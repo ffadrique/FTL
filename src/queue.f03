@@ -7,7 +7,7 @@ module xxmodulebase___queue_ftl
 ! Language  : Object Oriented Fortran 2018
 ! Reference : http://www.cplusplus.com/reference/queue/queue
 ! Synopsis  : Queue (FIFO) container template
-!             Limitations with repsect to STL C++
+!             Limitations with respect to STL C++
 !              - No emplace functions.
 !              - No swap functions.
 !

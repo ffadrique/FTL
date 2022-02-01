@@ -7,7 +7,7 @@ module xxmodulebase___list_ftl
 ! Language  : Object Oriented Fortran 2018
 ! Reference : http://www.cplusplus.com/reference/list
 ! Synopsis  : Double linked list container template
-!             Limitations with repsect to STL C++
+!             Limitations with respect to STL C++
 !              - No reverse iteration.
 !              - No constant iterators.
 !              - Max size is dummy (dummy value not computed from architecture).

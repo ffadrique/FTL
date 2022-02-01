@@ -8,12 +8,12 @@ module xxmodulebase___vector_ftl
 ! Reference : http://www.cplusplus.com/reference/vector
 !             http://www.cplusplus.com/reference/list
 ! Synopsis  : Vector (dynamic) container template
-!             Limitations with repsect to STL C++
+!             Limitations with respect to STL C++
 !              - No reverse iteration.
 !              - No constant iterators.
 !              - Max size is dummy (dummy value not computed from architecture).
 !              - No emplace functions.
-!              - No oeprator [].
+!              - No operator [].
 !              - Splice can append lists with an extension on the STL C++
 !                interface that emulates the past-last-element with null iterator
 !

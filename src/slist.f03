@@ -10,7 +10,7 @@ module xxmodulebase___slist_ftl
 !             Despite of the STL forward_list, this container has been built
 !             to mimic the list functionality in the understanding of the
 !             limitations of slist with respect to reverse iteration.
-!             Limitations with repsect to STL C++
+!             Limitations with respect to STL C++
 !              - No reverse iteration.
 !              - No constant iterators.
 !              - Max size is dummy (dummy value not computed from architecture).
