@@ -1,0 +1,7 @@
+$(OBJDIR)/list.o: $(OBJDIR)/m_object.o $(OBJDIR)/Use.o
+$(OBJDIR)/queue.o: $(OBJDIR)/m_object.o $(OBJDIR)/Use.o
+$(OBJDIR)/slist.o: $(OBJDIR)/m_object.o $(OBJDIR)/Use.o
+$(OBJDIR)/stack.o: $(OBJDIR)/m_object.o $(OBJDIR)/Use.o
+$(OBJDIR)/tree.o: $(OBJDIR)/m_object.o $(OBJDIR)/vector.o $(OBJDIR)/Use.o
+$(OBJDIR)/vector.o: $(OBJDIR)/m_object.o $(OBJDIR)/Use.o
+
