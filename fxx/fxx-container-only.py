@@ -1,0 +1,48 @@
+import sys
+import argparse
+import re
+import os
+
+from matches import *
+from container import *
+from parser import *
+
+# Define the command line options
+parser = argparse.ArgumentParser()
+parser.add_argument('--verbose', required=False, action='store_true', help='Trace detailed information of the process steps')
+parser.add_argument('--templates-dir', required=True, default='.', help='Location of the container templates (default: .)')
+parser.add_argument('--name', required=True, default='list', help='Container name (default: list)')
+parser.add_argument('--module', required=True, help='Module name')
+parser.add_argument('--type', required=True, help='Type name')
+parser.add_argument('--constructor', required=False, help='Constructor name (optional if type has the fomr "t_typename"')
+parser.add_argument('--output-dir', required=False, default='.', help='Output directory (default: . or the directroy of the input file')
+parser.add_argument('--pure', required=False, default=True, action='store_true', help='Configure the container to have pure accessors (default: True)' )
+parser.add_argument('--polymorphic', required=False, default=False, action='store_true', help='Configure the container to store polymorphic objects (default: False)' )
+
+# Process command line
+args = parser.parse_args()
+verbose = args.verbose
+templates_dir = args.templates_dir
+name = args.name
+module = args.module
+type = args.type
+output_dir = args.output_dir
+if verbose: print('Command line:', args)
+if args.constructor == None:
+    if type[0:2] == 't_': 
+        constructor = type[2:]
+    else: 
+        constructor = type
+else:
+    constructor = args.constructor
+polymorphic = args.polymorphic
+pure = args.pure
+
+# Initialise the container
+container = Container( name, module, type, constructor, polymorphic )
+container.pure = pure
+
+# Expand the template
+container.expand(templates_dir, output_dir, Container.templates_extension, verbose)
+
+

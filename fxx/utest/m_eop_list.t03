@@ -1,0 +1,47 @@
+module m_eop_list
+
+! Use statements
+  use <~vector>
+  use <list>
+
+
+! Container object declarations
+  vector<m_eop,t_eop> :: eop_object
+  list<m_leap,*t_leap> :: leap_object
+
+
+! Contained object declarations wit the intent attribute
+  vector<m_eop,t_eop>, pointer, intent(in) :: eop_object
+  list<m_leap,*t_leap>, allocatable, dimension(:), intent(out) :: leap_object
+
+
+! Iterator decalrations
+  vector_iterator<m_eop,t_eop> :: eop_object
+  list_iterator<m_leap,*t_leap> :: leap_object
+
+
+! Inheritance of a container
+  type, extends(vector<m_eop,t_eop>) :: t_eop_list
+  type, extends(list<m_leap,*t_leap>), abstract :: t_leap_list
+
+
+! Type selection (class or type)
+  select type( x )
+    type is(vector<m_eop,t_eop>)
+
+    class is(list<m_leap,*t_leap>)
+
+  end select
+
+
+! Reference to the parent in a type derived by inheritance
+  x = object%vector<m_eop,t_eop>%get_param()
+  y = object%list<m_leap,t_leap>%get_param()
+
+
+! Constructor
+  x = vector<m_eop,t_eop>()
+  y = list<m_leap,t_leap>( a, b )
+
+
+end module m_eop_list
