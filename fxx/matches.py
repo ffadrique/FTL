@@ -263,9 +263,9 @@ def inherited_expand(m, line, lines, verbose):
 
     # Format the expanded line
     try:
-        newline = lead + constructor + '_' + container + '_ftl' + iterator + trail
+        newline = lead + type + '_' + container + '_ftl' + iterator + trail
     except TypeError:
-        newline = lead + constructor + '_' + container + '_ftl' + trail
+        newline = lead + type + '_' + container + '_ftl' + trail
     if verbose: 
         print('Expanded line: ' + newline)
 

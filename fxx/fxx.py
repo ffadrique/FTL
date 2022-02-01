@@ -11,7 +11,7 @@ from parser import *
 parser = argparse.ArgumentParser()
 parser.add_argument('--verbose', required=False, action='store_true', help='Trace detailed information of the process steps')
 parser.add_argument('--templates-dir', required=False, default='.', help='Location of the container templates (default: .)')
-parser.add_argument('source', help='Source file with metacode for template instantiation (overrides all other generation options)')
+parser.add_argument('source', help='Source file with meta code for template instantiation')
 
 
 # Process command line

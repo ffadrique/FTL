@@ -13,7 +13,7 @@
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId />
     <IsWindowsApplication>False</IsWindowsApplication>
-    <CommandLineArguments>--verbose --templates-dir ../src utest/m_eop_list.t03</CommandLineArguments>
+    <CommandLineArguments>--help --verbose --templates-dir ../src utest/m_eop_list.t03</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
