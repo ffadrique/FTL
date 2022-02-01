@@ -1,8 +1,9 @@
 # FTL
 
-FTL (Fortran Template Library) is an object oriented implementation of generic container similar to the C++ STL (Standard Template Library). Not all eelements present in STL are implemented in FTL, yet the documentation in http://www.cplusplus.com/reference/stl/ can be used as generic conceptual reference.
+FTL (Fortran Template Library) is an object oriented implementation of generic containers similar to the C++ STL (Standard Template Library). Not all elements present in STL are implemented in FTL, yet the documentation in http://www.cplusplus.com/reference/stl/ can be used as generic conceptual reference. Specific documentation for FTL generated with Doxgen can be found in the [`documentation`](https://github.com/ffadrique/FTL/tree/master/documentation/doxygen,"documentation") directory.
 
 Some of the descriptions in the readme file have been taken from the above reference and adapted to the specific implementation of FTL.
+
 
 ## Standard Containers
 A container is a holder object that stores a collection of other objects (its elements). They are implemented as class templates, which allows a great flexibility in the types supported as elements.
@@ -33,12 +34,12 @@ Internally, vectors use a dynamically allocated array to store their elements. T
 
 Reference STL documentation: http://www.cplusplus.com/reference/vector/vector/
 
-Limitations with repsect to STL C++
+Limitations with respect to STL C++
 - No reverse iteration.
 - No constant iterators.
 - Max size is dummy (dummy value not computed from architecture).
 - No emplace functions.
-- No oeprator [].
+- No operator [].
 - Splice can append lists with an extension on the STL C++ interface that emulates the past-last-element with null iterator
 
 Container file name: [`vector.f03`](https://github.com/ffadrique/FTL/blob/master/src/vector.f03 "vector.f03")
@@ -51,7 +52,7 @@ List containers are implemented as doubly-linked lists; Doubly linked lists can 
 
 Reference STL documentation: http://www.cplusplus.com/reference/list/list/
 
-Limitations with repsect to STL C++
+Limitations with respect to STL C++
 - No reverse iteration.
 - No constant iterators.
 - Max size is dummy (dummy value not computed from architecture).
@@ -66,11 +67,11 @@ Single lists are sequence containers that allow constant time insert and erase o
 
 Single lists are implemented as singly-linked lists; Singly linked lists can store each of the elements they contain in different and unrelated storage locations. The ordering is kept by the association to each element of a link to the next element in the sequence.
 
-THe internace of *slist* is commont to *list*, therefore the applicable STL C++ documentation is that of *list*
+The interface of *slist* is common to *list*, therefore the applicable STL C++ documentation is that of *list*
 
 Reference STL documentation: http://www.cplusplus.com/reference/list/list/
 
-Limitations with repsect to STL C++
+Limitations with respect to STL C++
 - No reverse iteration.
 - No constant iterators.
 - Max size is dummy (dummy value not computed from architecture).
@@ -80,11 +81,11 @@ Limitations with repsect to STL C++
 Container file name: [`slist.f03`](https://github.com/ffadrique/FTL/blob/master/src/slist.f03 "slist.f03")
 ### queue
 
-Queues are a type of containers, specifically designed to operate in a FIFO context (first-in first-out), where elements are inserted into one end of the container and extracted from the other. Elements are pushed into the *back* of the specific container and popped from its *front*.
+Queues are a type of container, specifically designed to operate in a FIFO context (first-in first-out), where elements are inserted into one end of the container and extracted from the other. Elements are pushed into the *back* of the specific container and popped from its *front*.
 
 Reference STL documentation: http://www.cplusplus.com/reference/queue/queue/
 
-Limitations with repsect to STL C++
+Limitations with respect to STL C++
 - No emplace functions.
 - No swap functions.
 
@@ -92,11 +93,11 @@ Container file name: [`queue.f03`](https://github.com/ffadrique/FTL/blob/master/
 
 ### stack
 
-Stacks are a type of containers, specifically designed to operate in a LIFO context (last-in first-out), where elements are inserted and extracted only from one end of the container. Elements are pushed/popped from the *back* of the specific container, which is known as the top of the stack.
+Stacks are a type of container, specifically designed to operate in a LIFO context (last-in first-out), where elements are inserted and extracted only from one end of the container. Elements are pushed/popped from the *back* of the specific container, which is known as the top of the stack.
 
 Reference STL documentation: http://www.cplusplus.com/reference/stack/stack/
 
-Limitations with repsect to STL C++
+Limitations with respect to STL C++
 - No emplace functions.
 - No swap functions.
 
@@ -104,7 +105,7 @@ Container file name: [`stack.f03`](https://github.com/ffadrique/FTL/blob/master/
 
 ### tree
 
-Tree is a container designed to store a hierarchical collection of elements. Tree implements the hierachy as doubly-linked nodes pointing to parents, siblings and children.
+Tree is a container designed to store a hierarchical collection of elements. Tree implements the hierarchy as doubly-linked nodes pointing to parents, siblings and children.
 
 Reference STL documentation: N/A
 
@@ -112,19 +113,19 @@ Container file name: [`tree.f03`](https://github.com/ffadrique/FTL/blob/master/s
 
 ## Container implementation
 
-FTL containers are implemented as generic clasess to be instantiated replacing the template keywords by the actual contained element type information. Each generated container class is therefore a unique class that can generate any number of ojects, also independenly of other container classes. This provides high flexibility as each idependent container class does not have any common or static properties in the module implementing the container.
+FTL containers are implemented as generic classes to be instantiated replacing the template keywords by the actual contained element type information. Each generated container class is therefore a unique class that can generate any number of objects, also independently of other container classes. This provides high flexibility as each independent container class does not have any common or static properties in the module implementing the container.
 
 The keywords in the container templates:
 - `xxuse__`: Name of the module to reference in the `use` statement, like in `use xxuse__`. The used module contains the declaration of the contained element class.
-- `xxmodulebase__`: Name of the module to be use in the delaration of the container, like in `module xxmodulebase___list_ftl`. Usually this is the same as `xxuse__`.
+- `xxmodulebase__`: Name of the module to be used in the declaration of the container, like in `module xxmodulebase___list_ftl`. Usually this is the same as `xxuse__`.
 - `xxtypebase__`: Name of the type of the contained element, like in `class(xxtypebase__), intent(in) :: element`
-- `xxconstructor__`: Name to be used in the name of the container consturctor, like in `mylist = xxconstructor___list_ftl()`
+- `xxconstructor__`: Name to be used in the name of the container constructor, like in `mylist = xxconstructor___list_ftl()`
 
 ## Using the container templates
 
 The FTL templates can be used directly creating dedicated instances for each type of contained object replacing the keyword identified above manually. However, it is recommended to use the Python scripts that can be found in *[fxx](https://github.com/ffadrique/FTL/tree/master/fxx,"fxx")*. Two different generation options are available.
 
-### Single contatiner direct generation
+### Single container direct generation
 
 To generate a single container from the contained module name and type name, use the following command. Additional options can be furnished to steer he template generation.
 
@@ -149,7 +150,7 @@ options:
                         Constructor name (optional if type has the form
                         "t_typename", then constructor = "typename")
   --output-dir OUTPUT_DIR
-                        Output directory (default: . or the directroy of the
+                        Output directory (default: . or the directory of the
                         input file
   --pure                Configure the container to have pure accessors
                         (default: True)
@@ -159,17 +160,17 @@ options:
 
 The generated container source file is named `<MODULE>_<name>_ftl.f03`. The container type name is `<TYPE>_<name>_ftl`.
 
-The host module shall the use the module using the genenrated name above and shall declare the container instances using `type(<TYPE>_<name>_ftl) :: x`
+The host module shall the use the module using the generated name above and shall declare the container instances using `type(<TYPE>_<name>_ftl) :: x`
 
 ### Multiple ontatiner generation from host template
 
-It is possible to generate one or more container modules from a host source file that contains embeded meta commands. In this case the module and type names necessary to build the containers are taken from the host source. THe host sorce is also expanded the final syntax of the generated containers.
+It is possible to generate one or more container modules from a host source file that contains embedded meta commands. In this case the module and type names necessary to build the containers are taken from the host source. The host source is also expanded to the final syntax consistently with the generated containers.
 
 ```sh
 usage: fxx.py [-h] [--verbose] [--templates-dir TEMPLATES_DIR] source
 
 positional arguments:
-  source                Source file with metacode for template instantiation
+  source                Source file with meta code for template instantiation
 
 options:
   -h, --help            show this help message and exit
@@ -180,26 +181,130 @@ options:
 
 The following structures are supported
 
-| Construct type | Metacode example | Expanded code (module=m_foo, type=t_foo) | Remarks |
+| Construct type | Metacode example | Expanded code (module=`m_foo`, type=`t_foo`) | Remarks |
 | ------------ | ------------ | ------------ | ------------ |
 | Use statement | `use <list>`| `use m_foo_list_ftl` | One entry per identified container |
-| Object declaration | `list<m_foo,t_foo> :: x` | `type(t_foo_list_ftl)` :: x | `use <list>` generates `use m_foo_list_ftl` |
+| Object declaration | `list<m_foo,t_foo> :: x` | `type(t_foo_list_ftl) :: x` | `use <list>` generates `use m_foo_list_ftl` |
 | Constructor invocation | `x = list<m_foo,t_foo>()` | `x = foo_list_ftl()` | `use <list>` generates `use m_foo_list_ftl` |
-| Inherit container | `type, extends(list<m_foo,t_foo> :: t_bar` | type, extends(t_foo_list_ftl) :: t_bar | `use <list>` generates `use m_foo_list_ftl` |
-| Reference to parent | `x%list<m_foo,t_foo>%begin()` | x%t_foo_list_ftl%begin()` | `use <list>` generates `use m_foo_list_ftl` |
+| Inherit container | `type, extends(list<m_foo,t_foo> :: t_bar` | `type, extends(t_foo_list_ftl)` :: t_bar | `use <list>` generates `use m_foo_list_ftl` |
+| Reference to parent | `x%list<m_foo,t_foo>%begin()` | `x%t_foo_list_ftl%begin()` | `use <list>` generates `use m_foo_list_ftl` |
 | Case in `select type` construct | `class is( list<m_foo,t_foo> )` | `class is( t_foo_list_ftl )` | `use <list>` generates `use m_foo_list_ftl` |
 
 If the contained element permits, it is possible to generate the container with `pure` accessors for `front`, `back`, `top`, `bottom` and `get_elememt`. The `~` is used for this purpose in the use declaration.
-If the container has to store polymophic data the container can be configured using the `*` in the metacode.
+If the container has to store polymorphic data the container can be configured using the `*` in the meta code.
+
 | Construct type | Metacode example | Expanded code (module=m_foo, type=t_foo) | Remarks |
 | ------------ | ------------ | ------------ | ------------ |
-| Use statement with pure sccessor | `use <~list>`| `use m_foo_list_ftl` | One entry per identified container |
+| Use statement with pure accessor | `use <~list>`| `use m_foo_list_ftl` | One entry per identified container |
 | Object declaration with polymorphic contained element | `list<m_foo,*t_foo> :: x` | `type(t_foo_list_ftl)` :: x | `use <list>` generates `use m_foo`; `type(t_foo)`converted to `class(t_foo)` in container module |
 
+The host module source template must have one of the extensions `.t90`, `.t95`, `.t03`, `.t08`, `.t15`, `.t18`. The expanded host module source is generated in the same folder as the host source template, with the same name and with the same extension changing the `t` ba an `f` (e.g. `m_foo.t03` generates `m_foo.t03`). For every requested container in the host source template a container module is generated.
+
+### Contained element type requirements
+
+To support some of the functions provided by the containers, the contained element type must furnish some type bound procedures. In particular these are needed for searching and sorting functions. These are the comparison operators `operator(<)` and `operator(>)`, and the equality operator `operator(==)`.
+Additionally, if the container is to store polymorphic objects, the contained element type must implement the assignment `assignment(=)` as implicit assignment is not permitted for polymorphic objects.
+
+### Test example
+
+The following file can be used to test and understand the multiple container generation.
+
+#### Host module (not to compile)
+Host module with file name `m_database.t18`
+
+```Fortran
+module m_database
+
+! Use statements
+  use <~vector>
+  use <list>
+
+! Container object declarations
+  vector<m_foo,t_foo> :: foo_object
+  list<m_bar,*t_bar> :: bar_object
+
+! Contained object declarations wit the intent attribute
+  vector<m_foo,t_foo>, pointer, intent(in) :: foo_object
+  list<m_bar,*t_bar>, allocatable, dimension(:), intent(out) :: bar_object
+
+! Iterator declarations
+  vector_iterator<m_foo,t_foo> :: foo_object
+  list_iterator<m_bar,*t_bar> :: bar_object
+
+! Inheritance of a container
+  type, extends(vector<m_foo,t_foo>) :: t_foo_list
+  type, extends(list<m_bar,*t_bar>), abstract :: t_bar_list
+
+! Type selection (class or type)
+  select type( x )
+    type is(vector<m_foo,t_foo>)
+    class is(list<m_bar,*t_bar>)
+  end select
+
+! Reference to the parent in a type derived by inheritance
+  x = object%vector<m_foo,t_foo>%get_param()
+  y = object%list<m_bar,t_bar>%get_param()
+
+! Constructor
+  x = vector<m_foo,t_foo>()
+  y = list<m_bar,t_bar>( a, b )
+
+end module m_database
+```
+
+#### Expanded host module (not to compile)
+Generated expanded host module with file name `m_database.f18`
+
+```Fortran
+module m_database
+
+! Use statements
+  use m_foo_vector_ftl
+  use m_bar_list_ftl
+
+! Container object declarations
+  type(t_foo_vector_ftl) :: foo_object
+  type(t_bar_list_ftl) :: bar_object
+
+! Contained object declarations wit the intent attribute
+  class(t_foo_vector_ftl), pointer, intent(in) :: foo_object
+  class(t_bar_list_ftl), allocatable, dimension(:), intent(out) :: bar_object
+
+! Iterator declarations
+  type(t_foo_vector_ftl_iterator) :: foo_object
+  type(t_bar_list_ftl_iterator) :: bar_object
+
+! Inheritance of a container
+  type, extends(foo_vector_ftl) :: t_foo_list
+  type, extends(bar_list_ftl), abstract :: t_bar_list
+
+! Type selection (class or type)
+  select type( x )
+    type is(t_foo_vector_ftl)
+    class is(t_bar_list_ftl)
+  end select
+
+! Reference to the parent in a type derived by inheritance
+  x = object%t_foo_vector_ftl%get_param()
+  y = object%t_bar_list_ftl%get_param()
+
+! Constructor
+  x = foo_vector_ftl()
+  y = bar_list_ftl( a, b )
+
+end module m_database
+```
+
+### Generated containers
+From the above transformation of the host module, the following containers are generated
+- `m_foo_vector.f18` (from `vector.f03`)
+- `m_bar_list.f18` (from `list.f03`)
 
 ## Building and testing FTL
 FTL has been tested with Intel Fortran 19 (or higher) and gfortran 9.4 (or higher).
 The test provided along with the FTL libraries are written using *[XFunit](https://github.com/ffadrique/XFunit,"XFunit")*.
+
+Although the provided templates need to be instantiated for the specific contained element type, it is possible to compile and test the raw templates using the test contained module `Use.f03`. This allows testing FTL in the target platform (OS and compiler) before using it in the final application.
 
 ### Windows
 FTL is provided with a Visual Studio 2019 configured solution that allows building and testing the library. The solution provides a C# project that integrates the unit test in Fortran with the unit test detection feature of Visual Studio. This allows the execution of all unit tests from the Test Explorer menu.
@@ -230,7 +335,7 @@ Alternatively, the makefile can be edited to provide the full path to the compil
 Compiler options are automatically selected for the active compiler; only Debug configuration is provided in the make files.
 
 ## Documentation
-This readme page is the main user documentation. In addition, documentation generated with FORD and Doxygen can be found in the `documentation` directory. 
+This readme page is the main user documentation. In addition, documentation generated with FORD and Doxygen can be found in the [`documentation`](https://github.com/ffadrique/FTL/tree/master/documentation/doxygen,"documentation") directory. 
 
 ## Licensing
 FTL is open-source software, licensed under the GNU Lesser General Public License (LGPL).
