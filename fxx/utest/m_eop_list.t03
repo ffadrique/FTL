@@ -15,7 +15,7 @@ module m_eop_list
   list<m_leap,*t_leap>, allocatable, dimension(:), intent(out) :: leap_object
 
 
-! Iterator decalrations
+! Iterator declarations
   vector_iterator<m_eop,t_eop> :: eop_object
   list_iterator<m_leap,*t_leap> :: leap_object
 
