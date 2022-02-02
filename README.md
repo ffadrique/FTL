@@ -1,6 +1,6 @@
 # FTL
 
-FTL (Fortran Template Library) is an object oriented implementation of generic containers similar to the C++ STL (Standard Template Library). Not all elements present in STL are implemented in FTL, yet the documentation in http://www.cplusplus.com/reference/stl/ can be used as generic conceptual reference. Specific documentation for FTL generated with Doxgen can be found in the [`documentation`](https://github.com/ffadrique/FTL/tree/master/documentation/doxygen,"documentation") directory.
+FTL (Fortran Template Library) is an object oriented implementation of generic containers similar to the C++ STL (Standard Template Library). Not all elements present in STL are implemented in FTL, yet the documentation in http://www.cplusplus.com/reference/stl/ can be used as generic conceptual reference. Specific documentation for FTL generated with Doxgen can be found in the [`documentation`](https://github.com/ffadrique/FTL/tree/master/documentation/doxygen) directory.
 
 Some of the descriptions in the readme file have been taken from the above reference and adapted to the specific implementation of FTL.
 
@@ -335,7 +335,7 @@ Alternatively, the makefile can be edited to provide the full path to the compil
 Compiler options are automatically selected for the active compiler; only Debug configuration is provided in the make files.
 
 ## Documentation
-This readme page is the main user documentation. In addition, documentation generated with FORD and Doxygen can be found in the [`documentation`](https://github.com/ffadrique/FTL/tree/master/documentation/doxygen,"documentation") directory. 
+This readme page is the main user documentation. In addition, documentation generated with FORD and Doxygen can be found in the [`documentation`](https://github.com/ffadrique/FTL/tree/master/documentation/doxygen) directory. 
 
 ## Licensing
 FTL is open-source software, licensed under the GNU Lesser General Public License (LGPL).
