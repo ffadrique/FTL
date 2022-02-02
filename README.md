@@ -302,7 +302,7 @@ From the above transformation of the host module, the following containers are g
 
 ## Building and testing FTL
 FTL has been tested with Intel Fortran 19 (or higher) and gfortran 9.4 (or higher).
-The test provided along with the FTL libraries are written using *[XFunit](https://github.com/ffadrique/XFunit,"XFunit")*.
+The test provided along with the FTL libraries are written using *[XFunit](https://github.com/ffadrique/XFunit)*.
 
 Although the provided templates need to be instantiated for the specific contained element type, it is possible to compile and test the raw templates using the test contained module `Use.f03`. This allows testing FTL in the target platform (OS and compiler) before using it in the final application.
 
