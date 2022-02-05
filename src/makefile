@@ -34,7 +34,7 @@ LIBS = $(LIBDIR)/libftl.a
 
 # Option selection for Intel Fortran (ifort)
 ifeq ($(findstring ifort, $(F90COMP)), ifort)
-OPTIONS = -c -fpp -g -O0 -stand f18 -traceback -check bounds -assume byterecl -I $(MODDIR) -module $(MODDIR) -o $@ -free -Tf $<
+OPTIONS = -c -fpp -g -O0 -stand f18 -traceback -check bounds -assume byterecl -I $(MODDIR) -module $(MODDIR) -o $@ $<
 AR = ar
 endif
 
@@ -45,8 +45,8 @@ AR = ar
 endif
 
 # Automatic generation of list of source files and targets
-SRCS_F03 := $(wildcard *.f03)
-OBJECTS_F03 := $(SRCS_F03:%.f03=$(OBJDIR)/%.o)
+SRCS_F90 := $(wildcard *.f90)
+OBJECTS_F90 := $(SRCS_F90:%.f90=$(OBJDIR)/%.o)
 
 # Main make target (recursive in subdirectories)
 all: $(LIBS)
@@ -56,12 +56,12 @@ all: $(LIBS)
 libs: $(LIBS)
 
 # Build library from objects
-$(LIBS): $(OBJECTS_F03)
+$(LIBS): $(OBJECTS_F90)
 	@echo "(AR)" $(LIBS)
-	@$(AR) -r $@ $(OBJECTS_F03)
+	@$(AR) -r $@ $(OBJECTS_F90)
     
 # Build objects from sources
-$(OBJDIR)/%.o: %.f03
+$(OBJDIR)/%.o: %.f90
 	@if [ ! -d "$(OBJDIR)" ]; then mkdir -p $(OBJDIR); fi
 	@echo "(FC)" $@
 	@$(F90COMP) $(OPTIONS)

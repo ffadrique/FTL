@@ -67,7 +67,7 @@ program unit_list
 
 ! Initialise test suite
   suite = xfunit_suite( package=package, &
-                        source='xxbase___list_ftl.f03', &
+                        source='xxbase___list_ftl.f90', &
                         before=unit_list_suite_before, &
                         after=unit_list_suite_after, &
                         annotation='Double linked list' )

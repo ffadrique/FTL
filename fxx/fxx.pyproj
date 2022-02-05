@@ -32,10 +32,10 @@
     <Folder Include="utest\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="utest\m_eop_list.f03" />
+    <Content Include="utest\m_eop_list.f90" />
     <Content Include="utest\m_eop_list.t03" />
-    <Content Include="utest\m_eop_vector_ftl.f03" />
-    <Content Include="utest\m_leap_list_ftl.f03" />
+    <Content Include="utest\m_eop_vector_ftl.f90" />
+    <Content Include="utest\m_leap_list_ftl.f90" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>

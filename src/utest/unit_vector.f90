@@ -67,7 +67,7 @@ program unit_vector
 
 ! Initialise test suite
   suite = xfunit_suite( package=package, &
-                        source='xxbase___vector_ftl.f03', &
+                        source='xxbase___vector_ftl.f90', &
                         before=unit_vector_suite_before, &
                         after=unit_vector_suite_after, &
                         annotation='Vector container' )

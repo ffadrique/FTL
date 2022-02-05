@@ -49,7 +49,7 @@
 		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
 		<File RelativePath="..\xxbase___slist_ftl.jxml"/></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
-		<File RelativePath="..\unit_slist.f03"/>
-		<File RelativePath="..\unit_slist_tests.f03"/>
-		<File RelativePath="..\..\Use.f03"/></Filter></Files>
+		<File RelativePath="..\unit_slist.f90"/>
+		<File RelativePath="..\unit_slist_tests.f90"/>
+		<File RelativePath="..\..\Use.f90"/></Filter></Files>
 	<Globals/></VisualStudioProject>

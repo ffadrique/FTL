@@ -48,12 +48,12 @@
 		<File RelativePath=".\src\makefile.deps"/>
 		<File RelativePath=".\README.md"/></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
-		<File RelativePath=".\src\list.f03"/>
-		<File RelativePath=".\src\m_object.f03"/>
-		<File RelativePath=".\src\queue.f03"/>
-		<File RelativePath=".\src\slist.f03"/>
-		<File RelativePath=".\src\stack.f03"/>
-		<File RelativePath=".\src\tree.f03"/>
-		<File RelativePath=".\src\Use.f03"/>
-		<File RelativePath=".\src\vector.f03"/></Filter></Files>
+		<File RelativePath=".\src\list.f90"/>
+		<File RelativePath=".\src\m_object.f90"/>
+		<File RelativePath=".\src\queue.f90"/>
+		<File RelativePath=".\src\slist.f90"/>
+		<File RelativePath=".\src\stack.f90"/>
+		<File RelativePath=".\src\tree.f90"/>
+		<File RelativePath=".\src\Use.f90"/>
+		<File RelativePath=".\src\vector.f90"/></Filter></Files>
 	<Globals/></VisualStudioProject>
