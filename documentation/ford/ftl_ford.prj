@@ -1,7 +1,7 @@
 project: FTL
 src_dir: ../src
-output_dir: ./full
-summary: Fortran Template Library
+output_dir: ./html
+summary: Fortran Template Library   
 author: Fran Martinez
 email: fran.martinez.fadrique@gmail.com
 predocmark: >
@@ -16,8 +16,8 @@ graph: false
 creation_date: 2022-01-01
 search: false
 macro: 
-license: bsd
+license: LGPL
 
 exclude: 
 
-version: 0.1
+version: 3.0

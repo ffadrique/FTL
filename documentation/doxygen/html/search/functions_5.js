@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['front_0',['front',['../structxxmodulebase______list__ftl_1_1xxtypebase______list__ftl.html#ade2aea01e1b80107c0cf457d7c87377a',1,'xxmodulebase___list_ftl::xxtypebase___list_ftl::front()'],['../structxxmodulebase______queue__ftl_1_1xxtypebase______queue__ftl.html#ae886f8696c198905c87d5e4e8b7faa06',1,'xxmodulebase___queue_ftl::xxtypebase___queue_ftl::front()'],['../structxxmodulebase______slist__ftl_1_1xxtypebase______slist__ftl.html#ae38bd9da4b413ff0d0b1d2d69b7aa07f',1,'xxmodulebase___slist_ftl::xxtypebase___slist_ftl::front()'],['../structxxmodulebase______tree__ftl_1_1xxtypebase______tree__ftl.html#ac01d04d96dba7d4bb9a5931b46d89a43',1,'xxmodulebase___tree_ftl::xxtypebase___tree_ftl::front()'],['../structxxmodulebase______vector__ftl_1_1xxtypebase______vector__ftl.html#a8b66e599ac25b680d7217f444381fd50',1,'xxmodulebase___vector_ftl::xxtypebase___vector_ftl::front()']]]
-];
