@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xxtypebase_5fdefault_0',['xxtypebase_default',['../interfacexxuse_____1_1cxxtypebase____.html#a0ee3765eb5cf25ab1239b016d722fe46',1,'xxuse__::cxxtypebase__::xxtypebase_default()'],['../namespacexxuse____.html#a3cf169bf1e96f276b2e3b3570dd274e9',1,'xxuse__::xxtypebase_default()']]]
+  ['xxtypebase_5fdefault_819',['xxtypebase_default',['../interfacebase_1_1base.html#a442e7bfd5876f45e3046a8f20391923e',1,'base::base::xxtypebase_default()'],['../namespacebase.html#a169ad4f5a78adc5102b8e6bc6e790069',1,'base::xxtypebase_default()']]]
 ];
