@@ -42,7 +42,7 @@ LIBS = $(ILIBDIR)/libftl.a $(XFUNITLIBDIR)/libxfunit.a
 
 # Option selection for Intel Fortran (ifort)
 ifeq ($(findstring ifort, $(F90COMP)), ifort)
-OPTIONS = -fpp -g -O0 -stand f18 -traceback -check bounds -assume byterecl -I $(IMODDIR) -I $(MODDIR) -I $(XFUNITMODDIR) -module $(MODDIR) -o $@ -free -Tf $< -Tf $*.f03
+OPTIONS = -fpp -g -O0 -stand f18 -traceback -check bounds -assume byterecl -I $(IMODDIR) -I $(MODDIR) -I $(XFUNITMODDIR) -module $(MODDIR) -o $@ $< $(subst _tests,, $<)
 AR = ar
 endif
 
@@ -53,17 +53,17 @@ AR = ar
 endif
 
 # Automatic generation of list of source files and targets
-SRCS_MAIN_F03 := $(shell ls unit_*.f03 | grep -v _tests)
-BINS_MAIN := $(SRCS_MAIN_F03:%.f03=$(BINDIR)/%.bin)
+SRCS_MAIN_F90 := $(shell ls unit_*.f90 | grep -v _tests)
+BINS_MAIN := $(SRCS_MAIN_F90:%.f90=$(BINDIR)/%.bin)
 
 # List of unit test output files (JUnit-like files)
-JUNITS := $(SRCS_MAIN_F03:unit_%.f03=%.jxml)
+JUNITS := $(SRCS_MAIN_F90:unit_%.f90=%.jxml)
 
 # Main make target 
 all: $(BINS_MAIN)
 
 # Build executables from related sources
-$(OBJDIR)/%.bin: %_tests.f03 %.f03 
+$(OBJDIR)/%.bin: %_tests.f90 %.f90 
 	@if [ ! -d "$(BINDIR)" ]; then mkdir -p $(OBJDIR); fi
 	@echo "(FC)" $@
 	@$(F90COMP) $(OPTIONS) $(LIBS)
@@ -90,7 +90,7 @@ clean:
 
 # Test target
 test:
-	echo $(SRCS_MAIN_F03)
+	echo $(SRCS_MAIN_F90)
 	
 	
 	

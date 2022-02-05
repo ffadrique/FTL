@@ -9,7 +9,7 @@ class Container(object):
     names = ['list', 'slist', 'vector', 'queue', 'stack', 'tree']
 
     # Template default extension
-    templates_extension = '.f03'
+    templates_extension = '.f90'
 
     # Default consturctor
     def __init__(self):

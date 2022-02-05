@@ -33,7 +33,7 @@
     <Folder Include="utest\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="utest\m_eop_queue_ftl.f03" />
+    <Content Include="utest\m_eop_queue_ftl.f90" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>

@@ -1,11 +1,11 @@
-program unit_tree
+program unit_xxbase___queue_ftl
 
 !-------------------------------------------------------------------------------
 ! Copyright : 2022, Fran Martinez Fadrique <Fran.Martinez.Fadrique@gmail.com>
 ! Project   : Atlantis
 ! Author    : Fran Martinez Fadrique
 ! Language  : Object Oriented Fortran 2018
-! Synopsis  : Unit tests driver for xxbase___tree_ftl
+! Synopsis  : Unit tests driver for xxbase___queue_ftl
 !
 ! License   : This file is part of the Fortran Template Library (FTL).
 !
@@ -28,17 +28,17 @@ program unit_tree
 
   use m_xfunit
 
-  use unit_tree_tests
+  use unit_queue_tests
 
 !---End of use statements-------------------------------------------------------
 
   implicit none
 
   character(len=*), parameter :: package = 'fxx'
-  character(len=*), parameter :: module = 'xxbase___tree_ftl'
+  character(len=*), parameter :: module = 'xxbase___queue_ftl'
 
   character(len=130), parameter :: sccs_info = &
-  '$Id: $'
+  '\$Id: \$'
 
 !---Declaration of local variables----------------------------------------------
 
@@ -50,71 +50,49 @@ program unit_tree
 ! Local variables
   character(len=256) :: xfunit_root_dir
   logical :: junit_strict
-  type(t_xfunit_suite), allocatable :: suite
   type(t_xfunit_unit), allocatable :: ut
-
-! Initialise unit test infrastructure
-  allocate( manager )
-  allocate( suite )
-  allocate( ut )
 
 ! Initialise report generation flag
   junit_strict = .false.
 
 ! Initialise the unit test manager
   call get_environment_variable( 'XFUNIT_ROOT_DIR', xfunit_root_dir )
-  manager = xfunit_manager_eclipse( module, xfunit_root_dir, junit_strict )
+  allocate( manager, source=xfunit_manager_eclipse( module, xfunit_root_dir, junit_strict ) )
 
 ! Initialise test suite
+  allocate( suite )
+  allocate( ut )
   suite = xfunit_suite( package=package, &
-                        source='xxbase___tree_ftl.f03', &
-                        before=unit_tree_suite_before, &
-                        after=unit_tree_suite_after, &
-                        annotation='Tree container' )
+                        source='xxbase___queue_ftl.f90', &
+                        before=unit_queue_suite_before, &
+                        after=unit_queue_suite_after, &
+                        annotation='Queue container' )
 
 ! Create test
-  ut = xfunit_unit( name='unit_tree_test_001', &
-                    classname="tree", &
-                    executer=unit_tree_test_001, &
-                    before=unit_tree_before_001, &
-                    after=unit_tree_after_001, &
-                    annotation='Tree navigation forward and backward' )
+  ut = xfunit_unit( name='unit_queue_test_001', &
+                    classname='queue', &
+                    executer=unit_queue_test_001, &
+                    before=unit_queue_before_001, &
+                    after=unit_queue_after_001, &
+                    annotation='Constructor' )
   call suite%add_unit_test( ut )
 
 ! Create test
-  ut = xfunit_unit( name='unit_tree_test_002', &
-                    classname="tree", &
-                    executer=unit_tree_test_002, &
-                    before=unit_tree_before_002, &
-                    after=unit_tree_after_002, &
-                    annotation='Constructors' )
+  ut = xfunit_unit( name='unit_queue_test_002', &
+                    classname='queue', &
+                    executer=unit_queue_test_002, &
+                    before=unit_queue_before_002, &
+                    after=unit_queue_after_002, &
+                    annotation='Queue handling' )
   call suite%add_unit_test( ut )
 
 ! Create test
-  ut = xfunit_unit( name='unit_tree_test_003', &
-                    classname="tree", &
-                    executer=unit_tree_test_003, &
-                    before=unit_tree_before_003, &
-                    after=unit_tree_after_003, &
-                    annotation='Element insertion and deletion' )
-  call suite%add_unit_test( ut )
-
-! Create test
-  ut = xfunit_unit( name='unit_tree_test_004', &
-                    classname="tree", &
-                    executer=unit_tree_test_004, &
-                    before=unit_tree_before_004, &
-                    after=unit_tree_after_004, &
-                    annotation='Access and query functions' )
-  call suite%add_unit_test( ut )
-
-! Create test
-  ut = xfunit_unit( name='unit_tree_test_005', &
-                    classname="tree", &
-                    executer=unit_tree_test_005, &
-                    before=unit_tree_before_005, &
-                    after=unit_tree_after_005, &
-                    annotation='Iterator specific' )
+  ut = xfunit_unit( name='unit_queue_test_003', &
+                    classname='queue', &
+                    executer=unit_queue_test_003, &
+                    before=unit_queue_before_003, &
+                    after=unit_queue_after_003, &
+                    annotation='Queue assignment' )
   call suite%add_unit_test( ut )
 
 ! Execute tests
@@ -126,11 +104,9 @@ program unit_tree
 ! Generate output
   call manager%write_xml( suite )
 
-
-! Terminate unit test infrastructure
+! Terminate unit testing
   deallocate( manager )
   deallocate( suite )
   deallocate( ut )
 
-end program unit_tree
-
+end program unit_xxbase___queue_ftl
