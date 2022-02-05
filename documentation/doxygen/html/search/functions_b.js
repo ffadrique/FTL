@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['next_559',['next',['../structlist_1_1t__base__list__iterator.html#abc81a9a37bdb86045ff3f8f8c3e06448',1,'list::t_base_list_iterator::next()'],['../structslist_1_1t__base__slist__iterator.html#a2c879c0dd01854abbfd75779e5457aef',1,'slist::t_base_slist_iterator::next()'],['../structtree_1_1t__base__tree__iterator.html#a9c6b99fd8391b7bab532b464f0f2fc5c',1,'tree::t_base_tree_iterator::next()'],['../structvector_1_1t__base__vector__iterator.html#a35196cc3aba7c586c7379cca33602d08',1,'vector::t_base_vector_iterator::next()']]],
-  ['next_5fsibling_560',['next_sibling',['../structtree_1_1t__base__tree__iterator.html#a5d00f40db4688473557cae7347ffcd1e',1,'tree::t_base_tree_iterator']]],
-  ['next_5ftree_5fnode_5fup_561',['next_tree_node_up',['../structtree_1_1t__tree__node.html#a2eeeee54d670cf4f5cf2412054884b3a',1,'tree::t_tree_node']]],
-  ['nullify_562',['nullify',['../structlist_1_1t__base__list__iterator.html#a8c792dec5bc9d1f200b08f9914b7a106',1,'list::t_base_list_iterator::nullify()'],['../structslist_1_1t__base__slist__iterator.html#af90e6478a8e17fb1222ce0dd436f4781',1,'slist::t_base_slist_iterator::nullify()'],['../structtree_1_1t__base__tree__iterator.html#ad8ae7f8e580113e868cc599eb4799276',1,'tree::t_base_tree_iterator::nullify()'],['../structvector_1_1t__base__vector__iterator.html#a6488800a6788afd8c3a031e9b1a41752',1,'vector::t_base_vector_iterator::nullify()']]]
-];
