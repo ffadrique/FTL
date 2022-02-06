@@ -41,6 +41,11 @@ def use_expand(m, line, lines, containers, verbose):
     index = lines.index(line)
     lines[index:index + 1] = uses
 
+    # Check if the containers must implement pure interfaces
+    if prefix == None:
+        for c in filter(lambda x: x.name == cname, containers):
+            c.pure = False
+
 
 # Define the pattern for the detection of a container declaration
 # This detects statements of the form: '   container<module,type>, attributes :: x'

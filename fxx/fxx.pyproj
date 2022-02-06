@@ -13,7 +13,7 @@
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId />
     <IsWindowsApplication>False</IsWindowsApplication>
-    <CommandLineArguments>--help --verbose --templates-dir ../src utest/m_eop_list.t03</CommandLineArguments>
+    <CommandLineArguments>--verbose --templates-dir ../src utest/m_xfunit_suite.t90</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
@@ -33,7 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="utest\m_eop_list.f90" />
-    <Content Include="utest\m_eop_list.t03" />
+    <Content Include="utest\m_eop_list.t90" />
     <Content Include="utest\m_eop_vector_ftl.f90" />
     <Content Include="utest\m_leap_list_ftl.f90" />
   </ItemGroup>

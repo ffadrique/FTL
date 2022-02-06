@@ -58,12 +58,12 @@ class Container(object):
         if not self.pure:
             template = template.replace("pure subroutine element_assign_allocatable", "subroutine element_assign_allocatable")
             template = template.replace("pure subroutine element_assign_pointer", "subroutine element_assign_pointer")
-            template = template.replace("pure function " + par.Mnemonic + "_front", "function " + par.Mnemonic + "_front")
-            template = template.replace("pure function " + par.Mnemonic + "_back", "function " + par.Mnemonic + "_back")
-            template = template.replace("pure function " + par.Mnemonic + "_top", "function " + par.Mnemonic + "_top")
-            template = template.replace("pure function " + par.Mnemonic + "_bottom", "function " + par.Mnemonic + "_bottom")
-            template = template.replace("pure function " + par.Mnemonic + "_iterator_get_element", "function " + par.Mnemonic + "_iterator_get_element")
-            template = template.replace("pure subroutine " + par.Mnemonic + "_iterator_set_element", "subroutine " + par.Mnemonic + "_iterator_set_element")
+            template = template.replace("pure function " + cname + "_front", "function " + cname + "_front")
+            template = template.replace("pure function " + cname + "_back", "function " + cname + "_back")
+            template = template.replace("pure function " + cname + "_top", "function " + cname + "_top")
+            template = template.replace("pure function " + cname + "_bottom", "function " + cname + "_bottom")
+            template = template.replace("pure function " + cname + "_iterator_get_element", "function " + cname + "_iterator_get_element")
+            template = template.replace("pure subroutine " + cname + "_iterator_set_element", "subroutine " + cname + "_iterator_set_element")
 
         # Add the time stamp
         template += '\n! ' + datetime.now().strftime("%Y-%m-%dT%H:%M:%S") + '\n'
