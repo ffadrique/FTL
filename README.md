@@ -42,7 +42,7 @@ Limitations with respect to STL C++
 - No operator [].
 - Splice can append lists with an extension on the STL C++ interface that emulates the past-last-element with null iterator
 
-Container file name: [`vector.f03`](https://github.com/ffadrique/FTL/blob/master/src/vector.f03 "vector.f03")
+Container file name: [`vector.f90`](https://github.com/ffadrique/FTL/blob/master/src/vector.f90 "vector.f90")
 
 ### *list*
 
@@ -59,7 +59,7 @@ Limitations with respect to STL C++
 - No emplace functions.
 - Splice can append lists with an extension on the STL C++ interface that emulates the past-last-element with null iterator
 
-Container file name: [`list.f03`](https://github.com/ffadrique/FTL/blob/master/src/list.f03 "list.f03")
+Container file name: [`list.f90`](https://github.com/ffadrique/FTL/blob/master/src/list.f90 "list.f90")
 
 ### *slist*
 
@@ -78,7 +78,7 @@ Limitations with respect to STL C++
 - No emplace functions.
 - Splice can append lists with an extension on the STL C++ interface that emulates the past-last-element with null iterator
 
-Container file name: [`slist.f03`](https://github.com/ffadrique/FTL/blob/master/src/slist.f03 "slist.f03")
+Container file name: [`slist.f90`](https://github.com/ffadrique/FTL/blob/master/src/slist.f90 "slist.f90")
 ### queue
 
 Queues are a type of container, specifically designed to operate in a FIFO context (first-in first-out), where elements are inserted into one end of the container and extracted from the other. Elements are pushed into the *back* of the specific container and popped from its *front*.
@@ -89,7 +89,7 @@ Limitations with respect to STL C++
 - No emplace functions.
 - No swap functions.
 
-Container file name: [`queue.f03`](https://github.com/ffadrique/FTL/blob/master/src/queue.f03 "queue.f03")
+Container file name: [`queue.f90`](https://github.com/ffadrique/FTL/blob/master/src/queue.f90 "queue.f90")
 
 ### stack
 
@@ -101,7 +101,7 @@ Limitations with respect to STL C++
 - No emplace functions.
 - No swap functions.
 
-Container file name: [`stack.f03`](https://github.com/ffadrique/FTL/blob/master/src/stack.f03 "stack.f03")
+Container file name: [`stack.f90`](https://github.com/ffadrique/FTL/blob/master/src/stack.f90 "stack.f90")
 
 ### tree
 
@@ -109,7 +109,7 @@ Tree is a container designed to store a hierarchical collection of elements. Tre
 
 Reference STL documentation: N/A
 
-Container file name: [`tree.f03`](https://github.com/ffadrique/FTL/blob/master/src/tree.f03 "tree.f03")
+Container file name: [`tree.f90`](https://github.com/ffadrique/FTL/blob/master/src/tree.f90 "tree.f90")
 
 ## Container implementation
 
@@ -158,7 +158,7 @@ options:
                         (default: False)
 ```
 
-The generated container source file is named `<MODULE>_<name>_ftl.f03`. The container type name is `<TYPE>_<name>_ftl`.
+The generated container source file is named `<MODULE>_<name>_ftl.f90`. The container type name is `<TYPE>_<name>_ftl`.
 
 The host module shall the use the module using the generated name above and shall declare the container instances using `type(<TYPE>_<name>_ftl) :: x`
 
@@ -297,14 +297,14 @@ end module m_database
 
 ### Generated containers
 From the above transformation of the host module, the following containers are generated
-- `m_foo_vector.f18` (from `vector.f03`)
-- `m_bar_list.f18` (from `list.f03`)
+- `m_foo_vector.f18` (from `vector.f90`)
+- `m_bar_list.f18` (from `list.f90`)
 
 ## Building and testing FTL
 FTL has been tested with Intel Fortran 19 (or higher) and gfortran 9.4 (or higher).
 The test provided along with the FTL libraries are written using *[XFunit](https://github.com/ffadrique/XFunit)*.
 
-Although the provided templates need to be instantiated for the specific contained element type, it is possible to compile and test the raw templates using the test contained module `Use.f03`. This allows testing FTL in the target platform (OS and compiler) before using it in the final application.
+Although the provided templates need to be instantiated for the specific contained element type, it is possible to compile and test the raw templates using the test contained module `Use.f90`. This allows testing FTL in the target platform (OS and compiler) before using it in the final application.
 
 ### Windows
 FTL is provided with a Visual Studio 2019 configured solution that allows building and testing the library. The solution provides a C# project that integrates the unit test in Fortran with the unit test detection feature of Visual Studio. This allows the execution of all unit tests from the Test Explorer menu.
