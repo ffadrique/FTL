@@ -2,13 +2,17 @@ import sys
 import argparse
 import re
 import os
+import glob
 
 from matches import *
 from container import *
 from parser import *
 
 # Get the default path to the templates
-templates_dir = os.path.dirname(__file__) + "/../src"
+templates_dir = os.path.dirname(__file__)
+reffile = glob.glob("../*/list.f90", recursive=True)[0]
+templates_dir = os.path.dirname(reffile)
+
 
 # Define the command line options
 parser = argparse.ArgumentParser()
