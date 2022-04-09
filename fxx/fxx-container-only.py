@@ -10,7 +10,7 @@ from parser import *
 # Define the command line options
 parser = argparse.ArgumentParser()
 parser.add_argument('--verbose', required=False, action='store_true', help='Trace detailed information of the process steps')
-parser.add_argument('--templates-dir', required=True, default='.', help='Location of the container templates (default: .)')
+parser.add_argument('--templates-dir', required=True, default=os.path.realpath(__file__), help='Location of the container templates (default to path of fxx.py)')
 parser.add_argument('--name', required=True, default='list', choices=Container.names, help='Container name (default: list)')
 parser.add_argument('--module', required=True, help='Module name')
 parser.add_argument('--type', required=True, help='Type name')

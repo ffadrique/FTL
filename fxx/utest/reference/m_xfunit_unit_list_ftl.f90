@@ -1,4 +1,4 @@
-module m_leap_list_ftl
+module m_xfunit_unit_list_ftl
 
 !-------------------------------------------------------------------------------
 ! Copyright : 2022, Fran Martinez Fadrique <Fran.Martinez.Fadrique@gmail.com>
@@ -35,7 +35,7 @@ module m_leap_list_ftl
 !---USE statements--------------------------------------------------------------
 
   use m_object
-  use m_leap
+  use m_xfunit_unit
 
 !---End of use statements-------------------------------------------------------
 
@@ -45,8 +45,8 @@ module m_leap_list_ftl
 
   private
 
-  public t_leap_list_ftl, leap_list_ftl
-  public t_leap_list_ftl_iterator
+  public t_xfunit_unit_list_ftl, xfunit_unit_list_ftl
+  public t_xfunit_unit_list_ftl_iterator
 
   public distance, swap
 
@@ -59,7 +59,7 @@ module m_leap_list_ftl
     private
 
 !   The element data instance
-    class(t_leap), pointer :: element => null()
+    type(t_xfunit_unit), pointer :: element => null()
 
 !   Pointer to the previous node in the list (null if first)
     type(t_list_node),  pointer :: previous => null()
@@ -71,7 +71,7 @@ module m_leap_list_ftl
 
 
 ! Double linked list container type
-  type, extends(t_object) :: t_leap_list_ftl
+  type, extends(t_object) :: t_xfunit_unit_list_ftl
     private
 
 !     The number of nodes in the list
@@ -157,25 +157,25 @@ module m_leap_list_ftl
 !     Destructor
       final :: list_
 
-  end type t_leap_list_ftl
+  end type t_xfunit_unit_list_ftl
 
 
 ! Constructor interface
-  interface leap_list_ftl
+  interface xfunit_unit_list_ftl
     module procedure list_default
     module procedure list_fill
     module procedure list_range
     module procedure list_copy
     module procedure list_copy_from_array
-  end interface leap_list_ftl
+  end interface xfunit_unit_list_ftl
 
 
 ! Interface to provide user comparison functions
   abstract interface
     pure function comparison( from_list, reference ) result(res)
-      use m_leap
-      class(t_leap), intent(in) :: from_list
-      class(t_leap), intent(in) :: reference
+      use m_xfunit_unit
+      type(t_xfunit_unit), intent(in) :: from_list
+      type(t_xfunit_unit), intent(in) :: reference
       logical :: res
     end function comparison
   end interface
@@ -183,8 +183,8 @@ module m_leap_list_ftl
 ! Interface to provide predicate algorithm to the contained element
   abstract interface
     pure function predicate( a ) result(res)
-      use m_leap
-      class(t_leap), intent(in) :: a
+      use m_xfunit_unit
+      type(t_xfunit_unit), intent(in) :: a
       logical :: res
     end function predicate
   end interface
@@ -192,16 +192,16 @@ module m_leap_list_ftl
 ! Interface to provide binary predicate algorithm to the contained elements
   abstract interface
     pure function binary_predicate( a, b ) result(res)
-      use m_leap
-      class(t_leap), intent(in) :: a
-      class(t_leap), intent(in) :: b
+      use m_xfunit_unit
+      type(t_xfunit_unit), intent(in) :: a
+      type(t_xfunit_unit), intent(in) :: b
       logical :: res
     end function binary_predicate
   end interface
 
 
 ! Double linked list iterator type
-  type, extends(t_object) :: t_leap_list_ftl_iterator
+  type, extends(t_object) :: t_xfunit_unit_list_ftl_iterator
     private
 
 !     Pointer to the referenced node
@@ -234,7 +234,7 @@ module m_leap_list_ftl
       generic :: operator(/=) => list_iterator_not_equal
       procedure, private :: list_iterator_not_equal
 
-  end type t_leap_list_ftl_iterator
+  end type t_xfunit_unit_list_ftl_iterator
 
 
 ! Interfaces for procedures not bound to type
@@ -254,7 +254,7 @@ contains
 function list_default() result( res )
 
 ! The result list
-  type(t_leap_list_ftl) :: res
+  type(t_xfunit_unit_list_ftl) :: res
 
 ! Initialise
   res%first => null()
@@ -273,10 +273,10 @@ function list_fill( n, val ) result( res )
   integer, intent(in) :: n
 
 ! The element to use to fill the list
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! The result list
-  type(t_leap_list_ftl) :: res
+  type(t_xfunit_unit_list_ftl) :: res
 
 ! Assign input to output
   call res%assign( n, val )
@@ -294,13 +294,13 @@ end function list_fill
 function list_range( first, last ) result( res )
 
 ! Iterator to first node to insert
-  class(t_leap_list_ftl_iterator), intent(in) :: first
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: first
 
 ! Iterator to last node to insert
-  class(t_leap_list_ftl_iterator), intent(in) :: last
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: last
 
 ! The result list
-  type(t_leap_list_ftl) :: res
+  type(t_xfunit_unit_list_ftl) :: res
 
 ! Assign input to output
   call res%assign( first, last )
@@ -314,10 +314,10 @@ end function list_range
 function list_copy( other ) result( res )
 
 ! The input list
-  type(t_leap_list_ftl), intent(in) :: other
+  type(t_xfunit_unit_list_ftl), intent(in) :: other
 
 ! The result list
-  type(t_leap_list_ftl) :: res
+  type(t_xfunit_unit_list_ftl) :: res
 
 ! Assign input to output
   call res%assign( other )
@@ -329,10 +329,10 @@ end function list_copy
 function list_copy_from_array( val ) result(res)
 
 ! The input array
-  class(t_leap), dimension(:), intent(in) :: val
+  type(t_xfunit_unit), dimension(:), intent(in) :: val
 
 ! The result list
-  type(t_leap_list_ftl) :: res
+  type(t_xfunit_unit_list_ftl) :: res
 
 ! Assign input to output
   call res%assign( val )
@@ -346,10 +346,10 @@ end function list_copy_from_array
 subroutine list_assign_from_list( this, other )
 
 ! The output list
-  class(t_leap_list_ftl), intent(out) :: this
+  class(t_xfunit_unit_list_ftl), intent(out) :: this
 
 ! The input list
-  class(t_leap_list_ftl), intent(in) :: other
+  class(t_xfunit_unit_list_ftl), intent(in) :: other
 
 ! Local node pointers
   type(t_list_node), pointer :: lptr
@@ -376,7 +376,7 @@ end subroutine list_assign_from_list
 pure subroutine list_( this )
 
 ! The list
-  type(t_leap_list_ftl), intent(inout) :: this
+  type(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Clear the list
   if( this%count > 0 ) call this%clear()
@@ -390,10 +390,10 @@ end subroutine list_
 function list_begin( this ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), target, intent(in) :: this
+  class(t_xfunit_unit_list_ftl), target, intent(in) :: this
 
 ! Pointer to beginning of the list
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Return pointer to first node in the list
   res%node => this%first
@@ -407,10 +407,10 @@ end function list_begin
 function list_end( this ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), target, intent(in) :: this
+  class(t_xfunit_unit_list_ftl), target, intent(in) :: this
 
 ! Pointer to end of the list
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Return pointer to the last node in the list
   res%node => this%last
@@ -424,7 +424,7 @@ end function list_end
 pure function list_empty( this ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! The list empty status
   logical :: res
@@ -440,7 +440,7 @@ end function list_empty
 pure function list_size( this ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! The list size
   integer :: res
@@ -471,13 +471,13 @@ end function list_max_size
 ! Access first element
 ! Returns a reference to the first element in the list container.
 ! Calling this function on an empty container causes undefined behaviour.
-pure function list_front( this ) result(res)
+function list_front( this ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! Pointer to the element in the first node in the list
-  class(t_leap), allocatable :: res
+  type(t_xfunit_unit), allocatable :: res
 
 ! Assign the return value
   call element_assign_allocatable( res, this%first%element )
@@ -488,13 +488,13 @@ end function list_front
 ! Access last element
 ! Returns a reference to the last element in the list container.
 ! Calling this function on an empty container causes undefined behaviour.
-pure function list_back( this ) result(res)
+function list_back( this ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! Pointer to the element in the last node in the list
-  class(t_leap), allocatable :: res
+  type(t_xfunit_unit), allocatable :: res
 
 ! Assign the return value
   call element_assign_allocatable( res, this%last%element )
@@ -513,16 +513,16 @@ end function list_back
 subroutine list_assign_from_range( this, first, last )
 
 ! The output list
-  class(t_leap_list_ftl), intent(out) :: this
+  class(t_xfunit_unit_list_ftl), intent(out) :: this
 
 ! Iterator to first node to insert
-  class(t_leap_list_ftl_iterator), intent(in) :: first
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: first
 
 ! Iterator to last node to insert
-  class(t_leap_list_ftl_iterator), intent(in) :: last
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: last
 
 ! Local iterator
-  type(t_leap_list_ftl_iterator) :: it
+  type(t_xfunit_unit_list_ftl_iterator) :: it
 
 ! Initialise navigation pointer
   it = first
@@ -551,13 +551,13 @@ end subroutine list_assign_from_range
 subroutine list_assign_from_fill( this, n, val )
 
 ! The output list
-  class(t_leap_list_ftl), intent(out) :: this
+  class(t_xfunit_unit_list_ftl), intent(out) :: this
 
 ! The number of elements
   integer, intent(in) :: n
 
 ! The element to used to populate the container
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Local variables
   integer :: i
@@ -577,10 +577,10 @@ end subroutine list_assign_from_fill
 subroutine list_assign_from_array( this, val )
 
 ! The output list
-  class(t_leap_list_ftl), intent(out) :: this
+  class(t_xfunit_unit_list_ftl), intent(out) :: this
 
 ! The input array
-  class(t_leap), dimension(:), intent(in) :: val
+  type(t_xfunit_unit), dimension(:), intent(in) :: val
 
 ! Local counter
   integer :: i
@@ -603,10 +603,10 @@ end subroutine list_assign_from_array
 subroutine list_push_front( this, val )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The element
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Check if list already contains elements
   if( associated(this%last) ) then
@@ -647,7 +647,7 @@ end subroutine list_push_front
 pure subroutine list_pop_front( this )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Check that the list is not empty
   if( associated(this%first) ) then
@@ -688,10 +688,10 @@ end subroutine list_pop_front
 subroutine list_push_back( this, val )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The element
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Check if list already contains elements
   if( associated(this%last) ) then
@@ -732,7 +732,7 @@ end subroutine list_push_back
 pure subroutine list_pop_back( this )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Check that the list is not empty
   if( associated(this%first) ) then
@@ -777,16 +777,16 @@ end subroutine list_pop_back
 function list_insert_single( this, iterator, val ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Iterator to node used as reference for insertion
-  class(t_leap_list_ftl_iterator), intent(in) :: iterator
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: iterator
 
 ! The element
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Iterator to the inserted element
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Local node pointer
   type(t_list_node), pointer :: node
@@ -830,23 +830,23 @@ end function list_insert_single
 function list_insert_fill( this, iterator, n, val ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Iterator to node used as reference for insertion
-  class(t_leap_list_ftl_iterator), intent(in) :: iterator
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: iterator
 
 ! The number of times to insert the element
   integer, intent(in) :: n
 
 ! The element
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Iterator to the inserted element
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Local variables
   integer :: i
-  type(t_leap_list_ftl_iterator) :: it
+  type(t_xfunit_unit_list_ftl_iterator) :: it
 
 ! Insert the first element to store the iterator
   res = this%insert( iterator, val )
@@ -877,25 +877,25 @@ end function list_insert_fill
 function list_insert_range( this, iterator, first, last ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Iterator to node used as reference for insertion
-  type(t_leap_list_ftl_iterator), intent(in) :: iterator
+  type(t_xfunit_unit_list_ftl_iterator), intent(in) :: iterator
 
 ! Iterator to first node to insert
-  class(t_leap_list_ftl_iterator), intent(in) :: first
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: first
 
 ! Iterator to last node to insert
-  class(t_leap_list_ftl_iterator), intent(in) :: last
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: last
 
 ! Iterator to the inserted element
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Local nodes
   type(t_list_node), pointer :: inode
   type(t_list_node), pointer :: node
   type(t_list_node), pointer :: previous
-  type(t_leap_list_ftl_iterator) :: it
+  type(t_xfunit_unit_list_ftl_iterator) :: it
 
 ! Allocate first node to keep if in return
   allocate(node)
@@ -964,20 +964,20 @@ end function list_insert_range
 function list_insert_array( this, iterator, val ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Iterator to node used as reference for insertion
-  class(t_leap_list_ftl_iterator), intent(in) :: iterator
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: iterator
 
 ! The element
-  class(t_leap), dimension(:), intent(in) :: val
+  type(t_xfunit_unit), dimension(:), intent(in) :: val
 
 ! Iterator to the inserted element
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Local variables
   integer :: i
-  type(t_leap_list_ftl_iterator) :: it
+  type(t_xfunit_unit_list_ftl_iterator) :: it
 
 ! Insert the first element to store the iterator
   res = this%insert( iterator, val(1) )
@@ -1004,10 +1004,10 @@ end function list_insert_array
 subroutine list_erase_single( this, iterator )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Iterator to node to remove
-  class(t_leap_list_ftl_iterator), intent(inout) :: iterator
+  class(t_xfunit_unit_list_ftl_iterator), intent(inout) :: iterator
 
 ! Local node pointer
   type(t_list_node), pointer :: node
@@ -1058,13 +1058,13 @@ end subroutine list_erase_single
 subroutine list_erase_range( this, first, last )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Iterator to first node to remove
-  class(t_leap_list_ftl_iterator), intent(in) :: first
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: first
 
 ! Iterator to last node to remove
-  class(t_leap_list_ftl_iterator), intent(in) :: last
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: last
 
 ! Local node pointers
   type(t_list_node), pointer :: node, nodenext
@@ -1133,10 +1133,10 @@ end subroutine list_erase_range
 pure subroutine list_swap( this, other )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The list to swap
-  type(t_leap_list_ftl), intent(inout) :: other
+  type(t_xfunit_unit_list_ftl), intent(inout) :: other
 
 ! Local variables
   type(t_list_node), pointer :: tmpnode
@@ -1171,18 +1171,18 @@ end subroutine list_swap
 subroutine list_resize( this, n, val )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The number of elements in the resulting list
   integer, intent(in) :: n
 
 ! The element to use to initialise traling elements
-  class(t_leap), optional, target, intent(in) :: val
+  type(t_xfunit_unit), optional, target, intent(in) :: val
 
 ! Local variables
   integer :: i
-  class(t_leap), pointer :: init
-  class(t_leap), allocatable, target :: default
+  type(t_xfunit_unit), pointer :: init
+  type(t_xfunit_unit), allocatable, target :: default
 
 ! List size is greater than requested size
   if( this%count < n ) then
@@ -1221,7 +1221,7 @@ end subroutine list_resize
 pure subroutine list_clear( this )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Local node pointers
   type(t_list_node), pointer :: del, next
@@ -1265,13 +1265,13 @@ end subroutine list_clear
 function list_at_get( this, idx ) result(res)
 
 ! The list
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! The position in the list
   integer, intent(in) :: idx
 
 ! The object to replace
-  class(t_leap), pointer :: res
+  type(t_xfunit_unit), pointer :: res
 
 ! Local variables
   integer :: i
@@ -1306,13 +1306,13 @@ end function list_at_get
 subroutine list_splice_list( this, position, source )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The position in list to insert the elements
-  class(t_leap_list_ftl_iterator), intent(in) :: position
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: position
 
 ! The source list
-  class(t_leap_list_ftl), intent(inout) :: source
+  class(t_xfunit_unit_list_ftl), intent(inout) :: source
 
 ! Call the generic splice function
   call this%list_splice_nodes( position, source, source%first, source%last )
@@ -1332,16 +1332,16 @@ end subroutine list_splice_list
 subroutine list_splice_single( this, position, source, it )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The position in list to insert the elements
-  class(t_leap_list_ftl_iterator), intent(in) :: position
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: position
 
 ! The source list
-  class(t_leap_list_ftl), intent(inout) :: source
+  class(t_xfunit_unit_list_ftl), intent(inout) :: source
 
 ! The element position in source
-  class(t_leap_list_ftl_iterator), intent(in) :: it
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: it
 
 ! Call the generic splice function
   call this%list_splice_nodes( position, source, it%node, it%node )
@@ -1361,19 +1361,19 @@ end subroutine list_splice_single
 subroutine list_splice_range( this, position, source, first, last )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The position in list to insert the elements
-  class(t_leap_list_ftl_iterator), intent(in) :: position
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: position
 
 ! The source list
-  class(t_leap_list_ftl), intent(inout) :: source
+  class(t_xfunit_unit_list_ftl), intent(inout) :: source
 
 ! The first position in source to retrieve elements
-  class(t_leap_list_ftl_iterator), intent(in) :: first
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: first
 
 ! The last position in source to retrieve elements
-  class(t_leap_list_ftl_iterator), intent(in) :: last
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: last
 
 ! Call the generic splice function
   call this%list_splice_nodes( position, source, first%node, last%node )
@@ -1394,13 +1394,13 @@ end subroutine list_splice_range
 subroutine list_splice_nodes( this, position, source, first, last )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The position in list to insert the elements
-  class(t_leap_list_ftl_iterator), intent(in) :: position
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: position
 
 ! The source list
-  class(t_leap_list_ftl), intent(inout) :: source
+  class(t_xfunit_unit_list_ftl), intent(inout) :: source
 
 ! The first position in source to retrieve elements
   type(t_list_node), pointer, intent(in) :: first
@@ -1516,13 +1516,13 @@ end subroutine list_splice_nodes
 subroutine list_remove( this, val )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The value to use as comparison for the removal
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Local iterators
-  type(t_leap_list_ftl_iterator) :: it, itnext
+  type(t_xfunit_unit_list_ftl_iterator) :: it, itnext
 
 ! Check that there are elements in the list
   if( associated(this%first) ) then
@@ -1561,13 +1561,13 @@ end subroutine list_remove
 subroutine list_remove_if( this, pred )
 
 ! The list
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! THe predicate to use for removal selection
   procedure(predicate) :: pred
 
 ! Local variables
-  type(t_leap_list_ftl_iterator) :: it, itnext
+  type(t_xfunit_unit_list_ftl_iterator) :: it, itnext
 
 ! Check that there are elements in the list
   if( associated(this%first) ) then
@@ -1607,7 +1607,7 @@ end subroutine list_remove_if
 subroutine list_unique( this, bpred )
 
 ! The list
-  class(t_leap_list_ftl), target, intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), target, intent(inout) :: this
 
 ! The interface for the binary predicate (optional)
 ! If the operator is not provided, then operator(==) is assumed
@@ -1616,7 +1616,7 @@ subroutine list_unique( this, bpred )
 ! Local variables
   type(t_list_node), pointer :: outer, inner, innernext
   logical :: check
-  type(t_leap_list_ftl_iterator) :: it
+  type(t_xfunit_unit_list_ftl_iterator) :: it
 
 ! Outer-loop on the nodes
   outer => this%first
@@ -1687,10 +1687,10 @@ end subroutine list_unique
 subroutine list_merge( this, other, comp )
 
 ! The list
-  class(t_leap_list_ftl), target, intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), target, intent(inout) :: this
 
 ! The list to merge
-  type(t_leap_list_ftl), target, intent(inout) :: other
+  type(t_xfunit_unit_list_ftl), target, intent(inout) :: other
 
 ! Comparison function (optional)
   procedure(comparison), optional :: comp
@@ -1802,7 +1802,7 @@ end subroutine list_merge
 subroutine list_sort( this, compare )
 
 ! The list to sort
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! The interface for the comparison operator (optional)
 ! If the operator is not provided, then operator(<) is assumed
@@ -1818,7 +1818,7 @@ end subroutine list_sort
 recursive subroutine quick_sort( this, left, right, size, compare )
 
 ! The list to sort
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Quick-sort partition left position
   type(t_list_node), pointer :: left
@@ -1844,7 +1844,7 @@ recursive subroutine quick_sort( this, left, right, size, compare )
 
 ! Local pointers
   type(t_list_node), pointer :: last, ptr
-  class(t_leap), pointer :: ref, ele
+  type(t_xfunit_unit), pointer :: ref, ele
 
 ! Check for single element list
   if( size > 1 ) then
@@ -1916,7 +1916,7 @@ pure subroutine swap_nodes( node1, node2 )
   type(t_list_node), intent(inout) :: node2
 
 ! Intermediate pointer
-  class(t_leap), pointer :: tmp
+  type(t_xfunit_unit), pointer :: tmp
 
 ! Swap the pointers to the data elements
   tmp           => node1%element
@@ -1933,10 +1933,10 @@ end subroutine swap_nodes
 pure subroutine list_iterator_swap_iterators( iter1, iter2 )
 
 ! Iterator to first element
-  class(t_leap_list_ftl_iterator), intent(inout) :: iter1
+  class(t_xfunit_unit_list_ftl_iterator), intent(inout) :: iter1
 
 ! Iterator to second element
-  class(t_leap_list_ftl_iterator), intent(inout) :: iter2
+  class(t_xfunit_unit_list_ftl_iterator), intent(inout) :: iter2
 
 ! Swap the nodes pointed by the iterators
   call swap_nodes( iter1%node, iter2%node )
@@ -1948,7 +1948,7 @@ end subroutine list_iterator_swap_iterators
 pure subroutine list_reverse( this )
 
 ! The list to reverse
-  class(t_leap_list_ftl), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl), intent(inout) :: this
 
 ! Local node pointers
   type(t_list_node), pointer :: lptr, rptr
@@ -1981,10 +1981,10 @@ end subroutine list_reverse
 function list_binary_search( this, item, isless, isgreater ) result(res)
 
 ! The list to search
-  class(t_leap_list_ftl), target, intent(in) :: this
+  class(t_xfunit_unit_list_ftl), target, intent(in) :: this
 
 ! The element to look for
-  class(t_leap), intent(in) :: item
+  type(t_xfunit_unit), intent(in) :: item
 
 ! If the operator is not provided, then operator(<) is assumed
   procedure(comparison), optional :: isless
@@ -1993,7 +1993,7 @@ function list_binary_search( this, item, isless, isgreater ) result(res)
   procedure(comparison), optional :: isgreater
 
 ! The iterator to the list element (not associated if not found)
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Call the sorting routine
   res = recursive_binary_search( this%first, this%last, this%count, item, isless, isgreater )
@@ -2014,7 +2014,7 @@ recursive function recursive_binary_search( left, right, size, item, isless, isg
   integer, intent(in) :: size
 
 ! The element to look for
-  class(t_leap), intent(in) :: item
+  type(t_xfunit_unit), intent(in) :: item
 
 ! If the operator is not provided, then operator(<) is assumed
   procedure(comparison), optional :: isless
@@ -2023,7 +2023,7 @@ recursive function recursive_binary_search( left, right, size, item, isless, isg
   procedure(comparison), optional :: isgreater
 
 ! The iterator to the list element (not associated if not found)
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Counters
   integer :: i
@@ -2033,7 +2033,7 @@ recursive function recursive_binary_search( left, right, size, item, isless, isg
 
 ! Local pointers
   type(t_list_node),  pointer :: ptr
-  class(t_leap), pointer :: ref
+  type(t_xfunit_unit), pointer :: ref
 
 ! Check for single element list
   if( size > 0 ) then
@@ -2092,16 +2092,16 @@ end function recursive_binary_search
 function list_select( this, reference, bpred ) result(res)
 
 ! The list to search selected items
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! The reference element to use as selecting pattern
-  class(t_leap), intent(in) :: reference
+  type(t_xfunit_unit), intent(in) :: reference
 
 ! The interface for the comparison operator
   procedure(binary_predicate), optional :: bpred
 
 ! The output list contatining the selected elements
-  type(t_leap_list_ftl) :: res
+  type(t_xfunit_unit_list_ftl) :: res
 
 ! Local node pointer
   type(t_list_node), pointer :: node
@@ -2137,10 +2137,10 @@ end function list_select
 function list_array( this ) result(res)
 
 ! The input list
-  class(t_leap_list_ftl), intent(in) :: this
+  class(t_xfunit_unit_list_ftl), intent(in) :: this
 
 ! The returned array of elements (unallocated if memory failure)
-  class(t_leap), allocatable, dimension(:) :: res
+  type(t_xfunit_unit), allocatable, dimension(:) :: res
 
 ! Local node pointers
   type(t_list_node), pointer :: lptr
@@ -2172,13 +2172,13 @@ end function list_array
 ! Implement the assignment between two elements (contained in the container node)
 ! Centralises the implementation allowing the handling of polymorphism (store parent classes pointing derived clasess)
 ! at the time thta allows the invocation of assignment operators in the cases when the element implements it
-pure subroutine element_assign_pointer( left, right )
+subroutine element_assign_pointer( left, right )
 
 ! Element to be allocated and assigned (pointer interface)
-  class(t_leap), pointer, intent(inout) :: left
+  type(t_xfunit_unit), pointer, intent(inout) :: left
 
 ! Source element
-  class(t_leap), intent(in) :: right
+  type(t_xfunit_unit), intent(in) :: right
 
 ! Allocate first. Use mold to allow polymorphic object storage through parent class
   allocate( left, mold=right )
@@ -2192,13 +2192,13 @@ end subroutine element_assign_pointer
 ! Implement the assignment between two elements (contained in the container node)
 ! Centralises the implementation allowing the handling of polymorphism (store parent classes pointing derived clasess)
 ! at the time thta allows the invocation of assignment operators in the cases when the element implements it
-pure subroutine element_assign_allocatable( left, right )
+subroutine element_assign_allocatable( left, right )
 
 ! Element to be allocated and assigned (allocatable interface)
-  class(t_leap), allocatable, intent(inout) :: left
+  type(t_xfunit_unit), allocatable, intent(inout) :: left
 
 ! Source element
-  class(t_leap), intent(in) :: right
+  type(t_xfunit_unit), intent(in) :: right
 
 ! Allocate first. Use mold to allow polymorphic object storage through parent class
   allocate( left, mold=right )
@@ -2222,10 +2222,10 @@ end subroutine element_assign_allocatable
 function list_iterator_next( this ) result(res)
 
 ! The list iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: this
 
 ! Pointer to next node in the list
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Return pointer to next node
   res%node => this%node%next
@@ -2237,10 +2237,10 @@ end function list_iterator_next
 function list_iterator_previous( this ) result(res)
 
 ! The list iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: this
 
 ! The previous node in the list
-  type(t_leap_list_ftl_iterator) :: res
+  type(t_xfunit_unit_list_ftl_iterator) :: res
 
 ! Return pointer to previous node
   res%node => this%node%previous
@@ -2256,10 +2256,10 @@ end function list_iterator_previous
 function list_iterator_distance( this, target ) result(res)
 
 ! The first list iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: this
 
 ! The final list iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: target
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: target
 
 ! The number of elements between the iterators
   integer :: res
@@ -2312,7 +2312,7 @@ end function list_nodes_distance
 pure function list_iterator_associated( this ) result(res)
 
 ! The list iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: this
 
 ! The association status
   logical :: res
@@ -2327,7 +2327,7 @@ end function list_iterator_associated
 pure subroutine list_iterator_nullify( this )
 
 ! The list iterator
-  class(t_leap_list_ftl_iterator), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(inout) :: this
 
 ! Nullify pointer
   this%node => null()
@@ -2336,13 +2336,13 @@ end subroutine list_iterator_nullify
 
 
 ! Get an elememnt in the node pointed by the iterator
-pure function list_iterator_get_element( this ) result(res)
+function list_iterator_get_element( this ) result(res)
 
 ! The iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: this
 
 ! The returned pointer to element
-  class(t_leap), allocatable :: res
+  type(t_xfunit_unit), allocatable :: res
 
 ! Return the data element pointed by the iterator
   call element_assign_allocatable( res, this%node%element )
@@ -2354,10 +2354,10 @@ end function list_iterator_get_element
 function list_iterator_get_element_ptr( this ) result(res)
 
 ! The iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: this
 
 ! The returned pointer to element
-  class(t_leap), pointer :: res
+  type(t_xfunit_unit), pointer :: res
 
 ! Return the data element pointed by the iterator
   res => this%node%element
@@ -2366,13 +2366,13 @@ end function list_iterator_get_element_ptr
 
 
 ! Set the element in the node pointed by the iterator
-pure subroutine list_iterator_set_element( this, val )
+subroutine list_iterator_set_element( this, val )
 
 ! The iterator
-  class(t_leap_list_ftl_iterator), intent(inout) :: this
+  class(t_xfunit_unit_list_ftl_iterator), intent(inout) :: this
 
 ! The element to be assigned
-  class(t_leap), intent(in) :: val
+  type(t_xfunit_unit), intent(in) :: val
 
 ! Copy the element into its list position
   if( associated(this%node%element) ) deallocate( this%node%element )
@@ -2388,10 +2388,10 @@ end subroutine list_iterator_set_element
 subroutine list_iterator_assign( left, right )
 
 ! The output iterator
-  class(t_leap_list_ftl_iterator), intent(out) :: left
+  class(t_xfunit_unit_list_ftl_iterator), intent(out) :: left
 
 ! The input iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: right
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: right
 
 ! Associate iterator
   left%node => right%node
@@ -2406,10 +2406,10 @@ end subroutine list_iterator_assign
 pure function list_iterator_equal( left, right ) result(res)
 
 ! The first iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: left
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: left
 
 ! The second iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: right
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: right
 
 ! The comparison result
   logical :: res
@@ -2427,10 +2427,10 @@ end function list_iterator_equal
 pure function list_iterator_not_equal( left, right ) result(res)
 
 ! The first iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: left
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: left
 
 ! The second iterator
-  class(t_leap_list_ftl_iterator), intent(in) :: right
+  class(t_xfunit_unit_list_ftl_iterator), intent(in) :: right
 
 ! The comparison result
   logical :: res
@@ -2440,6 +2440,6 @@ pure function list_iterator_not_equal( left, right ) result(res)
 
 end function list_iterator_not_equal
 
-end module m_leap_list_ftl
+end module m_xfunit_unit_list_ftl
 
-! 2022-02-05T22:12:26
+! 2022-04-09T12:55:19

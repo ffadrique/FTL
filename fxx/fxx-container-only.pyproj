@@ -13,8 +13,12 @@
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId />
     <IsWindowsApplication>False</IsWindowsApplication>
-    <CommandLineArguments>--verbose --templates-dir ../src --name queue --module m_eop --type t_eop --output-dir utest --polymorphic --pure</CommandLineArguments>
+    <CommandLineArguments>
+    </CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />

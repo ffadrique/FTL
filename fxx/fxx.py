@@ -7,10 +7,13 @@ from matches import *
 from container import *
 from parser import *
 
+# Get the default path to the templates
+templates_dir = os.path.dirname(__file__) + "/../src"
+
 # Define the command line options
 parser = argparse.ArgumentParser()
 parser.add_argument('--verbose', required=False, action='store_true', help='Trace detailed information of the process steps')
-parser.add_argument('--templates-dir', required=False, default='.', help='Location of the container templates (default: .)')
+parser.add_argument('--templates-dir', required=False, default=templates_dir, help='Location of the container templates (default to path of fxx.py)')
 parser.add_argument('source', help='Source file with meta code for template instantiation')
 
 
@@ -40,7 +43,7 @@ output_file_extension = ".f" + file_extension[2:]
 
 # Parse the input source file
 parser = Parser(filepath)
-containers = parser.parse_and_expand(output_file_extension,verbose)
+containers = parser.parse_and_expand(output_file_extension, verbose)
     
 
 # Loop on the containers to expand from templates

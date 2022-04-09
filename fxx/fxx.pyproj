@@ -13,8 +13,12 @@
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId />
     <IsWindowsApplication>False</IsWindowsApplication>
-    <CommandLineArguments>--verbose --templates-dir ../src utest/m_xfunit_suite.t90</CommandLineArguments>
+    <CommandLineArguments>
+    </CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -27,15 +31,23 @@
     <Compile Include="parser.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_fxx.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="utest\" />
+    <Folder Include="utest\reference\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="utest\m_eop_list.f90" />
+    <Content Include="utest\m_xfunit_suite.t90" />
+    <Content Include="utest\reference\m_eop_list.f90" />
     <Content Include="utest\m_eop_list.t90" />
-    <Content Include="utest\m_eop_vector_ftl.f90" />
-    <Content Include="utest\m_leap_list_ftl.f90" />
+    <Content Include="utest\reference\m_eop_queue_ftl.f90" />
+    <Content Include="utest\reference\m_eop_vector_ftl.f90" />
+    <Content Include="utest\reference\m_leap_list_ftl.f90" />
+    <Content Include="utest\reference\m_xfunit_suite.f90" />
+    <Content Include="utest\reference\m_xfunit_unit_list_ftl.f90" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
