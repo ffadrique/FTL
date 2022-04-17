@@ -10,7 +10,7 @@ from parser import *
 
 # Get the default path to the templates
 templates_dir = os.path.dirname(__file__)
-reffile = glob.glob("../*/list.f90", recursive=True)[0]
+reffile = glob.glob(templates_dir + "/../*/list.f90", recursive=True)[0]
 templates_dir = os.path.dirname(reffile)
 
 
