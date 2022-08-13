@@ -302,17 +302,24 @@ From the above transformation of the host module, the following containers are g
 
 ## Building and testing FTL
 FTL has been tested with Intel Fortran 19 (or higher) and gfortran 9.4 (or higher).
-The test provided along with the FTL libraries are written using *[XFunit](https://github.com/ffadrique/XFunit)*.
+
+The test provided along with the FTL libraries are written using *[XFunit](https://github.com/ffadrique/XFunit)*. Testing also requires that the dependencies [Fommons](https://github.com/ffadrique/Fommons) and [XFunit](https://github.com/ffadrique/XFunit) are available and compiled in the target sytem.
 
 Although the provided templates need to be instantiated for the specific contained element type, it is possible to compile and test the raw templates using the test contained module `Use.f90`. This allows testing FTL in the target platform (OS and compiler) before using it in the final application.
 
+In both Windows and Linux deploy the Fommons and XFunit from the same root directory
+- Windows: `Projects/Fommons` and `Projects/XFunit`. The `.sln` files are prepared for this configuration.
+- Linux: `Projects/fommons` and `Projects/xfunit`. The `gmake` files are prepared for this configuration (mind the lowercase for the library folder names).
+
 ### Windows
 FTL is provided with a Visual Studio 2019 configured solution that allows building and testing the library. The solution provides a C# project that integrates the unit test in Fortran with the unit test detection feature of Visual Studio. This allows the execution of all unit tests from the Test Explorer menu.
-The purpose of this Visual Studio solution is to test the library in the destination platform (OS and compiler). To use the templates it is not necessary to download and install the Visual Studio solution, just the template files.
+To use the templates it is not necessary to download and install the Visual Studio solution, just the template files.
+The purpose of this Visual Studio solution is to test the library in the destination platform (OS and compiler). 
 
 ### Linux
 FTL is provided with `gmake` makefiles to build and test the library.
-The purpose of this gmake and the unit test suite (utest folder) is to test the library in the destination platform (OS and compiler). To use the templates it is not necessary to download and install the gmake files or the unit tests, just the template files.
+The purpose of this gmake and the unit test suite (utest folder) is to test the library in the destination platform (OS and compiler). 
+To use the templates it is not necessary to download and install the gmake files or the unit tests, just the template files.
  
 To build the FTL library execute the following command in the `src` directory
 ```make

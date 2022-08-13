@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31911.196
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "FTL", "FTL.vfproj", "{85A0CBD4-F129-4D6B-BD85-483068B0DCE3}"
 EndProject
@@ -62,14 +62,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{0E18E4B5
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "fxx-container-only", "fxx\fxx-container-only.pyproj", "{4F001766-70E4-4419-8A5F-F34C015D5B7F}"
 EndProject
-Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "utilities", "..\XFunit\src\utilities\utilities.vfproj", "{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}"
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "Fommons", "..\Fommons\src\Fommons.vfproj", "{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}"
 EndProject
-Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "xfunit", "..\XFunit\src\xfunit\xfunit.vfproj", "{CB98DE4E-28F8-4983-91B9-D5C179E97364}"
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "xfunit", "..\XFunit\src\xfunit.vfproj", "{CB98DE4E-28F8-4983-91B9-D5C179E97364}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82} = {5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XFUnit", "XFUnit", "{97413133-3E11-4ADF-8039-F28D0F07D4D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{97413133-3E11-4ADF-8039-F28D0F07D4D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FXX", "FXX", "{159E065F-7CCC-4BA6-87B9-65E00A16B38B}"
 EndProject
@@ -179,22 +179,18 @@ Global
 		{4F001766-70E4-4419-8A5F-F34C015D5B7F}.Release|x86.ActiveCfg = Release|Any CPU
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Debug|x64.ActiveCfg = Debug|x64
-		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Debug|x64.Build.0 = Debug|x64
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Debug|x86.ActiveCfg = Debug|Win32
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Debug|x86.Build.0 = Debug|Win32
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Release|Any CPU.ActiveCfg = Release|Win32
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Release|x64.ActiveCfg = Release|x64
-		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Release|x64.Build.0 = Release|x64
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Release|x86.ActiveCfg = Release|Win32
 		{5A255DD3-8AAD-4EB7-9FA8-8065A0B9EA82}.Release|x86.Build.0 = Release|Win32
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Debug|x64.ActiveCfg = Debug|x64
-		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Debug|x64.Build.0 = Debug|x64
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Debug|x86.ActiveCfg = Debug|Win32
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Debug|x86.Build.0 = Debug|Win32
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Release|Any CPU.ActiveCfg = Release|Win32
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Release|x64.ActiveCfg = Release|x64
-		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Release|x64.Build.0 = Release|x64
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Release|x86.ActiveCfg = Release|Win32
 		{CB98DE4E-28F8-4983-91B9-D5C179E97364}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
