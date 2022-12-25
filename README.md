@@ -127,7 +127,7 @@ The FTL templates can be used directly creating dedicated instances for each typ
 
 ### Single container direct generation
 
-To generate a single container from the contained module name and type name, use the following command. Additional options can be furnished to steer he template generation.
+To generate a single container from the contained module name and type name, use the following command. Additional options can be furnished to steer the template generation.
 
 ```sh
 usage: fxx-container-only.py [-h] [--verbose] --templates-dir TEMPLATES_DIR
