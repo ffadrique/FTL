@@ -162,7 +162,7 @@ The generated container source file is named `<MODULE>_<name>_ftl.f90`. The cont
 
 The host module shall the use the module using the generated name above and shall declare the container instances using `type(<TYPE>_<name>_ftl) :: x`
 
-### Multiple ontatiner generation from host template
+### Multiple contatiner generation from host template
 
 It is possible to generate one or more container modules from a host source file that contains embedded meta commands. In this case the module and type names necessary to build the containers are taken from the host source. The host source is also expanded to the final syntax consistently with the generated containers.
 
