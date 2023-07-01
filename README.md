@@ -127,7 +127,7 @@ The FTL templates can be used directly creating dedicated instances for each typ
 
 ### Single container direct generation
 
-To generate a single container from the contained module name and type name, use the following command. Additional options can be furnished to steer he template generation.
+To generate a single container from the contained module name and type name, use the following command. Additional options can be furnished to steer the template generation.
 
 ```sh
 usage: fxx-container-only.py [-h] [--verbose] --templates-dir TEMPLATES_DIR
@@ -162,7 +162,7 @@ The generated container source file is named `<MODULE>_<name>_ftl.f90`. The cont
 
 The host module shall the use the module using the generated name above and shall declare the container instances using `type(<TYPE>_<name>_ftl) :: x`
 
-### Multiple ontatiner generation from host template
+### Multiple contatiner generation from host template
 
 It is possible to generate one or more container modules from a host source file that contains embedded meta commands. In this case the module and type names necessary to build the containers are taken from the host source. The host source is also expanded to the final syntax consistently with the generated containers.
 
