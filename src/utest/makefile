@@ -22,7 +22,6 @@
 
 # Master configuration key through the compiler command
 F90COMP = gfortran
-F90COMP = /home/fran/gcc/gcc-10/bin/gfortran
 
 # Reference directories
 OBJDIR := Debug
@@ -33,22 +32,26 @@ BINDIR := Debug
 IMODDIR := ../Debug
 ILIBDIR := ../Debug
 
+FOMMONSDIR := ../../../Fommons
+FOMMONSMODDIR := $(FOMMONSDIR)/src/Debug
+FOMMONSLIBDIR := $(FOMMONSDIR)/src/Debug
+
 XFUNITDIR := ../../../XFunit
 XFUNITMODDIR := $(XFUNITDIR)/src/Debug
 XFUNITLIBDIR := $(XFUNITDIR)/src/Debug
 
-# FTL library
-LIBS = $(ILIBDIR)/libftl.a $(XFUNITLIBDIR)/libxfunit.a
+# FTL library and dependencies
+LIBS = $(ILIBDIR)/libftl.a $(XFUNITLIBDIR)/libxfunit.a $(FOMMONSLIBDIR)/libfommons.a
 
 # Option selection for Intel Fortran (ifort)
 ifeq ($(findstring ifort, $(F90COMP)), ifort)
-OPTIONS = -fpp -g -O0 -stand f18 -traceback -check bounds -assume byterecl -I $(IMODDIR) -I $(MODDIR) -I $(XFUNITMODDIR) -module $(MODDIR) -o $@ $< $(subst _tests,, $<)
+OPTIONS = -fpp -g -O0 -stand f18 -traceback -check bounds -assume byterecl -I $(IMODDIR) -I $(MODDIR) -I $(FOMMONSMODDIR) -I $(XFUNITMODDIR) -module $(MODDIR) -o $@ $< $(subst _tests,, $<)
 AR = ar
 endif
 
 # Option selection for GNU Fortran (gfortran)
 ifeq ($(findstring gfortran, $(F90COMP)), gfortran)
-OPTIONS = -cpp -g -O0 -std=f2008 -fbacktrace -fbounds-check -ffree-line-length-512 -I $(IMODDIR) -I $(MODDIR) -I $(XFUNITMODDIR) -J $(MODDIR) -o $@ $^
+OPTIONS = -cpp -g -O0 -std=f2008 -fbacktrace -fbounds-check -ffree-line-length-512 -I $(IMODDIR) -I $(MODDIR) -I $(FOMMONSMODDIR) -I $(XFUNITMODDIR) -J $(MODDIR) -o $@ $^
 AR = ar
 endif
 
