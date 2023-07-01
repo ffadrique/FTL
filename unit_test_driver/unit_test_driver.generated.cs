@@ -1,20 +1,13 @@
 
-
-
-
-
-
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestDriver
 {
 
-
 		[TestClass]
 		public class ftl : Unit
 		{
-
 				[TestMethod]
 				public void unit_list()
 				{
@@ -27,7 +20,6 @@ namespace UnitTestDriver
 					// Assert the test completion
 					Assert.AreEqual(ProcessJxmlFile( "xxbase___list_ftl" ), 0);
 				}
-
 				[TestMethod]
 				public void unit_queue()
 				{
@@ -40,7 +32,6 @@ namespace UnitTestDriver
 					// Assert the test completion
 					Assert.AreEqual(ProcessJxmlFile( "xxbase___queue_ftl" ), 0);
 				}
-
 				[TestMethod]
 				public void unit_slist()
 				{
@@ -53,7 +44,6 @@ namespace UnitTestDriver
 					// Assert the test completion
 					Assert.AreEqual(ProcessJxmlFile( "xxbase___slist_ftl" ), 0);
 				}
-
 				[TestMethod]
 				public void unit_stack()
 				{
@@ -66,7 +56,6 @@ namespace UnitTestDriver
 					// Assert the test completion
 					Assert.AreEqual(ProcessJxmlFile( "xxbase___stack_ftl" ), 0);
 				}
-
 				[TestMethod]
 				public void unit_tree()
 				{
@@ -79,7 +68,6 @@ namespace UnitTestDriver
 					// Assert the test completion
 					Assert.AreEqual(ProcessJxmlFile( "xxbase___tree_ftl" ), 0);
 				}
-
 				[TestMethod]
 				public void unit_vector()
 				{
@@ -92,7 +80,5 @@ namespace UnitTestDriver
 					// Assert the test completion
 					Assert.AreEqual(ProcessJxmlFile( "xxbase___vector_ftl" ), 0);
 				}
-
 		}
-
 }
