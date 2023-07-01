@@ -251,7 +251,7 @@ end function tree_copy
 
 
 ! Destructor
-pure subroutine tree_( this )
+subroutine tree_( this )
 
 ! The list
   type(xxtypebase___tree_ftl), intent(inout) :: this
@@ -417,7 +417,7 @@ end subroutine tree_push_back_child_node
 
 
 ! Remove child node at the beginning of the tree root children list
-pure subroutine tree_pop_front_child_tree( this )
+subroutine tree_pop_front_child_tree( this )
 
 ! The tree
   class(xxtypebase___tree_ftl), intent(inout) :: this
@@ -432,7 +432,7 @@ end subroutine tree_pop_front_child_tree
 ! This interface is also designed to allow inheritance of the tree type
 ! and then to extend also the tree_iterator type such that the derived tree type
 ! can invoke this method with the derivied tree_iterator type
-pure subroutine tree_pop_front_child_iterator( iterator )
+subroutine tree_pop_front_child_iterator( iterator )
 
 ! The tree iterator
   class(xxtypebase___tree_ftl_iterator), intent(inout) :: iterator
@@ -444,7 +444,7 @@ end subroutine tree_pop_front_child_iterator
 
 
 ! Remove child node to the beginning of the children list
-pure subroutine tree_pop_front_child_node( this )
+subroutine tree_pop_front_child_node( this )
 
 ! The node
   class(t_tree_node), intent(inout) :: this
@@ -478,7 +478,7 @@ end subroutine tree_pop_front_child_node
 
 
 ! Remove child node at the beginning of the tree root children list
-pure subroutine tree_pop_back_child_tree( this )
+subroutine tree_pop_back_child_tree( this )
 
 ! The tree
   class(xxtypebase___tree_ftl), intent(inout) :: this
@@ -493,7 +493,7 @@ end subroutine tree_pop_back_child_tree
 ! This interface is also designed to allow inheritance of the tree type
 ! and then to extend also the tree_iterator type such that the derived tree type
 ! can invoke this method with the derivied tree_iterator type
-pure subroutine tree_pop_back_child_iterator( iterator )
+subroutine tree_pop_back_child_iterator( iterator )
 
 ! The node iterator
   class(xxtypebase___tree_ftl_iterator), intent(inout) :: iterator
@@ -505,7 +505,7 @@ end subroutine tree_pop_back_child_iterator
 
 
 ! Remove child node to the end of the children list
-pure subroutine tree_pop_back_child_node( this )
+subroutine tree_pop_back_child_node( this )
 
 ! The node
   class(t_tree_node), intent(inout) :: this
@@ -657,7 +657,7 @@ end subroutine tree_insert_sibling
 ! This interface is also designed to allow inheritance of the tree type
 ! and then to extend also the tree_iterator type such that the derived tree type
 ! can invoke this method with the derivied tree_iterator type
-pure subroutine tree_erase( iterator )
+ subroutine tree_erase( iterator )
 
 ! Iterator to element to remove
   class(xxtypebase___tree_ftl_iterator), intent(inout) :: iterator
@@ -949,7 +949,7 @@ end function tree_associated
 
 
 ! Nullify an iterator
-pure subroutine tree_nullify( this )
+subroutine tree_nullify( this )
 
 ! The tree iterator
   class(xxtypebase___tree_ftl_iterator), intent(inout) :: this
@@ -1345,7 +1345,7 @@ end function tree_sibling_position
 
 
 ! Clear the whole tree
-pure subroutine tree_clear_tree( this )
+subroutine tree_clear_tree( this )
 
 ! The tree
   class(xxtypebase___tree_ftl), intent(inout) :: this
@@ -1360,7 +1360,7 @@ end subroutine tree_clear_tree
 
 
 ! Clear the node pointed by the iterator
-pure subroutine tree_clear_iterator( iterator )
+subroutine tree_clear_iterator( iterator )
 
 ! The node iterator
   class(xxtypebase___tree_ftl_iterator), intent(inout) :: iterator
@@ -1432,7 +1432,7 @@ end subroutine tree_clear_iterator
 
 
 ! Recursively clear the node and all descendants
-pure recursive subroutine tree_clear_node( this )
+recursive subroutine tree_clear_node( this )
 
 ! The top node
   class(t_tree_node), intent(inout) :: this

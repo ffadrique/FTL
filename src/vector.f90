@@ -398,7 +398,7 @@ end subroutine vector_assign_from_vector
 
 ! Vector destructor
 ! Destroys the container object.
-pure subroutine vector_( this )
+subroutine vector_( this )
 
 ! The vector
   type(xxtypebase___vector_ftl), intent(inout) :: this
@@ -712,7 +712,7 @@ end subroutine vector_push_front
 ! Removes the first element in the vector container,
 ! effectively reducing its size by one.
 ! This destroys the removed element.
-pure subroutine vector_pop_front( this )
+subroutine vector_pop_front( this )
 
 ! The vector
   class(xxtypebase___vector_ftl), intent(inout) :: this
@@ -767,7 +767,7 @@ end subroutine vector_push_back
 ! Removes the last element in the vector container,
 ! effectively reducing the container size by one.
 ! This destroys the removed element.
-pure subroutine vector_pop_back( this )
+subroutine vector_pop_back( this )
 
 ! The vector
   class(xxtypebase___vector_ftl), intent(inout) :: this
@@ -1406,7 +1406,7 @@ end subroutine vector_resize
 ! Clear content
 ! Removes all elements from the vector container (which are destroyed)
 ! and leaving the container with a size of 0
-pure subroutine vector_clear( this )
+subroutine vector_clear( this )
 
 ! The vector
   class(xxtypebase___vector_ftl), intent(inout) :: this

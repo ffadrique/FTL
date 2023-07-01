@@ -376,7 +376,7 @@ end subroutine slist_assign_from_slist
 
 ! List destructor
 ! Destroys the container object.
-pure subroutine slist_( this )
+subroutine slist_( this )
 
 ! The list
   type(xxtypebase___slist_ftl), intent(inout) :: this
@@ -647,7 +647,7 @@ end subroutine slist_push_front
 ! Removes the first element in the list container,
 ! effectively reducing its size by one.
 ! This destroys the removed element.
-pure subroutine slist_pop_front( this )
+subroutine slist_pop_front( this )
 
 ! The list
   class(xxtypebase___slist_ftl), intent(inout) :: this
@@ -732,7 +732,7 @@ end subroutine slist_push_back
 ! Removes the last element in the list container,
 ! effectively reducing the container size by one.
 ! This destroys the removed element.
-pure subroutine slist_pop_back( this )
+subroutine slist_pop_back( this )
 
 ! The list
   class(xxtypebase___slist_ftl), intent(inout) :: this
@@ -1249,7 +1249,7 @@ end subroutine slist_resize
 ! Clear content
 ! Removes all elements from the list container (which are destroyed)
 ! and leaving the container with a size of 0
-pure subroutine slist_clear( this )
+subroutine slist_clear( this )
 
 ! The list
   class(xxtypebase___slist_ftl), intent(inout) :: this
@@ -2432,7 +2432,7 @@ end function slist_iterator_get_element_ptr
 
 
 ! Set the element in the node pointed by the iterator
-pure subroutine slist_iterator_set_element( this, val )
+subroutine slist_iterator_set_element( this, val )
 
 ! The iterator
   class(xxtypebase___slist_ftl_iterator), intent(inout) :: this
