@@ -1,15 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using System.IO;
 using System.Xml;
 using System.Diagnostics;
 
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace UnitTestDriver
 {
@@ -93,12 +90,6 @@ namespace UnitTestDriver
             new UserConfiguration(Path.Combine(TestDir, TestName), TestName);
         }
 
-        //[DllImport("ole32.dll")]
-        //public static extern int GetRunningObjectTable(int reserved, out IRunningObjectTable prot);
-
-        //[DllImport("ole32.dll")]
-        //public static extern int CreateBindCtx(int reserved, out IBindCtx ppbc);
-
         /// <summary>
         /// Get the binary executable file for a given test
         /// </summary>
@@ -125,13 +116,14 @@ namespace UnitTestDriver
         /// </summary>
         public void RunFortranTest()
         {
+            // Initialise the test command environment
+            Dictionary<String,String> env = new Dictionary<String,String>();
+            env.Add("XFUNIT_ROOT_DIR", TestDir);
+            env.Add("PROF_DIR", Path.GetDirectoryName(TestDir));
+            
             // Initialise the test command
-            String[] env = new String[]
-            {
-                @"set XFUNIT_ROOT_DIR=" + TestDir,
-                @"set PROF_DIR=" + Path.GetDirectoryName(TestDir)
-            };
             String cmd = @"""" + Binary + @"""";
+            cmd = Binary;
 
             // Get the current path
             String CurDir = Directory.GetCurrentDirectory();
@@ -143,6 +135,8 @@ namespace UnitTestDriver
                 Directory.SetCurrentDirectory(Path.Combine(TestDir, TestName));
 
                 // Execute the fortran binary
+                // *** Compile the binary with /libs:static or
+                // *** set windows path to folder where libcoremd.dll is located
                 new Executer(env, cmd, out String stdout, out String stderr);
                 if (stderr != String.Empty)
                 {

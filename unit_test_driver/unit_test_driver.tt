@@ -1,6 +1,9 @@
 <#@ template debug="true" hostspecific="false" language="C#" #>
 <#@ output extension=".generated.cs" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System" #>
 <#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ Assembly Name="EnvDTE" #>
 
@@ -10,27 +13,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestDriver
 {
 <#
-	// Define the list of libraries to test
-	String [] libraries = new String [] 
-	{
-		"ftl",
-	};
+  // Initialise environment
+	EnvDTE.DTE dte = (EnvDTE.DTE)System.Runtime.InteropServices.Marshal.GetActiveObject("VisualStudio.DTE");
+
+	// Initialise directory reference from solution file
+	String solution_path = Path.GetDirectoryName(dte.Solution.FullName);
+
+	// Define the list of libraries to test (from *.vfproj)
+	List<String> libraries = Directory.GetFiles(solution_path, "*.vfproj", SearchOption.TopDirectoryOnly).ToList();
+	libraries = libraries.Select(p => Path.GetFileNameWithoutExtension(p) ).ToList();
 
 	// Loop on the Libraries
 	foreach(String library in libraries)
 	{
 #>
-
 		[TestClass]
 		public class <#= library #> : Unit
 		{
 <#
-			// Get the solution path
-			EnvDTE.DTE dte = (EnvDTE.DTE)System.Runtime.InteropServices.Marshal.GetActiveObject("VisualStudio.DTE");
-			String solution_path = Path.GetDirectoryName(dte.Solution.FullName);
-
 			// Get the test path
-			String test_path = Path.Combine(solution_path, "src", "utest");
+			String test_path = Path.Combine(solution_path, "utest");
 
 			// List the test directories
 			String [] test_cases = Directory.GetDirectories(test_path, "unit_*", SearchOption.TopDirectoryOnly);
@@ -50,7 +52,7 @@ namespace UnitTestDriver
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile( "xxbase___<#= test_name.Substring(5) #>_ftl" ), 0);
+					Assert.AreEqual(ProcessJxmlFile("<#= test_name.Substring(5) #>"), 0);
 				}
 <#
 			}

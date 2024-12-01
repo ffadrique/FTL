@@ -1,10 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
-using System.IO;
 using System.Diagnostics;
 
 namespace UnitTestDriver
@@ -23,18 +19,11 @@ namespace UnitTestDriver
         /// <param name="fname">Name of the file to execute</param>
         /// <param name="stdout">Returned standard output</param>
         /// <param name="stderr">Returned standard error</param>
-        public Executer(String [] environment, String fname, out String stdout, out String stderr)
+        public Executer(Dictionary<String,String> environment, String fname, out String stdout, out String stderr)
         {
-            // Configure the execution options
-            ProcessStartInfo psi = new ProcessStartInfo("cmd.exe")
-            {
-                CreateNoWindow = false,
-                WindowStyle = ProcessWindowStyle.Hidden,
-                UseShellExecute = false,
-                RedirectStandardError = true,
-                RedirectStandardOutput = true,
-                RedirectStandardInput = true
-            };
+            // Set the environment
+            foreach (String env in environment.Keys)
+                Environment.SetEnvironmentVariable(env, environment[env]);
 
             // Spawn the process
             try
@@ -43,34 +32,23 @@ namespace UnitTestDriver
                 using (Process proc = new Process())
                 {
                     // Set process information
-                    proc.StartInfo = psi;
-
-                    // Initiate asynchronous standard output read
-                    Sbout = new StringBuilder("");
-                    proc.OutputDataReceived += StdoutHandler;
+                    proc.StartInfo.FileName = fname;
+                    proc.StartInfo.CreateNoWindow = false;
+                    proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    proc.StartInfo.UseShellExecute = false;
+                    proc.StartInfo.RedirectStandardError = true;
+                    proc.StartInfo.RedirectStandardOutput = true;
+                    proc.StartInfo.RedirectStandardInput = true;
 
                     // Launch the process
                     proc.Start();
 
-                    using (StreamWriter sw = proc.StandardInput)
-                    {
-                        if (sw.BaseStream.CanWrite)
-                        {
-                            foreach(String env in environment)
-                                sw.WriteLine(env);
-                            sw.WriteLine(fname);
-                        }
-                    }
-                    
                     // Start reading standard outpurt and standard error
-                    proc.BeginOutputReadLine();
+                    stdout = proc.StandardOutput.ReadToEnd();
                     stderr = proc.StandardError.ReadToEnd();
 
                     // Wait for process to terminate
                     proc.WaitForExit();
-
-                    // Collect standard output and return
-                    stdout = Sbout.ToString();
                 }
             }
             catch (Exception ex)
