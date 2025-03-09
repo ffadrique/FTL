@@ -14,202 +14,85 @@ namespace UnitTestDriver
 {
 
 		[TestClass]
-		public class frypto : Unit
+		public class FTL : Unit
 		{
 
 				[TestMethod]
-				public void unit_m_aes()
+				public void unit_list()
 				{
 					// Initialise the test run
-					Initialise("unit_m_aes");
+					Initialise("unit_list");
 
 					// Execute the fortran test if required
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_aes"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___list_ftl"), 0);
 				}
 
 				[TestMethod]
-				public void unit_m_base32()
+				public void unit_queue()
 				{
 					// Initialise the test run
-					Initialise("unit_m_base32");
+					Initialise("unit_queue");
 
 					// Execute the fortran test if required
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_base32"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___queue_ftl"), 0);
 				}
 
 				[TestMethod]
-				public void unit_m_base64()
+				public void unit_slist()
 				{
 					// Initialise the test run
-					Initialise("unit_m_base64");
+					Initialise("unit_slist");
 
 					// Execute the fortran test if required
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_base64"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___slist_ftl"), 0);
 				}
 
 				[TestMethod]
-				public void unit_m_blowfish()
+				public void unit_stack()
 				{
 					// Initialise the test run
-					Initialise("unit_m_blowfish");
+					Initialise("unit_stack");
 
 					// Execute the fortran test if required
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_blowfish"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___stack_ftl"), 0);
 				}
 
 				[TestMethod]
-				public void unit_m_crc32()
+				public void unit_tree()
 				{
 					// Initialise the test run
-					Initialise("unit_m_crc32");
+					Initialise("unit_tree");
 
 					// Execute the fortran test if required
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_crc32"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___tree_ftl"), 0);
 				}
 
 				[TestMethod]
-				public void unit_m_crypto()
+				public void unit_vector()
 				{
 					// Initialise the test run
-					Initialise("unit_m_crypto");
+					Initialise("unit_vector");
 
 					// Execute the fortran test if required
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_crypto"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_des()
-				{
-					// Initialise the test run
-					Initialise("unit_m_des");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_des"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_md5()
-				{
-					// Initialise the test run
-					Initialise("unit_m_md5");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_md5"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_sha1()
-				{
-					// Initialise the test run
-					Initialise("unit_m_sha1");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_sha1"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_sha256()
-				{
-					// Initialise the test run
-					Initialise("unit_m_sha256");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_sha256"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_sha384()
-				{
-					// Initialise the test run
-					Initialise("unit_m_sha384");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_sha384"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_sha512()
-				{
-					// Initialise the test run
-					Initialise("unit_m_sha512");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_sha512"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_shasum()
-				{
-					// Initialise the test run
-					Initialise("unit_m_shasum");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_shasum"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_uuencode()
-				{
-					// Initialise the test run
-					Initialise("unit_m_uuencode");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_uuencode"), 0);
-				}
-
-				[TestMethod]
-				public void unit_m_uuid()
-				{
-					// Initialise the test run
-					Initialise("unit_m_uuid");
-
-					// Execute the fortran test if required
-					if(OutOfDate) RunFortranTest();
-
-					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("m_uuid"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___vector_ftl"), 0);
 				}
 
 		}

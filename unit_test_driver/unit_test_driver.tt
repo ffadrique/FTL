@@ -32,7 +32,7 @@ namespace UnitTestDriver
 		{
 <#
 			// Get the test path
-			String test_path = Path.Combine(solution_path, "utest");
+			String test_path = Path.Combine(solution_path, "src/utest");
 
 			// List the test directories
 			String [] test_cases = Directory.GetDirectories(test_path, "unit_*", SearchOption.TopDirectoryOnly);
@@ -52,7 +52,7 @@ namespace UnitTestDriver
 					if(OutOfDate) RunFortranTest();
 
 					// Assert the test completion
-					Assert.AreEqual(ProcessJxmlFile("<#= test_name.Substring(5) #>"), 0);
+					Assert.AreEqual(ProcessJxmlFile( "xxbase___<#=  test_name.Substring(5) #>_ftl"), 0);
 				}
 <#
 			}
