@@ -73,8 +73,8 @@ class Parser(object):
                 use_expand(m, line, lines, containers, verbose)
 
         # Add the time stamp
-        lines.append('')
-        lines.append('! ' + datetime.now().strftime("%Y-%m-%dT%H:%M:%S") )
+        # lines.append('')
+        # lines.append('! ' + datetime.now().strftime("%Y-%m-%dT%H:%M:%S") )
 
         # Write the expanded output source file
         filename, ext = os.path.splitext(self.source)
