@@ -2586,7 +2586,8 @@ pure subroutine vector_reserve( this, capacity )
   integer, intent(in) :: capacity
 
 ! Local intermediate storage
-  type(xxtypebase___vector_ftl) :: local
+! Do not use the vector_ftl type to avoid calling impure final subroutine
+  type(t_node), allocatable, dimension(:) :: local
 
 ! Local variables
   integer :: i, m
@@ -2608,24 +2609,22 @@ pure subroutine vector_reserve( this, capacity )
     if( m > size(this%data) ) then
 
 !     Preserve pointer to current elements in local buffer
-      allocate( local%data( m ) )
+      allocate( local( m ) )
       do i = 1, this%count
-        local%data(i)%element => this%data(i)%element
+        local(i)%element => this%data(i)%element
       end do
-      local%count = this%count
 
 !     Reallocate vector to new capacity
       deallocate( this%data )
       allocate( this%data(m) )
 
 !     Restore pointers to vector vector elements
-      do i = 1, local%count
-        this%data(i)%element => local%data(i)%element
+      do i = 1, this%count
+        this%data(i)%element => local(i)%element
       end do
-      this%count = local%count
 
 !     Deallocate local buffer
-      deallocate( local%data )
+      deallocate( local )
 
     end if
 
@@ -2639,13 +2638,6 @@ pure subroutine vector_realloc( this )
 
 ! The vector
   class(xxtypebase___vector_ftl), intent(inout) :: this
-
-! Local intermediate storage
-  type(xxtypebase___vector_ftl) :: local
-
-! Local variables
-  integer :: i
-  integer :: newsize
 
 ! Check array status
   if( .not. allocated(this%data) ) then
