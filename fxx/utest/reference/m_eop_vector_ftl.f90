@@ -1,7 +1,7 @@
 module m_eop_vector_ftl
 
 !-------------------------------------------------------------------------------
-! Copyright : 2022, Fran Martinez Fadrique <Fran.Martinez.Fadrique@gmail.com>
+! Copyright : 2025, Fran Martinez Fadrique <Fran.Martinez.Fadrique@gmail.com>
 ! Project   : Atlantis
 ! Author    : Fran Martinez Fadrique
 ! Language  : Object Oriented Fortran 2018
