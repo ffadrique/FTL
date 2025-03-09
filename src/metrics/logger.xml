@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="fmx.xsl"?>
+<logger xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LogEntry source="list.f90" lineno="150">
+    <source>      procedure :: select =&gt; list_select</source>
+    <text>Doubtfull matching</text>
+  </LogEntry>
+  <LogEntry source="slist.f90" lineno="150">
+    <source>      procedure :: select =&gt; slist_select</source>
+    <text>Doubtfull matching</text>
+  </LogEntry>
+  <LogEntry source="vector.f90" lineno="162">
+    <source>      procedure :: select =&gt; vector_select</source>
+    <text>Doubtfull matching</text>
+  </LogEntry>
+</logger>

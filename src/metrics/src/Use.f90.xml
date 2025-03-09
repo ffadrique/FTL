@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../fmx.xsl"?>
+<fmx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Use.f90">
+    <context>
+        <time>2025-03-09T11:42:15</time>
+        <version>1.0.0.1</version>
+        <path>src</path>
+        <path_to_root>../</path_to_root>
+        <project>FTL</project>
+        <name>Use.f90</name>
+        <copyright>Copyright © 2020, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</copyright>
+    </context>
+    <units>
+        <unit name="xxuse__" type="module">
+            <main>
+                <lines>
+                    <source percent="37.14">26</source>
+                    <comments percent="35.71">25</comments>
+                    <empty percent="27.14">19</empty>
+                    <total>70</total>
+                </lines>
+                <complexity>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </complexity>
+                <nesting>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </nesting>
+                <methods>0</methods>
+            </main>
+            <methods>
+                <method name="assign" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="53.85">7</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="46.15">6</empty>
+                            <total>13</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="equal" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="50.00">6</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="50.00">6</empty>
+                            <total>12</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="get_c" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="45.45">5</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="54.55">6</empty>
+                            <total>11</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="get_i" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="45.45">5</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="54.55">6</empty>
+                            <total>11</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="greater" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="46.15">6</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="53.85">7</empty>
+                            <total>13</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="less" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="46.15">6</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="53.85">7</empty>
+                            <total>13</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="xxtypebase_default" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="56.25">9</source>
+                            <comments percent="0.00">0</comments>
+                            <empty percent="43.75">7</empty>
+                            <total>16</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+            </methods>
+            <statistics>
+                <lines>
+                    <source percent="44.03">70</source>
+                    <comments percent="15.72">25</comments>
+                    <empty percent="40.25">64</empty>
+                    <total>159</total>
+                </lines>
+                <complexity>
+                    <minimum>1</minimum>
+                    <maximum>1</maximum>
+                    <average>1.00</average>
+                </complexity>
+                <nesting>
+                    <minimum>1</minimum>
+                    <maximum>1</maximum>
+                    <average>1.00</average>
+                </nesting>
+                <methods>7</methods>
+            </statistics>
+        </unit>
+    </units>
+    <statistics>
+        <lines>
+            <source percent="44.03">70</source>
+            <comments percent="15.72">25</comments>
+            <empty percent="40.25">64</empty>
+            <total>159</total>
+        </lines>
+        <complexity>
+            <minimum>1</minimum>
+            <maximum>1</maximum>
+            <average>1.00</average>
+        </complexity>
+        <nesting>
+            <minimum>1</minimum>
+            <maximum>1</maximum>
+            <average>1.00</average>
+        </nesting>
+        <methods>7</methods>
+    </statistics>
+    <code>
+        <line t="M" i="1" b="0" n="0">module xxuse__</line>
+        <line t="M" i="2" b="0" n="0"></line>
+        <line t="C" i="3" b="0" n="0">!-------------------------------------------------------------------------------</line>
+        <line t="C" i="4" b="0" n="0">! Copyright : 2022, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</line>
+        <line t="C" i="5" b="0" n="0">! Project   : Atlantis</line>
+        <line t="C" i="6" b="0" n="0">! Author    : Fran Martinez Fadrique</line>
+        <line t="C" i="7" b="0" n="0">! Language  : Object Oriented Fortran 2018</line>
+        <line t="C" i="8" b="0" n="0">! Reference : http://www.cplusplus.com/reference/list</line>
+        <line t="C" i="9" b="0" n="0">! Synopsis  : Conveniene module to allow compilation and unit testing of the</line>
+        <line t="C" i="10" b="0" n="0">!             Fortran Template Library containers.</line>
+        <line t="C" i="11" b="0" n="0">!</line>
+        <line t="C" i="12" b="0" n="0">! License   : This file is part of the Fortran Template Library (FTL).</line>
+        <line t="C" i="13" b="0" n="0">!</line>
+        <line t="C" i="14" b="0" n="0">!             FTL is free software: you can redistribute it and/or modify</line>
+        <line t="C" i="15" b="0" n="0">!             it under the terms of the GNU Lesser General Public License as</line>
+        <line t="C" i="16" b="0" n="0">!             published by the Free Software Foundation, either version 3 of</line>
+        <line t="C" i="17" b="0" n="0">!             the License, or (at your option) any later version.</line>
+        <line t="C" i="18" b="0" n="0">!</line>
+        <line t="C" i="19" b="0" n="0">!             FTL is distributed in the hope that it will be useful,</line>
+        <line t="C" i="20" b="0" n="0">!             but WITHOUT ANY WARRANTY; without even the implied warranty of</line>
+        <line t="C" i="21" b="0" n="0">!             MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</line>
+        <line t="C" i="22" b="0" n="0">!             See the GNU Lesser General Public License for more details.</line>
+        <line t="C" i="23" b="0" n="0">!</line>
+        <line t="C" i="24" b="0" n="0">!             You should have received a copy of the GNU Lesser General Public</line>
+        <line t="C" i="25" b="0" n="0">!             License along with FTL.  </line>
+        <line t="C" i="26" b="0" n="0">!             If not, see &lt;http://www.gnu.org/licenses/&gt;.</line>
+        <line t="C" i="27" b="0" n="0">!-------------------------------------------------------------------------------</line>
+        <line t="C" i="28" b="0" n="0"></line>
+        <line t="X" i="29" b="0" n="0">  implicit none</line>
+        <line t="X" i="30" b="0" n="0"></line>
+        <line t="X" i="31" b="0" n="0">  private</line>
+        <line t="X" i="32" b="0" n="0"></line>
+        <line t="X" i="33" b="0" n="0">  public xxtypebase__, cxxtypebase__</line>
+        <line t="X" i="34" b="0" n="0"></line>
+        <line t="T" i="35" b="0" n="0">  type xxtypebase__</line>
+        <line t="T" i="36" b="0" n="0"></line>
+        <line t="X" i="37" b="0" n="0">    private</line>
+        <line t="X" i="38" b="0" n="0"></line>
+        <line t="X" i="39" b="0" n="0">      integer :: i = 0</line>
+        <line t="X" i="40" b="0" n="0"></line>
+        <line t="X" i="41" b="0" n="0">      real(kind=8) :: r = 0.0_8</line>
+        <line t="X" i="42" b="0" n="0"></line>
+        <line t="X" i="43" b="0" n="0">      character(len=32) :: c = ' '</line>
+        <line t="X" i="44" b="0" n="0"></line>
+        <line t="X" i="45" b="0" n="0">    contains</line>
+        <line t="X" i="46" b="0" n="0"></line>
+        <line t="X" i="47" b="0" n="0">      generic :: assignment(=) =&gt; assign</line>
+        <line t="X" i="48" b="0" n="0">      procedure :: assign</line>
+        <line t="X" i="49" b="0" n="0"></line>
+        <line t="X" i="50" b="0" n="0">      generic :: operator(==) =&gt; equal</line>
+        <line t="X" i="51" b="0" n="0">      procedure :: equal</line>
+        <line t="X" i="52" b="0" n="0"></line>
+        <line t="X" i="53" b="0" n="0">      generic :: operator(&lt;) =&gt; less</line>
+        <line t="X" i="54" b="0" n="0">      procedure :: less</line>
+        <line t="X" i="55" b="0" n="0"></line>
+        <line t="X" i="56" b="0" n="0">      generic :: operator(&gt;) =&gt; greater</line>
+        <line t="X" i="57" b="0" n="0">      procedure :: greater</line>
+        <line t="X" i="58" b="0" n="0"></line>
+        <line t="X" i="59" b="0" n="0">      procedure :: get_i</line>
+        <line t="X" i="60" b="0" n="0"></line>
+        <line t="X" i="61" b="0" n="0">      procedure :: get_c</line>
+        <line t="X" i="62" b="0" n="0"></line>
+        <line t="T" i="63" b="0" n="0">  end type xxtypebase__</line>
+        <line t="T" i="64" b="0" n="0"></line>
+        <line t="X" i="65" b="0" n="0">  interface cxxtypebase__</line>
+        <line t="X" i="66" b="0" n="0">    module procedure xxtypebase_default</line>
+        <line t="X" i="67" b="0" n="0">  end interface cxxtypebase__</line>
+        <line t="X" i="68" b="0" n="0"></line>
+        <line t="X" i="69" b="0" n="0">contains</line>
+        <line t="X" i="70" b="0" n="0"></line>
+        <line k="xxtypebase_default" t="F" i="71" b="1" n="1">elemental function xxtypebase_default( i, r, c ) result(res)</line>
+        <line t="F" i="72" b="1" n="1"></line>
+        <line t="X" i="73" b="1" n="1">  integer, intent(in) :: i</line>
+        <line t="X" i="74" b="1" n="1"></line>
+        <line t="X" i="75" b="1" n="1">  real(kind=8), intent(in) :: r</line>
+        <line t="X" i="76" b="1" n="1"></line>
+        <line t="X" i="77" b="1" n="1">  character(len=*), intent(in) :: c</line>
+        <line t="X" i="78" b="1" n="1"></line>
+        <line t="X" i="79" b="1" n="1">  type(xxtypebase__) :: res</line>
+        <line t="X" i="80" b="1" n="1"></line>
+        <line t="X" i="81" b="1" n="1">  res%i = i</line>
+        <line t="X" i="82" b="1" n="1">  res%r = r</line>
+        <line t="X" i="83" b="1" n="1">  res%c = c</line>
+        <line t="X" i="84" b="1" n="1"></line>
+        <line t="EF" i="85" b="1" n="1">end function xxtypebase_default</line>
+        <line t="EF" i="86" b="1" n="1"></line>
+        <line k="equal" t="F" i="87" b="1" n="1">function equal( left, right ) result(res)</line>
+        <line t="F" i="88" b="1" n="1"></line>
+        <line t="X" i="89" b="1" n="1">  class(xxtypebase__), intent(in) :: left</line>
+        <line t="X" i="90" b="1" n="1"></line>
+        <line t="X" i="91" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="92" b="1" n="1"></line>
+        <line t="X" i="93" b="1" n="1">  logical :: res</line>
+        <line t="X" i="94" b="1" n="1"></line>
+        <line t="X" i="95" b="1" n="1">  res = ( left%i == right%i )</line>
+        <line t="X" i="96" b="1" n="1"></line>
+        <line t="EF" i="97" b="1" n="1">end function equal</line>
+        <line t="EF" i="98" b="1" n="1"></line>
+        <line t="EF" i="99" b="1" n="1"></line>
+        <line k="assign" t="S" i="100" b="1" n="1">pure subroutine assign( left, right )</line>
+        <line t="S" i="101" b="1" n="1"></line>
+        <line t="X" i="102" b="1" n="1">  class(xxtypebase__), intent(inout) :: left</line>
+        <line t="X" i="103" b="1" n="1"></line>
+        <line t="X" i="104" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="105" b="1" n="1"></line>
+        <line t="X" i="106" b="1" n="1">  left%i = right%i</line>
+        <line t="X" i="107" b="1" n="1">  left%r = right%r</line>
+        <line t="X" i="108" b="1" n="1">  left%c = right%c</line>
+        <line t="X" i="109" b="1" n="1"></line>
+        <line t="ES" i="110" b="1" n="1">end subroutine assign</line>
+        <line t="ES" i="111" b="1" n="1"></line>
+        <line t="ES" i="112" b="1" n="1"></line>
+        <line k="less" t="F" i="113" b="1" n="1">function less( left, right ) result(res)</line>
+        <line t="F" i="114" b="1" n="1"></line>
+        <line t="X" i="115" b="1" n="1">  class(xxtypebase__), intent(in) :: left</line>
+        <line t="X" i="116" b="1" n="1"></line>
+        <line t="X" i="117" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="118" b="1" n="1"></line>
+        <line t="X" i="119" b="1" n="1">  logical :: res</line>
+        <line t="X" i="120" b="1" n="1"></line>
+        <line t="X" i="121" b="1" n="1">  res = ( left%i &lt; right%i )</line>
+        <line t="X" i="122" b="1" n="1"></line>
+        <line t="EF" i="123" b="1" n="1">end function less</line>
+        <line t="EF" i="124" b="1" n="1"></line>
+        <line t="EF" i="125" b="1" n="1"></line>
+        <line k="greater" t="F" i="126" b="1" n="1">function greater( left, right ) result(res)</line>
+        <line t="F" i="127" b="1" n="1"></line>
+        <line t="X" i="128" b="1" n="1">  class(xxtypebase__), intent(in) :: left</line>
+        <line t="X" i="129" b="1" n="1"></line>
+        <line t="X" i="130" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="131" b="1" n="1"></line>
+        <line t="X" i="132" b="1" n="1">  logical :: res</line>
+        <line t="X" i="133" b="1" n="1"></line>
+        <line t="X" i="134" b="1" n="1">  res = ( left%i &gt; right%i )</line>
+        <line t="X" i="135" b="1" n="1"></line>
+        <line t="EF" i="136" b="1" n="1">end function greater</line>
+        <line t="EF" i="137" b="1" n="1"></line>
+        <line t="EF" i="138" b="1" n="1"></line>
+        <line k="get_i" t="F" i="139" b="1" n="1">elemental function get_i( this ) result(res)</line>
+        <line t="F" i="140" b="1" n="1"></line>
+        <line t="X" i="141" b="1" n="1">  class(xxtypebase__), intent(in) :: this</line>
+        <line t="X" i="142" b="1" n="1"></line>
+        <line t="X" i="143" b="1" n="1">  integer :: res</line>
+        <line t="X" i="144" b="1" n="1"></line>
+        <line t="X" i="145" b="1" n="1">  res = this%i</line>
+        <line t="X" i="146" b="1" n="1"></line>
+        <line t="EF" i="147" b="1" n="1">end function get_i</line>
+        <line t="EF" i="148" b="1" n="1"></line>
+        <line t="EF" i="149" b="1" n="1"></line>
+        <line k="get_c" t="F" i="150" b="1" n="1">elemental function get_c( this ) result(res)</line>
+        <line t="F" i="151" b="1" n="1"></line>
+        <line t="X" i="152" b="1" n="1">  class(xxtypebase__), intent(in) :: this</line>
+        <line t="X" i="153" b="1" n="1"></line>
+        <line t="X" i="154" b="1" n="1">  character(len=len(this%c)) :: res</line>
+        <line t="X" i="155" b="1" n="1"></line>
+        <line t="X" i="156" b="1" n="1">  res = this%c</line>
+        <line t="X" i="157" b="1" n="1"></line>
+        <line t="EF" i="158" b="1" n="1">end function get_c</line>
+        <line t="EF" i="159" b="1" n="1"></line>
+        <line t="EF" i="160" b="1" n="1"></line>
+        <line t="M" i="161" b="1" n="1">end module xxuse__</line>
+    </code>
+</fmx>

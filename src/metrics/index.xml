@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="fmx.xsl"?>
+<fmxroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <context>
+        <time>2025-03-09T11:42:15</time>
+        <version>1.0.0.1</version>
+        <path>FTL</path>
+        <project>FTL</project>
+        <copyright>Copyright © 2020, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</copyright>
+    </context>
+    <statistics>
+        <lines>
+            <source percent="35.68">3709</source>
+            <comments percent="32.07">3333</comments>
+            <empty percent="32.25">3352</empty>
+            <total>10394</total>
+        </lines>
+        <complexity>
+            <minimum>1</minimum>
+            <maximum>15</maximum>
+            <average>2.07</average>
+        </complexity>
+        <nesting>
+            <minimum>1</minimum>
+            <maximum>7</maximum>
+            <average>1.66</average>
+        </nesting>
+        <libraries>1</libraries>
+    </statistics>
+    <directories>
+        <directory name="src">
+            <statistics>
+                <lines>
+                    <source percent="35.68">3709</source>
+                    <comments percent="32.07">3333</comments>
+                    <empty percent="32.25">3352</empty>
+                    <total>10394</total>
+                </lines>
+                <complexity>
+                    <minimum>1</minimum>
+                    <maximum>15</maximum>
+                    <average>2.07</average>
+                </complexity>
+                <nesting>
+                    <minimum>1</minimum>
+                    <maximum>7</maximum>
+                    <average>1.66</average>
+                </nesting>
+                <modules>8</modules>
+            </statistics>
+        </directory>
+    </directories>
+</fmxroot>

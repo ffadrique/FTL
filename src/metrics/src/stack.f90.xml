@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../fmx.xsl"?>
+<fmx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="stack.f90">
+    <context>
+        <time>2025-03-09T11:42:15</time>
+        <version>1.0.0.1</version>
+        <path>src</path>
+        <path_to_root>../</path_to_root>
+        <project>FTL</project>
+        <name>stack.f90</name>
+        <copyright>Copyright © 2020, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</copyright>
+    </context>
+    <units>
+        <unit name="xxmodulebase___stack_ftl" type="module">
+            <main>
+                <lines>
+                    <source percent="32.48">38</source>
+                    <comments percent="40.17">47</comments>
+                    <empty percent="27.35">32</empty>
+                    <total>117</total>
+                </lines>
+                <complexity>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </complexity>
+                <nesting>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </nesting>
+                <methods>0</methods>
+            </main>
+            <methods>
+                <method name="element_assign_allocatable" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="30.00">6</source>
+                            <comments percent="35.00">7</comments>
+                            <empty percent="35.00">7</empty>
+                            <total>20</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="element_assign_pointer" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="30.00">6</source>
+                            <comments percent="35.00">7</comments>
+                            <empty percent="35.00">7</empty>
+                            <total>20</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">4</source>
+                            <comments percent="25.00">3</comments>
+                            <empty percent="41.67">5</empty>
+                            <total>12</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_array" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="41.67">15</source>
+                            <comments percent="25.00">9</comments>
+                            <empty percent="33.33">12</empty>
+                            <total>36</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_assign_from_array" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="34.78">8</source>
+                            <comments percent="26.09">6</comments>
+                            <empty percent="39.13">9</empty>
+                            <total>23</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_assign_from_stack" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="39.53">17</source>
+                            <comments percent="25.58">11</comments>
+                            <empty percent="34.88">15</empty>
+                            <total>43</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>4</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>4</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_bottom" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_clear" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="35.56">16</source>
+                            <comments percent="26.67">12</comments>
+                            <empty percent="37.78">17</empty>
+                            <total>45</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_copy" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_copy_from_array" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_default" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="46.15">6</source>
+                            <comments percent="23.08">3</comments>
+                            <empty percent="30.77">4</empty>
+                            <total>13</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_empty" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_pop" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="41.03">16</source>
+                            <comments percent="23.08">9</comments>
+                            <empty percent="35.90">14</empty>
+                            <total>39</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>4</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_push" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="38.46">15</source>
+                            <comments percent="25.64">10</comments>
+                            <empty percent="35.90">14</empty>
+                            <total>39</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_size" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="stack_top" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+            </methods>
+            <statistics>
+                <lines>
+                    <source percent="35.61">177</source>
+                    <comments percent="29.78">148</comments>
+                    <empty percent="34.61">172</empty>
+                    <total>497</total>
+                </lines>
+                <complexity>
+                    <minimum>1</minimum>
+                    <maximum>4</maximum>
+                    <average>1.88</average>
+                </complexity>
+                <nesting>
+                    <minimum>1</minimum>
+                    <maximum>4</maximum>
+                    <average>1.75</average>
+                </nesting>
+                <methods>16</methods>
+            </statistics>
+        </unit>
+    </units>
+    <statistics>
+        <lines>
+            <source percent="35.61">177</source>
+            <comments percent="29.78">148</comments>
+            <empty percent="34.61">172</empty>
+            <total>497</total>
+        </lines>
+        <complexity>
+            <minimum>1</minimum>
+            <maximum>4</maximum>
+            <average>1.88</average>
+        </complexity>
+        <nesting>
+            <minimum>1</minimum>
+            <maximum>4</maximum>
+            <average>1.75</average>
+        </nesting>
+        <methods>16</methods>
+    </statistics>
+    <code>
+        <line t="M" i="1" b="0" n="0">module xxmodulebase___stack_ftl</line>
+        <line t="M" i="2" b="0" n="0"></line>
+        <line t="C" i="3" b="0" n="0">!-------------------------------------------------------------------------------</line>
+        <line t="C" i="4" b="0" n="0">! Copyright : 2022, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</line>
+        <line t="C" i="5" b="0" n="0">! Project   : Atlantis</line>
+        <line t="C" i="6" b="0" n="0">! Author    : Fran Martinez Fadrique</line>
+        <line t="C" i="7" b="0" n="0">! Language  : Object Oriented Fortran 2018</line>
+        <line t="C" i="8" b="0" n="0">! Reference : http://www.cplusplus.com/reference/queue/queue</line>
+        <line t="C" i="9" b="0" n="0">! Synopsis  : Stack (LIFO) container template</line>
+        <line t="C" i="10" b="0" n="0">!             Limitations with respect to STL C++</line>
+        <line t="C" i="11" b="0" n="0">!              - No emplace functions.</line>
+        <line t="C" i="12" b="0" n="0">!              - No swap functions.</line>
+        <line t="C" i="13" b="0" n="0">!</line>
+        <line t="C" i="14" b="0" n="0">! License   : This file is part of the Fortran Template Library (FTL).</line>
+        <line t="C" i="15" b="0" n="0">!</line>
+        <line t="C" i="16" b="0" n="0">!             FTL is free software: you can redistribute it and/or modify</line>
+        <line t="C" i="17" b="0" n="0">!             it under the terms of the GNU Lesser General Public License as</line>
+        <line t="C" i="18" b="0" n="0">!             published by the Free Software Foundation, either version 3 of</line>
+        <line t="C" i="19" b="0" n="0">!             the License, or (at your option) any later version.</line>
+        <line t="C" i="20" b="0" n="0">!</line>
+        <line t="C" i="21" b="0" n="0">!             FTL is distributed in the hope that it will be useful,</line>
+        <line t="C" i="22" b="0" n="0">!             but WITHOUT ANY WARRANTY; without even the implied warranty of</line>
+        <line t="C" i="23" b="0" n="0">!             MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</line>
+        <line t="C" i="24" b="0" n="0">!             See the GNU Lesser General Public License for more details.</line>
+        <line t="C" i="25" b="0" n="0">!</line>
+        <line t="C" i="26" b="0" n="0">!             You should have received a copy of the GNU Lesser General Public</line>
+        <line t="C" i="27" b="0" n="0">!             License along with FTL.  </line>
+        <line t="C" i="28" b="0" n="0">!             If not, see &lt;http://www.gnu.org/licenses/&gt;.</line>
+        <line t="C" i="29" b="0" n="0">!-------------------------------------------------------------------------------</line>
+        <line t="C" i="30" b="0" n="0"></line>
+        <line t="C" i="31" b="0" n="0">!---USE statements--------------------------------------------------------------</line>
+        <line t="C" i="32" b="0" n="0"></line>
+        <line t="X" i="33" b="0" n="0">  use m_object</line>
+        <line t="X" i="34" b="0" n="0">  use xxuse__</line>
+        <line t="X" i="35" b="0" n="0"></line>
+        <line t="C" i="36" b="0" n="0">!---End of use statements-------------------------------------------------------</line>
+        <line t="C" i="37" b="0" n="0"></line>
+        <line t="X" i="38" b="0" n="0">  implicit none</line>
+        <line t="X" i="39" b="0" n="0"></line>
+        <line t="C" i="40" b="0" n="0">!---Public/Private declarations-------------------------------------------------</line>
+        <line t="C" i="41" b="0" n="0"></line>
+        <line t="X" i="42" b="0" n="0">  private</line>
+        <line t="X" i="43" b="0" n="0"></line>
+        <line t="X" i="44" b="0" n="0">  public xxtypebase___stack_ftl, xxconstructor___stack_ftl</line>
+        <line t="X" i="45" b="0" n="0"></line>
+        <line t="C" i="46" b="0" n="0">!---End of public/private declarations------------------------------------------</line>
+        <line t="C" i="47" b="0" n="0"></line>
+        <line t="C" i="48" b="0" n="0">!---Declaration of module variables---------------------------------------------</line>
+        <line t="C" i="49" b="0" n="0"></line>
+        <line t="C" i="50" b="0" n="0">! Stack node type</line>
+        <line t="T" i="51" b="0" n="0">  type t_node</line>
+        <line t="X" i="52" b="0" n="0">    private</line>
+        <line t="X" i="53" b="0" n="0"></line>
+        <line t="C" i="54" b="0" n="0">!   The element data instance</line>
+        <line t="X" i="55" b="0" n="0">    class(xxtypebase__), pointer :: element =&gt; null()</line>
+        <line t="X" i="56" b="0" n="0"></line>
+        <line t="C" i="57" b="0" n="0">!   Pointer to the down node in the stack (null if bottom)</line>
+        <line t="X" i="58" b="0" n="0">    type(t_node),  pointer :: pdown =&gt; null()</line>
+        <line t="X" i="59" b="0" n="0"></line>
+        <line t="T" i="60" b="0" n="0">  end type t_node</line>
+        <line t="T" i="61" b="0" n="0"></line>
+        <line t="T" i="62" b="0" n="0"></line>
+        <line t="C" i="63" b="0" n="0">! Linked stack container type</line>
+        <line t="T" i="64" b="0" n="0">  type, extends(t_object) :: xxtypebase___stack_ftl</line>
+        <line t="X" i="65" b="0" n="0">    private</line>
+        <line t="X" i="66" b="0" n="0"></line>
+        <line t="C" i="67" b="0" n="0">!   The number of nodes in the stack</line>
+        <line t="X" i="68" b="0" n="0">    integer :: count   = 0</line>
+        <line t="X" i="69" b="0" n="0"></line>
+        <line t="C" i="70" b="0" n="0">!   The top node</line>
+        <line t="X" i="71" b="0" n="0">    type(t_node), pointer :: ptop =&gt; null()</line>
+        <line t="X" i="72" b="0" n="0"></line>
+        <line t="C" i="73" b="0" n="0">!   The bottom node</line>
+        <line t="X" i="74" b="0" n="0">    type(t_node), pointer :: pbottom =&gt; null()</line>
+        <line t="X" i="75" b="0" n="0"></line>
+        <line t="X" i="76" b="0" n="0">    contains</line>
+        <line t="X" i="77" b="0" n="0"></line>
+        <line t="C" i="78" b="0" n="0">!     Insertion and removal</line>
+        <line t="X" i="79" b="0" n="0">      procedure :: push =&gt; stack_push</line>
+        <line t="X" i="80" b="0" n="0">      procedure :: pop =&gt; stack_pop</line>
+        <line t="X" i="81" b="0" n="0">      procedure :: clear =&gt; stack_clear</line>
+        <line t="X" i="82" b="0" n="0"></line>
+        <line t="C" i="83" b="0" n="0">!     Access</line>
+        <line t="X" i="84" b="0" n="0">      procedure :: top =&gt; stack_top</line>
+        <line t="X" i="85" b="0" n="0">      procedure :: bottom =&gt; stack_bottom</line>
+        <line t="X" i="86" b="0" n="0"></line>
+        <line t="C" i="87" b="0" n="0">!     Query</line>
+        <line t="X" i="88" b="0" n="0">      procedure :: size =&gt; stack_size</line>
+        <line t="X" i="89" b="0" n="0">      procedure :: empty =&gt; stack_empty</line>
+        <line t="X" i="90" b="0" n="0"></line>
+        <line t="C" i="91" b="0" n="0">!     Conversion</line>
+        <line t="X" i="92" b="0" n="0">      procedure :: array =&gt; stack_array</line>
+        <line t="X" i="93" b="0" n="0"></line>
+        <line t="C" i="94" b="0" n="0">!     Assignment</line>
+        <line t="X" i="95" b="0" n="0">      generic :: assignment(=) =&gt; stack_assign_from_stack, &amp;</line>
+        <line t="X" i="96" b="0" n="0">                                  stack_assign_from_array</line>
+        <line t="X" i="97" b="0" n="0">      procedure :: stack_assign_from_stack</line>
+        <line t="X" i="98" b="0" n="0">      procedure, private :: stack_assign_from_array</line>
+        <line t="X" i="99" b="0" n="0"></line>
+        <line t="C" i="100" b="0" n="0">!     Destructor</line>
+        <line t="X" i="101" b="0" n="0">      final :: stack_</line>
+        <line t="X" i="102" b="0" n="0"></line>
+        <line t="T" i="103" b="0" n="0">  end type xxtypebase___stack_ftl</line>
+        <line t="T" i="104" b="0" n="0"></line>
+        <line t="T" i="105" b="0" n="0"></line>
+        <line t="C" i="106" b="0" n="0">! Constructor interface</line>
+        <line t="X" i="107" b="0" n="0">  interface xxconstructor___stack_ftl</line>
+        <line t="X" i="108" b="0" n="0">    module procedure stack_default</line>
+        <line t="X" i="109" b="0" n="0">    module procedure stack_copy</line>
+        <line t="X" i="110" b="0" n="0">    module procedure stack_copy_from_array</line>
+        <line t="X" i="111" b="0" n="0">  end interface xxconstructor___stack_ftl</line>
+        <line t="X" i="112" b="0" n="0"></line>
+        <line t="C" i="113" b="0" n="0">!---End of declaration of module variables--------------------------------------</line>
+        <line t="C" i="114" b="0" n="0"></line>
+        <line t="X" i="115" b="0" n="0">contains</line>
+        <line t="X" i="116" b="0" n="0"></line>
+        <line t="C" i="117" b="0" n="0">! Default constructor</line>
+        <line k="stack_default" t="F" i="118" b="1" n="1">function stack_default( ) result(res)</line>
+        <line t="F" i="119" b="1" n="1"></line>
+        <line t="C" i="120" b="1" n="1">! The result stack</line>
+        <line t="X" i="121" b="1" n="1">  type(xxtypebase___stack_ftl) :: res</line>
+        <line t="X" i="122" b="1" n="1"></line>
+        <line t="C" i="123" b="1" n="1">! Initialise</line>
+        <line t="X" i="124" b="1" n="1">  res%ptop =&gt; null()</line>
+        <line t="X" i="125" b="1" n="1">  res%pbottom =&gt; null()</line>
+        <line t="X" i="126" b="1" n="1">  res%count = 0</line>
+        <line t="X" i="127" b="1" n="1"></line>
+        <line t="EF" i="128" b="1" n="1">end function stack_default</line>
+        <line t="EF" i="129" b="1" n="1"></line>
+        <line t="EF" i="130" b="1" n="1"></line>
+        <line t="C" i="131" b="1" n="1">! Copy constructor</line>
+        <line k="stack_copy" t="F" i="132" b="1" n="1">function stack_copy( stack ) result(res)</line>
+        <line t="F" i="133" b="1" n="1"></line>
+        <line t="C" i="134" b="1" n="1">! The input stack</line>
+        <line t="X" i="135" b="1" n="1">  type(xxtypebase___stack_ftl), intent(in) :: stack</line>
+        <line t="X" i="136" b="1" n="1"></line>
+        <line t="C" i="137" b="1" n="1">! The result stack</line>
+        <line t="X" i="138" b="1" n="1">  type(xxtypebase___stack_ftl) :: res</line>
+        <line t="X" i="139" b="1" n="1"></line>
+        <line t="C" i="140" b="1" n="1">! Copy the stack</line>
+        <line t="X" i="141" b="1" n="1">  res = stack</line>
+        <line t="X" i="142" b="1" n="1"></line>
+        <line t="EF" i="143" b="1" n="1">end function stack_copy</line>
+        <line t="EF" i="144" b="1" n="1"></line>
+        <line t="EF" i="145" b="1" n="1"></line>
+        <line t="C" i="146" b="1" n="1">! Copy constructor from array</line>
+        <line k="stack_copy_from_array" t="F" i="147" b="1" n="1">function stack_copy_from_array( a ) result(res)</line>
+        <line t="F" i="148" b="1" n="1"></line>
+        <line t="C" i="149" b="1" n="1">! The input array</line>
+        <line t="X" i="150" b="1" n="1">  class(xxtypebase__), dimension(:), intent(in) :: a</line>
+        <line t="X" i="151" b="1" n="1"></line>
+        <line t="C" i="152" b="1" n="1">! The result stack</line>
+        <line t="X" i="153" b="1" n="1">  type(xxtypebase___stack_ftl) :: res</line>
+        <line t="X" i="154" b="1" n="1"></line>
+        <line t="C" i="155" b="1" n="1">! Copy the stack</line>
+        <line t="X" i="156" b="1" n="1">  res = a</line>
+        <line t="X" i="157" b="1" n="1"></line>
+        <line t="EF" i="158" b="1" n="1">end function stack_copy_from_array</line>
+        <line t="EF" i="159" b="1" n="1"></line>
+        <line t="EF" i="160" b="1" n="1"></line>
+        <line t="C" i="161" b="1" n="1">! Destructor</line>
+        <line k="stack_" t="S" i="162" b="1" n="1">subroutine stack_( this )</line>
+        <line t="S" i="163" b="1" n="1"></line>
+        <line t="C" i="164" b="1" n="1">! The stack</line>
+        <line t="X" i="165" b="1" n="1">  type(xxtypebase___stack_ftl), intent(inout) :: this</line>
+        <line t="X" i="166" b="1" n="1"></line>
+        <line t="C" i="167" b="1" n="1">! Clear the stack</line>
+        <line t="X" i="168" b="2" n="2">  if( this%count &gt; 0 ) call this%clear()</line>
+        <line t="X" i="169" b="2" n="2"></line>
+        <line t="ES" i="170" b="2" n="2">end subroutine stack_</line>
+        <line t="ES" i="171" b="1" n="2"></line>
+        <line t="ES" i="172" b="1" n="2"></line>
+        <line t="C" i="173" b="1" n="2">! Add a node to the top of the stack</line>
+        <line k="stack_push" t="S" i="174" b="1" n="1">subroutine stack_push( this, element )</line>
+        <line t="S" i="175" b="1" n="1"></line>
+        <line t="C" i="176" b="1" n="1">! The stack</line>
+        <line t="X" i="177" b="1" n="1">  class(xxtypebase___stack_ftl), intent(inout) :: this</line>
+        <line t="X" i="178" b="1" n="1"></line>
+        <line t="C" i="179" b="1" n="1">! The element</line>
+        <line t="X" i="180" b="1" n="1">  class(xxtypebase__), intent(in) :: element</line>
+        <line t="X" i="181" b="1" n="1"></line>
+        <line t="C" i="182" b="1" n="1">! Local node pointer</line>
+        <line t="X" i="183" b="1" n="1">  type(t_node), pointer :: node</line>
+        <line t="X" i="184" b="1" n="1"></line>
+        <line t="C" i="185" b="1" n="1">! Allocate the new node</line>
+        <line t="X" i="186" b="1" n="1">  allocate( node )</line>
+        <line t="X" i="187" b="1" n="1"></line>
+        <line t="C" i="188" b="1" n="1">! Check if stack already contains elements</line>
+        <line t="X" i="189" b="2" n="2">  if( associated(this%ptop) ) then</line>
+        <line t="X" i="190" b="2" n="2"></line>
+        <line t="C" i="191" b="2" n="2">!   Reasign new node pointers</line>
+        <line t="X" i="192" b="2" n="2">    node%pdown =&gt; this%ptop</line>
+        <line t="X" i="193" b="2" n="2">    this%ptop =&gt; node</line>
+        <line t="X" i="194" b="2" n="2"></line>
+        <line t="X" i="195" b="3" n="2">  else</line>
+        <line t="X" i="196" b="3" n="2"></line>
+        <line t="C" i="197" b="3" n="2">!   Assign pointers</line>
+        <line t="X" i="198" b="3" n="2">    this%ptop =&gt; node</line>
+        <line t="X" i="199" b="3" n="2">    this%pbottom =&gt; this%ptop</line>
+        <line t="X" i="200" b="3" n="2"></line>
+        <line t="X" i="201" b="3" n="1">  end if</line>
+        <line t="X" i="202" b="3" n="1"></line>
+        <line t="C" i="203" b="3" n="1">! Copy the element into its stack position</line>
+        <line t="X" i="204" b="3" n="1">  call element_assign_pointer( node%element, element )</line>
+        <line t="X" i="205" b="3" n="1"></line>
+        <line t="C" i="206" b="3" n="1">! Increase counter</line>
+        <line t="X" i="207" b="3" n="1">  this%count = this%count + 1</line>
+        <line t="X" i="208" b="3" n="1"></line>
+        <line t="ES" i="209" b="3" n="1">end subroutine stack_push</line>
+        <line t="ES" i="210" b="1" n="1"></line>
+        <line t="ES" i="211" b="1" n="1"></line>
+        <line t="C" i="212" b="1" n="1">! Remove node from the beginning of the stack</line>
+        <line k="stack_pop" t="S" i="213" b="1" n="1">subroutine stack_pop( this )</line>
+        <line t="S" i="214" b="1" n="1"></line>
+        <line t="C" i="215" b="1" n="1">! The stack</line>
+        <line t="X" i="216" b="1" n="1">  class(xxtypebase___stack_ftl), intent(inout) :: this</line>
+        <line t="X" i="217" b="1" n="1"></line>
+        <line t="C" i="218" b="1" n="1">! Local node pointer</line>
+        <line t="X" i="219" b="1" n="1">  type(t_node), pointer :: node</line>
+        <line t="X" i="220" b="1" n="1"></line>
+        <line t="C" i="221" b="1" n="1">! Check that the stack is not empty</line>
+        <line t="X" i="222" b="2" n="2">  if( associated(this%ptop) ) then</line>
+        <line t="X" i="223" b="2" n="2"></line>
+        <line t="C" i="224" b="2" n="2">!   Destroy data element in the top stack node</line>
+        <line t="X" i="225" b="2" n="2">    deallocate( this%ptop%element )</line>
+        <line t="X" i="226" b="2" n="2"></line>
+        <line t="C" i="227" b="2" n="2">!   Check if there is more than one node</line>
+        <line t="X" i="228" b="3" n="3">    if( associated(this%ptop%pdown) ) then</line>
+        <line t="X" i="229" b="3" n="3"></line>
+        <line t="C" i="230" b="3" n="3">!     More than one node in the stack; remove the top one</line>
+        <line t="X" i="231" b="3" n="3">      node =&gt; this%ptop</line>
+        <line t="X" i="232" b="3" n="3">      this%ptop =&gt; this%ptop%pdown</line>
+        <line t="X" i="233" b="3" n="3">      deallocate( node )</line>
+        <line t="X" i="234" b="3" n="3"></line>
+        <line t="X" i="235" b="4" n="3">    else</line>
+        <line t="X" i="236" b="4" n="3"></line>
+        <line t="C" i="237" b="4" n="3">!     Only one node in stack; remove it</line>
+        <line t="X" i="238" b="4" n="3">      deallocate( this%ptop )</line>
+        <line t="X" i="239" b="4" n="3">      this%pbottom =&gt; null()</line>
+        <line t="X" i="240" b="4" n="3"></line>
+        <line t="X" i="241" b="4" n="2">    end if</line>
+        <line t="X" i="242" b="4" n="2"></line>
+        <line t="C" i="243" b="4" n="2">!   Decrease counter</line>
+        <line t="X" i="244" b="4" n="2">    this%count = this%count - 1</line>
+        <line t="X" i="245" b="4" n="2"></line>
+        <line t="X" i="246" b="4" n="1">  end if</line>
+        <line t="X" i="247" b="4" n="1"></line>
+        <line t="ES" i="248" b="4" n="1">end subroutine stack_pop</line>
+        <line t="ES" i="249" b="1" n="1"></line>
+        <line t="ES" i="250" b="1" n="1"></line>
+        <line t="C" i="251" b="1" n="1">! Return the element in the top (down to extract) node in the stack</line>
+        <line k="stack_top" t="F" i="252" b="1" n="1">pure function stack_top( this ) result(res)</line>
+        <line t="F" i="253" b="1" n="1"></line>
+        <line t="C" i="254" b="1" n="1">! The stack</line>
+        <line t="X" i="255" b="1" n="1">  class(xxtypebase___stack_ftl), target, intent(in) :: this</line>
+        <line t="X" i="256" b="1" n="1"></line>
+        <line t="C" i="257" b="1" n="1">! Pointer to the element in the top node in the stack</line>
+        <line t="X" i="258" b="1" n="1">  class(xxtypebase__), allocatable :: res</line>
+        <line t="X" i="259" b="1" n="1"></line>
+        <line t="C" i="260" b="1" n="1">! Assign the return value</line>
+        <line t="X" i="261" b="1" n="1">  call element_assign_allocatable( res, this%ptop%element )</line>
+        <line t="X" i="262" b="1" n="1"></line>
+        <line t="EF" i="263" b="1" n="1">end function stack_top</line>
+        <line t="EF" i="264" b="1" n="1"></line>
+        <line t="EF" i="265" b="1" n="1"></line>
+        <line t="C" i="266" b="1" n="1">! Return the element in the bottom (bottom to extract) node in the stack</line>
+        <line k="stack_bottom" t="F" i="267" b="1" n="1">pure function stack_bottom( this ) result(res)</line>
+        <line t="F" i="268" b="1" n="1"></line>
+        <line t="C" i="269" b="1" n="1">! The stack</line>
+        <line t="X" i="270" b="1" n="1">  class(xxtypebase___stack_ftl), target, intent(in) :: this</line>
+        <line t="X" i="271" b="1" n="1"></line>
+        <line t="C" i="272" b="1" n="1">! Pointer to the element in the bottom node in the stack</line>
+        <line t="X" i="273" b="1" n="1">  class(xxtypebase__), allocatable :: res</line>
+        <line t="X" i="274" b="1" n="1"></line>
+        <line t="C" i="275" b="1" n="1">! Assign the return value</line>
+        <line t="X" i="276" b="1" n="1">  call element_assign_allocatable( res, this%pbottom%element )</line>
+        <line t="X" i="277" b="1" n="1"></line>
+        <line t="EF" i="278" b="1" n="1">end function stack_bottom</line>
+        <line t="EF" i="279" b="1" n="1"></line>
+        <line t="EF" i="280" b="1" n="1"></line>
+        <line t="C" i="281" b="1" n="1">! Destroy a stack</line>
+        <line k="stack_clear" t="S" i="282" b="1" n="1">subroutine stack_clear( this )</line>
+        <line t="S" i="283" b="1" n="1"></line>
+        <line t="C" i="284" b="1" n="1">! The stack</line>
+        <line t="X" i="285" b="1" n="1">  class(xxtypebase___stack_ftl), intent(inout) :: this</line>
+        <line t="X" i="286" b="1" n="1"></line>
+        <line t="C" i="287" b="1" n="1">! Local node pointers</line>
+        <line t="X" i="288" b="1" n="1">  type(t_node), pointer :: del, down</line>
+        <line t="X" i="289" b="1" n="1"></line>
+        <line t="X" i="290" b="1" n="1"></line>
+        <line t="C" i="291" b="1" n="1">! Check if empty stack</line>
+        <line t="X" i="292" b="2" n="2">  if( associated( this%pbottom ) ) then</line>
+        <line t="X" i="293" b="2" n="2"></line>
+        <line t="C" i="294" b="2" n="2">!   Initialise stack navigation</line>
+        <line t="X" i="295" b="2" n="2">    del =&gt; this%ptop</line>
+        <line t="X" i="296" b="2" n="2"></line>
+        <line t="C" i="297" b="2" n="2">!   Navigate the stack</line>
+        <line t="X" i="298" b="3" n="3">    do while( associated(del) )</line>
+        <line t="X" i="299" b="3" n="3"></line>
+        <line t="C" i="300" b="3" n="3">!     Save pointer to down node</line>
+        <line t="X" i="301" b="3" n="3">      down =&gt; del%pdown</line>
+        <line t="X" i="302" b="3" n="3"></line>
+        <line t="C" i="303" b="3" n="3">!     Destroy data element in the current stack node</line>
+        <line t="X" i="304" b="3" n="3">      deallocate( del%element )</line>
+        <line t="X" i="305" b="3" n="3"></line>
+        <line t="C" i="306" b="3" n="3">!     Deallocate the stack node</line>
+        <line t="X" i="307" b="3" n="3">      deallocate( del )</line>
+        <line t="X" i="308" b="3" n="3"></line>
+        <line t="C" i="309" b="3" n="3">!     Irerate</line>
+        <line t="X" i="310" b="3" n="3">      del =&gt; down</line>
+        <line t="X" i="311" b="3" n="3"></line>
+        <line t="X" i="312" b="3" n="2">    end do</line>
+        <line t="X" i="313" b="3" n="2"></line>
+        <line t="X" i="314" b="3" n="1">  end if</line>
+        <line t="X" i="315" b="3" n="1"></line>
+        <line t="C" i="316" b="3" n="1">! Reinitialise stack pointers</line>
+        <line t="X" i="317" b="3" n="1">  this%ptop =&gt; null()</line>
+        <line t="X" i="318" b="3" n="1">  this%pbottom =&gt; null()</line>
+        <line t="X" i="319" b="3" n="1"></line>
+        <line t="C" i="320" b="3" n="1">! Reset counter</line>
+        <line t="X" i="321" b="3" n="1">  this%count = 0</line>
+        <line t="X" i="322" b="3" n="1"></line>
+        <line t="ES" i="323" b="3" n="1">end subroutine stack_clear</line>
+        <line t="ES" i="324" b="1" n="1"></line>
+        <line t="ES" i="325" b="1" n="1"></line>
+        <line t="C" i="326" b="1" n="1">! Return total length of stack</line>
+        <line k="stack_size" t="F" i="327" b="1" n="1">pure function stack_size( this ) result(res)</line>
+        <line t="F" i="328" b="1" n="1"></line>
+        <line t="C" i="329" b="1" n="1">! The stack</line>
+        <line t="X" i="330" b="1" n="1">  class(xxtypebase___stack_ftl), intent(in) :: this</line>
+        <line t="X" i="331" b="1" n="1"></line>
+        <line t="C" i="332" b="1" n="1">! The stack size</line>
+        <line t="X" i="333" b="1" n="1">  integer :: res</line>
+        <line t="X" i="334" b="1" n="1"></line>
+        <line t="C" i="335" b="1" n="1">! Assign the return value</line>
+        <line t="X" i="336" b="1" n="1">  res = this%count</line>
+        <line t="X" i="337" b="1" n="1"></line>
+        <line t="EF" i="338" b="1" n="1">end function stack_size</line>
+        <line t="EF" i="339" b="1" n="1"></line>
+        <line t="EF" i="340" b="1" n="1"></line>
+        <line t="C" i="341" b="1" n="1">! Test whether stack is empty</line>
+        <line k="stack_empty" t="F" i="342" b="1" n="1">pure function stack_empty( this ) result(res)</line>
+        <line t="F" i="343" b="1" n="1"></line>
+        <line t="C" i="344" b="1" n="1">! The stack</line>
+        <line t="X" i="345" b="1" n="1">  class(xxtypebase___stack_ftl), intent(in) :: this</line>
+        <line t="X" i="346" b="1" n="1"></line>
+        <line t="C" i="347" b="1" n="1">! The stack empty status</line>
+        <line t="X" i="348" b="1" n="1">  logical :: res</line>
+        <line t="X" i="349" b="1" n="1"></line>
+        <line t="C" i="350" b="1" n="1">! Asign the return value</line>
+        <line t="X" i="351" b="1" n="1">  res = ( this%count == 0 )</line>
+        <line t="X" i="352" b="1" n="1"></line>
+        <line t="EF" i="353" b="1" n="1">end function stack_empty</line>
+        <line t="EF" i="354" b="1" n="1"></line>
+        <line t="EF" i="355" b="1" n="1"></line>
+        <line t="C" i="356" b="1" n="1">! Create a stack from an exisiting stack (assignment operator)</line>
+        <line k="stack_assign_from_stack" t="S" i="357" b="1" n="1">subroutine stack_assign_from_stack( this, other )</line>
+        <line t="S" i="358" b="1" n="1"></line>
+        <line t="C" i="359" b="1" n="1">! The output stack</line>
+        <line t="X" i="360" b="1" n="1">  class(xxtypebase___stack_ftl), intent(out) :: this</line>
+        <line t="X" i="361" b="1" n="1"></line>
+        <line t="C" i="362" b="1" n="1">! The input stack</line>
+        <line t="X" i="363" b="1" n="1">  type(xxtypebase___stack_ftl), intent(in) :: other</line>
+        <line t="X" i="364" b="1" n="1"></line>
+        <line t="C" i="365" b="1" n="1">! Local node pointers</line>
+        <line t="X" i="366" b="1" n="1">  type(t_node), pointer :: lptr, dptr</line>
+        <line t="X" i="367" b="1" n="1"></line>
+        <line t="C" i="368" b="1" n="1">! Check if the input stack has elements</line>
+        <line t="X" i="369" b="2" n="2">  if( associated(other%ptop) ) then</line>
+        <line t="X" i="370" b="2" n="2"></line>
+        <line t="C" i="371" b="2" n="2">!   Initialise navigation pointer</line>
+        <line t="X" i="372" b="2" n="2">    lptr =&gt; other%pbottom</line>
+        <line t="X" i="373" b="2" n="2"></line>
+        <line t="C" i="374" b="2" n="2">!   Loop on the stack</line>
+        <line t="X" i="375" b="3" n="3">    do while( .not. associated(lptr,other%ptop) )</line>
+        <line t="X" i="376" b="3" n="3"></line>
+        <line t="C" i="377" b="3" n="3">!     Add element to the output stack</line>
+        <line t="X" i="378" b="3" n="3">      call this%push( lptr%element )</line>
+        <line t="X" i="379" b="3" n="3"></line>
+        <line t="C" i="380" b="3" n="3">!     Loop searching for the current pointer location</line>
+        <line t="X" i="381" b="3" n="3">      dptr =&gt; other%ptop</line>
+        <line t="X" i="382" b="4" n="4">      do while( .not. associated(dptr%pdown,lptr) )</line>
+        <line t="X" i="383" b="4" n="4">        dptr =&gt; dptr%pdown</line>
+        <line t="X" i="384" b="4" n="3">      end do</line>
+        <line t="X" i="385" b="4" n="3"></line>
+        <line t="C" i="386" b="4" n="3">!     Iterate</line>
+        <line t="X" i="387" b="4" n="3">      lptr =&gt; dptr</line>
+        <line t="X" i="388" b="4" n="3"></line>
+        <line t="X" i="389" b="4" n="2">    end do</line>
+        <line t="X" i="390" b="4" n="2"></line>
+        <line t="C" i="391" b="4" n="2">!   Add the top element</line>
+        <line t="X" i="392" b="4" n="2">    call this%push(other%ptop%element)</line>
+        <line t="X" i="393" b="4" n="2"></line>
+        <line t="X" i="394" b="4" n="1">  end if</line>
+        <line t="X" i="395" b="4" n="1"></line>
+        <line t="ES" i="396" b="4" n="1">end subroutine stack_assign_from_stack</line>
+        <line t="ES" i="397" b="1" n="1"></line>
+        <line t="ES" i="398" b="1" n="1"></line>
+        <line t="C" i="399" b="1" n="1">! Create a stack from an array (assignment operator)</line>
+        <line k="stack_assign_from_array" t="S" i="400" b="1" n="1">subroutine stack_assign_from_array( this, array )</line>
+        <line t="S" i="401" b="1" n="1"></line>
+        <line t="C" i="402" b="1" n="1">! The output stack</line>
+        <line t="X" i="403" b="1" n="1">  class(xxtypebase___stack_ftl), intent(out) :: this</line>
+        <line t="X" i="404" b="1" n="1"></line>
+        <line t="C" i="405" b="1" n="1">! The input array</line>
+        <line t="X" i="406" b="1" n="1">  class(xxtypebase__), dimension(:), intent(in) :: array</line>
+        <line t="X" i="407" b="1" n="1"></line>
+        <line t="C" i="408" b="1" n="1">! Local counter</line>
+        <line t="X" i="409" b="1" n="1">  integer :: i</line>
+        <line t="X" i="410" b="1" n="1"></line>
+        <line t="C" i="411" b="1" n="1">! Loop on the input array</line>
+        <line t="X" i="412" b="2" n="2">  do i = 1, size(array)</line>
+        <line t="X" i="413" b="2" n="2"></line>
+        <line t="C" i="414" b="2" n="2">!   Add element to the output stack</line>
+        <line t="X" i="415" b="2" n="2">    call this%push( array(i) )</line>
+        <line t="X" i="416" b="2" n="2"></line>
+        <line t="X" i="417" b="2" n="1">  end do</line>
+        <line t="X" i="418" b="2" n="1"></line>
+        <line t="ES" i="419" b="2" n="1">end subroutine stack_assign_from_array</line>
+        <line t="ES" i="420" b="1" n="1"></line>
+        <line t="ES" i="421" b="1" n="1"></line>
+        <line t="C" i="422" b="1" n="1">! Create an array (allocatable) of elements from a stack (bottom to top)</line>
+        <line k="stack_array" t="F" i="423" b="1" n="1">function stack_array( this ) result(res)</line>
+        <line t="F" i="424" b="1" n="1"></line>
+        <line t="C" i="425" b="1" n="1">! The input stack</line>
+        <line t="X" i="426" b="1" n="1">  class(xxtypebase___stack_ftl), intent(in) :: this</line>
+        <line t="X" i="427" b="1" n="1"></line>
+        <line t="C" i="428" b="1" n="1">! The returned array of elements (unallocated if memory failure)</line>
+        <line t="X" i="429" b="1" n="1">  class(xxtypebase__), allocatable, dimension(:) :: res</line>
+        <line t="X" i="430" b="1" n="1"></line>
+        <line t="C" i="431" b="1" n="1">! Local node pointers</line>
+        <line t="X" i="432" b="1" n="1">  type(t_node), pointer :: lptr</line>
+        <line t="X" i="433" b="1" n="1"></line>
+        <line t="C" i="434" b="1" n="1">! Local counter</line>
+        <line t="X" i="435" b="1" n="1">  integer :: i</line>
+        <line t="X" i="436" b="1" n="1"></line>
+        <line t="C" i="437" b="1" n="1">! Memory allocation status</line>
+        <line t="X" i="438" b="1" n="1">  integer :: status</line>
+        <line t="X" i="439" b="1" n="1"></line>
+        <line t="C" i="440" b="1" n="1">! Allocate memory for returned array</line>
+        <line t="X" i="441" b="1" n="1">  allocate( res( this%size() ), stat=status )</line>
+        <line t="X" i="442" b="2" n="2">  if( status == 0 ) then</line>
+        <line t="X" i="443" b="2" n="2"></line>
+        <line t="C" i="444" b="2" n="2">!   Initialise navigation pointer</line>
+        <line t="X" i="445" b="2" n="2">    lptr =&gt; this%ptop</line>
+        <line t="X" i="446" b="2" n="2"></line>
+        <line t="C" i="447" b="2" n="2">!   Loop on the elements</line>
+        <line t="X" i="448" b="3" n="3">    do i = this%size(), 1, -1</line>
+        <line t="X" i="449" b="3" n="3">      res(i) = lptr%element</line>
+        <line t="X" i="450" b="3" n="3">      lptr =&gt; lptr%pdown</line>
+        <line t="X" i="451" b="3" n="2">    end do</line>
+        <line t="X" i="452" b="3" n="2"></line>
+        <line t="X" i="453" b="3" n="1">  end if</line>
+        <line t="X" i="454" b="3" n="1"></line>
+        <line t="EF" i="455" b="3" n="1">end function stack_array</line>
+        <line t="EF" i="456" b="1" n="1"></line>
+        <line t="EF" i="457" b="1" n="1"></line>
+        <line t="C" i="458" b="1" n="1">! Implement the assignment between two elements (contained in the container node)</line>
+        <line t="C" i="459" b="1" n="1">! Centralises the implementation allowing the handling of polymorphism (store parent classes pointing derived clasess)</line>
+        <line t="C" i="460" b="1" n="1">! at the time thta allows the invocation of assignment operators in the cases when the element implements it</line>
+        <line k="element_assign_pointer" t="S" i="461" b="1" n="1">pure subroutine element_assign_pointer( left, right )</line>
+        <line t="S" i="462" b="1" n="1"></line>
+        <line t="C" i="463" b="1" n="1">! Element to be allocated and assigned (pointer interface)</line>
+        <line t="X" i="464" b="1" n="1">  class(xxtypebase__), pointer, intent(inout) :: left</line>
+        <line t="X" i="465" b="1" n="1"></line>
+        <line t="C" i="466" b="1" n="1">! Source element</line>
+        <line t="X" i="467" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="468" b="1" n="1"></line>
+        <line t="C" i="469" b="1" n="1">! Allocate first. Use mold to allow polymorphic object storage through parent class</line>
+        <line t="X" i="470" b="1" n="1">  allocate( left, mold=right )</line>
+        <line t="X" i="471" b="1" n="1"></line>
+        <line t="C" i="472" b="1" n="1">! Assign explicitly to allow invoking the assignment operator if implemented in the element</line>
+        <line t="X" i="473" b="1" n="1">  left = right</line>
+        <line t="X" i="474" b="1" n="1"></line>
+        <line t="ES" i="475" b="1" n="1">end subroutine element_assign_pointer</line>
+        <line t="ES" i="476" b="1" n="1"></line>
+        <line t="ES" i="477" b="1" n="1"></line>
+        <line t="C" i="478" b="1" n="1">! Implement the assignment between two elements (contained in the container node)</line>
+        <line t="C" i="479" b="1" n="1">! Centralises the implementation allowing the handling of polymorphism (store parent classes pointing derived clasess)</line>
+        <line t="C" i="480" b="1" n="1">! at the time thta allows the invocation of assignment operators in the cases when the element implements it</line>
+        <line k="element_assign_allocatable" t="S" i="481" b="1" n="1">pure subroutine element_assign_allocatable( left, right )</line>
+        <line t="S" i="482" b="1" n="1"></line>
+        <line t="C" i="483" b="1" n="1">! Element to be allocated and assigned (allocatable interface)</line>
+        <line t="X" i="484" b="1" n="1">  class(xxtypebase__), allocatable, intent(inout) :: left</line>
+        <line t="X" i="485" b="1" n="1"></line>
+        <line t="C" i="486" b="1" n="1">! Source element</line>
+        <line t="X" i="487" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="488" b="1" n="1"></line>
+        <line t="C" i="489" b="1" n="1">! Allocate first. Use mold to allow polymorphic object storage through parent class</line>
+        <line t="X" i="490" b="1" n="1">  allocate( left, mold=right )</line>
+        <line t="X" i="491" b="1" n="1"></line>
+        <line t="C" i="492" b="1" n="1">! Assign explicitly to allow invoking the assignment operator if implemented in the element</line>
+        <line t="X" i="493" b="1" n="1">  left = right</line>
+        <line t="X" i="494" b="1" n="1"></line>
+        <line t="ES" i="495" b="1" n="1">end subroutine element_assign_allocatable</line>
+        <line t="ES" i="496" b="1" n="1"></line>
+        <line t="M" i="497" b="1" n="1">end module xxmodulebase___stack_ftl</line>
+        <line t="M" i="498" b="1" n="1"></line>
+    </code>
+</fmx>

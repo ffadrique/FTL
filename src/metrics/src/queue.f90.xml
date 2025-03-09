@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../fmx.xsl"?>
+<fmx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="queue.f90">
+    <context>
+        <time>2025-03-09T11:42:15</time>
+        <version>1.0.0.1</version>
+        <path>src</path>
+        <path_to_root>../</path_to_root>
+        <project>FTL</project>
+        <name>queue.f90</name>
+        <copyright>Copyright © 2020, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</copyright>
+    </context>
+    <units>
+        <unit name="xxmodulebase___queue_ftl" type="module">
+            <main>
+                <lines>
+                    <source percent="32.48">38</source>
+                    <comments percent="40.17">47</comments>
+                    <empty percent="27.35">32</empty>
+                    <total>117</total>
+                </lines>
+                <complexity>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </complexity>
+                <nesting>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </nesting>
+                <methods>0</methods>
+            </main>
+            <methods>
+                <method name="element_assign_allocatable" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="30.00">6</source>
+                            <comments percent="35.00">7</comments>
+                            <empty percent="35.00">7</empty>
+                            <total>20</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="element_assign_pointer" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="30.00">6</source>
+                            <comments percent="35.00">7</comments>
+                            <empty percent="35.00">7</empty>
+                            <total>20</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">4</source>
+                            <comments percent="25.00">3</comments>
+                            <empty percent="41.67">5</empty>
+                            <total>12</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_array" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="41.67">15</source>
+                            <comments percent="25.00">9</comments>
+                            <empty percent="33.33">12</empty>
+                            <total>36</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_assign_from_array" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="34.78">8</source>
+                            <comments percent="26.09">6</comments>
+                            <empty percent="39.13">9</empty>
+                            <total>23</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_assign_from_queue" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="34.48">10</source>
+                            <comments percent="27.59">8</comments>
+                            <empty percent="37.93">11</empty>
+                            <total>29</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_back" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_clear" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="36.36">16</source>
+                            <comments percent="27.27">12</comments>
+                            <empty percent="36.36">16</empty>
+                            <total>44</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_copy" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_copy_from_array" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_default" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="46.15">6</source>
+                            <comments percent="23.08">3</comments>
+                            <empty percent="30.77">4</empty>
+                            <total>13</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_empty" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_front" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_pop" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="41.03">16</source>
+                            <comments percent="23.08">9</comments>
+                            <empty percent="35.90">14</empty>
+                            <total>39</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>4</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_push" type="subroutine">
+                    <statistics>
+                        <lines>
+                            <source percent="35.14">13</source>
+                            <comments percent="27.03">10</comments>
+                            <empty percent="37.84">14</empty>
+                            <total>37</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>3</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="queue_size" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">5</source>
+                            <comments percent="26.67">4</comments>
+                            <empty percent="40.00">6</empty>
+                            <total>15</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+            </methods>
+            <statistics>
+                <lines>
+                    <source percent="35.00">168</source>
+                    <comments percent="30.21">145</comments>
+                    <empty percent="34.79">167</empty>
+                    <total>480</total>
+                </lines>
+                <complexity>
+                    <minimum>1</minimum>
+                    <maximum>4</maximum>
+                    <average>1.75</average>
+                </complexity>
+                <nesting>
+                    <minimum>1</minimum>
+                    <maximum>3</maximum>
+                    <average>1.63</average>
+                </nesting>
+                <methods>16</methods>
+            </statistics>
+        </unit>
+    </units>
+    <statistics>
+        <lines>
+            <source percent="35.00">168</source>
+            <comments percent="30.21">145</comments>
+            <empty percent="34.79">167</empty>
+            <total>480</total>
+        </lines>
+        <complexity>
+            <minimum>1</minimum>
+            <maximum>4</maximum>
+            <average>1.75</average>
+        </complexity>
+        <nesting>
+            <minimum>1</minimum>
+            <maximum>3</maximum>
+            <average>1.63</average>
+        </nesting>
+        <methods>16</methods>
+    </statistics>
+    <code>
+        <line t="M" i="1" b="0" n="0">module xxmodulebase___queue_ftl</line>
+        <line t="M" i="2" b="0" n="0"></line>
+        <line t="C" i="3" b="0" n="0">!-------------------------------------------------------------------------------</line>
+        <line t="C" i="4" b="0" n="0">! Copyright : 2022, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</line>
+        <line t="C" i="5" b="0" n="0">! Project   : Atlantis</line>
+        <line t="C" i="6" b="0" n="0">! Author    : Fran Martinez Fadrique</line>
+        <line t="C" i="7" b="0" n="0">! Language  : Object Oriented Fortran 2018</line>
+        <line t="C" i="8" b="0" n="0">! Reference : http://www.cplusplus.com/reference/queue/queue</line>
+        <line t="C" i="9" b="0" n="0">! Synopsis  : Queue (FIFO) container template</line>
+        <line t="C" i="10" b="0" n="0">!             Limitations with respect to STL C++</line>
+        <line t="C" i="11" b="0" n="0">!              - No emplace functions.</line>
+        <line t="C" i="12" b="0" n="0">!              - No swap functions.</line>
+        <line t="C" i="13" b="0" n="0">!</line>
+        <line t="C" i="14" b="0" n="0">! License   : This file is part of the Fortran Template Library (FTL).</line>
+        <line t="C" i="15" b="0" n="0">!</line>
+        <line t="C" i="16" b="0" n="0">!             FTL is free software: you can redistribute it and/or modify</line>
+        <line t="C" i="17" b="0" n="0">!             it under the terms of the GNU Lesser General Public License as</line>
+        <line t="C" i="18" b="0" n="0">!             published by the Free Software Foundation, either version 3 of</line>
+        <line t="C" i="19" b="0" n="0">!             the License, or (at your option) any later version.</line>
+        <line t="C" i="20" b="0" n="0">!</line>
+        <line t="C" i="21" b="0" n="0">!             FTL is distributed in the hope that it will be useful,</line>
+        <line t="C" i="22" b="0" n="0">!             but WITHOUT ANY WARRANTY; without even the implied warranty of</line>
+        <line t="C" i="23" b="0" n="0">!             MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</line>
+        <line t="C" i="24" b="0" n="0">!             See the GNU Lesser General Public License for more details.</line>
+        <line t="C" i="25" b="0" n="0">!</line>
+        <line t="C" i="26" b="0" n="0">!             You should have received a copy of the GNU Lesser General Public</line>
+        <line t="C" i="27" b="0" n="0">!             License along with FTL.  </line>
+        <line t="C" i="28" b="0" n="0">!             If not, see &lt;http://www.gnu.org/licenses/&gt;.</line>
+        <line t="C" i="29" b="0" n="0">!-------------------------------------------------------------------------------</line>
+        <line t="C" i="30" b="0" n="0"></line>
+        <line t="C" i="31" b="0" n="0">!---USE statements--------------------------------------------------------------</line>
+        <line t="C" i="32" b="0" n="0"></line>
+        <line t="X" i="33" b="0" n="0">  use m_object</line>
+        <line t="X" i="34" b="0" n="0">  use xxuse__</line>
+        <line t="X" i="35" b="0" n="0"></line>
+        <line t="C" i="36" b="0" n="0">!---End of use statements-------------------------------------------------------</line>
+        <line t="C" i="37" b="0" n="0"></line>
+        <line t="X" i="38" b="0" n="0">  implicit none</line>
+        <line t="X" i="39" b="0" n="0"></line>
+        <line t="C" i="40" b="0" n="0">!---Public/Private declarations-------------------------------------------------</line>
+        <line t="C" i="41" b="0" n="0"></line>
+        <line t="X" i="42" b="0" n="0">  private</line>
+        <line t="X" i="43" b="0" n="0"></line>
+        <line t="X" i="44" b="0" n="0">  public xxtypebase___queue_ftl, xxconstructor___queue_ftl</line>
+        <line t="X" i="45" b="0" n="0"></line>
+        <line t="C" i="46" b="0" n="0">!---End of public/private declarations------------------------------------------</line>
+        <line t="C" i="47" b="0" n="0"></line>
+        <line t="C" i="48" b="0" n="0">!---Declaration of module variables---------------------------------------------</line>
+        <line t="C" i="49" b="0" n="0"></line>
+        <line t="C" i="50" b="0" n="0">! Queue node type</line>
+        <line t="T" i="51" b="0" n="0">  type t_node</line>
+        <line t="X" i="52" b="0" n="0">    private</line>
+        <line t="X" i="53" b="0" n="0"></line>
+        <line t="C" i="54" b="0" n="0">!   The element data instance</line>
+        <line t="X" i="55" b="0" n="0">    class(xxtypebase__),  pointer :: element =&gt; null()</line>
+        <line t="X" i="56" b="0" n="0"></line>
+        <line t="C" i="57" b="0" n="0">!   Pointer to the next mode in the queue (null if last)</line>
+        <line t="X" i="58" b="0" n="0">    type(t_node), pointer :: next    =&gt; null()</line>
+        <line t="X" i="59" b="0" n="0"></line>
+        <line t="T" i="60" b="0" n="0">  end type t_node</line>
+        <line t="T" i="61" b="0" n="0"></line>
+        <line t="T" i="62" b="0" n="0"></line>
+        <line t="C" i="63" b="0" n="0">! Linked queue container type</line>
+        <line t="T" i="64" b="0" n="0">  type, extends(t_object) :: xxtypebase___queue_ftl</line>
+        <line t="X" i="65" b="0" n="0">    private</line>
+        <line t="X" i="66" b="0" n="0"></line>
+        <line t="C" i="67" b="0" n="0">!     The number of nodes in the queue</line>
+        <line t="X" i="68" b="0" n="0">      integer :: count   = 0</line>
+        <line t="X" i="69" b="0" n="0"></line>
+        <line t="C" i="70" b="0" n="0">!     The first node</line>
+        <line t="X" i="71" b="0" n="0">      type(t_node), pointer :: first =&gt; null()</line>
+        <line t="X" i="72" b="0" n="0"></line>
+        <line t="C" i="73" b="0" n="0">!     The last node</line>
+        <line t="X" i="74" b="0" n="0">      type(t_node), pointer :: last =&gt; null()</line>
+        <line t="X" i="75" b="0" n="0"></line>
+        <line t="X" i="76" b="0" n="0">    contains</line>
+        <line t="X" i="77" b="0" n="0"></line>
+        <line t="C" i="78" b="0" n="0">!     Insertion and removal</line>
+        <line t="X" i="79" b="0" n="0">      procedure :: push =&gt; queue_push</line>
+        <line t="X" i="80" b="0" n="0">      procedure :: pop =&gt; queue_pop</line>
+        <line t="X" i="81" b="0" n="0">      procedure :: clear =&gt; queue_clear</line>
+        <line t="X" i="82" b="0" n="0"></line>
+        <line t="C" i="83" b="0" n="0">!     Access</line>
+        <line t="X" i="84" b="0" n="0">      procedure :: front =&gt; queue_front</line>
+        <line t="X" i="85" b="0" n="0">      procedure :: back =&gt; queue_back</line>
+        <line t="X" i="86" b="0" n="0"></line>
+        <line t="C" i="87" b="0" n="0">!     Query</line>
+        <line t="X" i="88" b="0" n="0">      procedure :: size =&gt; queue_size</line>
+        <line t="X" i="89" b="0" n="0">      procedure :: empty =&gt; queue_empty</line>
+        <line t="X" i="90" b="0" n="0"></line>
+        <line t="C" i="91" b="0" n="0">!     Conversion</line>
+        <line t="X" i="92" b="0" n="0">      procedure :: array =&gt; queue_array</line>
+        <line t="X" i="93" b="0" n="0"></line>
+        <line t="C" i="94" b="0" n="0">!     Assignment</line>
+        <line t="X" i="95" b="0" n="0">      generic :: assignment(=) =&gt; queue_assign_from_queue, &amp;</line>
+        <line t="X" i="96" b="0" n="0">                                  queue_assign_from_array</line>
+        <line t="X" i="97" b="0" n="0">      procedure :: queue_assign_from_queue</line>
+        <line t="X" i="98" b="0" n="0">      procedure, private :: queue_assign_from_array</line>
+        <line t="X" i="99" b="0" n="0"></line>
+        <line t="C" i="100" b="0" n="0">!     Destructor</line>
+        <line t="X" i="101" b="0" n="0">      final :: queue_</line>
+        <line t="X" i="102" b="0" n="0"></line>
+        <line t="T" i="103" b="0" n="0">  end type xxtypebase___queue_ftl</line>
+        <line t="T" i="104" b="0" n="0"></line>
+        <line t="T" i="105" b="0" n="0"></line>
+        <line t="C" i="106" b="0" n="0">! Constructor interface</line>
+        <line t="X" i="107" b="0" n="0">  interface xxconstructor___queue_ftl</line>
+        <line t="X" i="108" b="0" n="0">    module procedure queue_default</line>
+        <line t="X" i="109" b="0" n="0">    module procedure queue_copy</line>
+        <line t="X" i="110" b="0" n="0">    module procedure queue_copy_from_array</line>
+        <line t="X" i="111" b="0" n="0">  end interface xxconstructor___queue_ftl</line>
+        <line t="X" i="112" b="0" n="0"></line>
+        <line t="C" i="113" b="0" n="0">!---End of declaration of module variables--------------------------------------</line>
+        <line t="C" i="114" b="0" n="0"></line>
+        <line t="X" i="115" b="0" n="0">contains</line>
+        <line t="X" i="116" b="0" n="0"></line>
+        <line t="C" i="117" b="0" n="0">! Default constructor</line>
+        <line k="queue_default" t="F" i="118" b="1" n="1">function queue_default( ) result(res)</line>
+        <line t="F" i="119" b="1" n="1"></line>
+        <line t="C" i="120" b="1" n="1">! The result queue</line>
+        <line t="X" i="121" b="1" n="1">  type(xxtypebase___queue_ftl) :: res</line>
+        <line t="X" i="122" b="1" n="1"></line>
+        <line t="C" i="123" b="1" n="1">! Initialise</line>
+        <line t="X" i="124" b="1" n="1">  res%first =&gt; null()</line>
+        <line t="X" i="125" b="1" n="1">  res%last =&gt; null()</line>
+        <line t="X" i="126" b="1" n="1">  res%count = 0</line>
+        <line t="X" i="127" b="1" n="1"></line>
+        <line t="EF" i="128" b="1" n="1">end function queue_default</line>
+        <line t="EF" i="129" b="1" n="1"></line>
+        <line t="EF" i="130" b="1" n="1"></line>
+        <line t="C" i="131" b="1" n="1">! Copy constructor</line>
+        <line k="queue_copy" t="F" i="132" b="1" n="1">function queue_copy( this ) result(res)</line>
+        <line t="F" i="133" b="1" n="1"></line>
+        <line t="C" i="134" b="1" n="1">! The input queue</line>
+        <line t="X" i="135" b="1" n="1">  type(xxtypebase___queue_ftl), intent(in) :: this</line>
+        <line t="X" i="136" b="1" n="1"></line>
+        <line t="C" i="137" b="1" n="1">! The result queue</line>
+        <line t="X" i="138" b="1" n="1">  type(xxtypebase___queue_ftl) :: res</line>
+        <line t="X" i="139" b="1" n="1"></line>
+        <line t="C" i="140" b="1" n="1">! Copy the queue</line>
+        <line t="X" i="141" b="1" n="1">  res = this</line>
+        <line t="X" i="142" b="1" n="1"></line>
+        <line t="EF" i="143" b="1" n="1">end function queue_copy</line>
+        <line t="EF" i="144" b="1" n="1"></line>
+        <line t="EF" i="145" b="1" n="1"></line>
+        <line t="C" i="146" b="1" n="1">! Copy constructor from array</line>
+        <line k="queue_copy_from_array" t="F" i="147" b="1" n="1">function queue_copy_from_array( a ) result(res)</line>
+        <line t="F" i="148" b="1" n="1"></line>
+        <line t="C" i="149" b="1" n="1">! The input array</line>
+        <line t="X" i="150" b="1" n="1">  class(xxtypebase__), dimension(:), intent(in) :: a</line>
+        <line t="X" i="151" b="1" n="1"></line>
+        <line t="C" i="152" b="1" n="1">! The result queue</line>
+        <line t="X" i="153" b="1" n="1">  type(xxtypebase___queue_ftl) :: res</line>
+        <line t="X" i="154" b="1" n="1"></line>
+        <line t="C" i="155" b="1" n="1">! Copy the queue</line>
+        <line t="X" i="156" b="1" n="1">  res = a</line>
+        <line t="X" i="157" b="1" n="1"></line>
+        <line t="EF" i="158" b="1" n="1">end function queue_copy_from_array</line>
+        <line t="EF" i="159" b="1" n="1"></line>
+        <line t="EF" i="160" b="1" n="1"></line>
+        <line t="C" i="161" b="1" n="1">! Destructor</line>
+        <line k="queue_" t="S" i="162" b="1" n="1">subroutine queue_( this )</line>
+        <line t="S" i="163" b="1" n="1"></line>
+        <line t="C" i="164" b="1" n="1">! The queue</line>
+        <line t="X" i="165" b="1" n="1">  type(xxtypebase___queue_ftl), intent(inout) :: this</line>
+        <line t="X" i="166" b="1" n="1"></line>
+        <line t="C" i="167" b="1" n="1">! Clear the queue</line>
+        <line t="X" i="168" b="2" n="2">  if( this%count &gt; 0 ) call this%clear()</line>
+        <line t="X" i="169" b="2" n="2"></line>
+        <line t="ES" i="170" b="2" n="2">end subroutine queue_</line>
+        <line t="ES" i="171" b="1" n="2"></line>
+        <line t="ES" i="172" b="1" n="2"></line>
+        <line t="C" i="173" b="1" n="2">! Add a node to the end of the queue</line>
+        <line k="queue_push" t="S" i="174" b="1" n="1">subroutine queue_push( this, element )</line>
+        <line t="S" i="175" b="1" n="1"></line>
+        <line t="C" i="176" b="1" n="1">! The queue</line>
+        <line t="X" i="177" b="1" n="1">  class(xxtypebase___queue_ftl), intent(inout) :: this</line>
+        <line t="X" i="178" b="1" n="1"></line>
+        <line t="C" i="179" b="1" n="1">! The element</line>
+        <line t="X" i="180" b="1" n="1">  class(xxtypebase__), intent(in) :: element</line>
+        <line t="X" i="181" b="1" n="1"></line>
+        <line t="C" i="182" b="1" n="1">! Check if queue already contains elements</line>
+        <line t="X" i="183" b="2" n="2">  if( associated(this%last) ) then</line>
+        <line t="X" i="184" b="2" n="2"></line>
+        <line t="C" i="185" b="2" n="2">!   Allocate new node</line>
+        <line t="X" i="186" b="2" n="2">    allocate( this%last%next )</line>
+        <line t="X" i="187" b="2" n="2"></line>
+        <line t="C" i="188" b="2" n="2">!   Reasign new node pointers</line>
+        <line t="X" i="189" b="2" n="2">    this%last =&gt; this%last%next</line>
+        <line t="X" i="190" b="2" n="2"></line>
+        <line t="X" i="191" b="3" n="2">  else</line>
+        <line t="X" i="192" b="3" n="2"></line>
+        <line t="C" i="193" b="3" n="2">!   Allocate memory for first node</line>
+        <line t="X" i="194" b="3" n="2">    allocate(this%first)</line>
+        <line t="X" i="195" b="3" n="2"></line>
+        <line t="C" i="196" b="3" n="2">!   Assign pointers</line>
+        <line t="X" i="197" b="3" n="2">    this%last =&gt; this%first</line>
+        <line t="X" i="198" b="3" n="2"></line>
+        <line t="X" i="199" b="3" n="1">  end if</line>
+        <line t="X" i="200" b="3" n="1"></line>
+        <line t="C" i="201" b="3" n="1">! Copy the element into its queue position</line>
+        <line t="X" i="202" b="3" n="1">  call element_assign_pointer( this%last%element, element )</line>
+        <line t="X" i="203" b="3" n="1"></line>
+        <line t="C" i="204" b="3" n="1">! Increase counter</line>
+        <line t="X" i="205" b="3" n="1">  this%count = this%count + 1</line>
+        <line t="X" i="206" b="3" n="1"></line>
+        <line t="ES" i="207" b="3" n="1">end subroutine queue_push</line>
+        <line t="ES" i="208" b="1" n="1"></line>
+        <line t="ES" i="209" b="1" n="1"></line>
+        <line t="C" i="210" b="1" n="1">! Remove node from the beginning of the queue</line>
+        <line k="queue_pop" t="S" i="211" b="1" n="1">subroutine queue_pop( this )</line>
+        <line t="S" i="212" b="1" n="1"></line>
+        <line t="C" i="213" b="1" n="1">! The queue</line>
+        <line t="X" i="214" b="1" n="1">  class(xxtypebase___queue_ftl), intent(inout) :: this</line>
+        <line t="X" i="215" b="1" n="1"></line>
+        <line t="C" i="216" b="1" n="1">! Local node pointer</line>
+        <line t="X" i="217" b="1" n="1">  type(t_node), pointer :: node</line>
+        <line t="X" i="218" b="1" n="1"></line>
+        <line t="C" i="219" b="1" n="1">! Check that the queue is not empty</line>
+        <line t="X" i="220" b="2" n="2">  if( associated(this%first) ) then</line>
+        <line t="X" i="221" b="2" n="2"></line>
+        <line t="C" i="222" b="2" n="2">!   Destroy data element in the first queue node</line>
+        <line t="X" i="223" b="2" n="2">    deallocate( this%first%element )</line>
+        <line t="X" i="224" b="2" n="2"></line>
+        <line t="C" i="225" b="2" n="2">!   Check if there is more than one node</line>
+        <line t="X" i="226" b="3" n="3">    if( associated(this%first%next) ) then</line>
+        <line t="X" i="227" b="3" n="3"></line>
+        <line t="C" i="228" b="3" n="3">!     More than one node in the queue; remove the first one</line>
+        <line t="X" i="229" b="3" n="3">      node =&gt; this%first</line>
+        <line t="X" i="230" b="3" n="3">      this%first =&gt; this%first%next</line>
+        <line t="X" i="231" b="3" n="3">      deallocate( node )</line>
+        <line t="X" i="232" b="3" n="3"></line>
+        <line t="X" i="233" b="4" n="3">    else</line>
+        <line t="X" i="234" b="4" n="3"></line>
+        <line t="C" i="235" b="4" n="3">!     Only one node in queue; remove it</line>
+        <line t="X" i="236" b="4" n="3">      deallocate( this%first )</line>
+        <line t="X" i="237" b="4" n="3">      this%last  =&gt; null()</line>
+        <line t="X" i="238" b="4" n="3"></line>
+        <line t="X" i="239" b="4" n="2">    end if</line>
+        <line t="X" i="240" b="4" n="2"></line>
+        <line t="C" i="241" b="4" n="2">!   Decrease counter</line>
+        <line t="X" i="242" b="4" n="2">    this%count = this%count - 1</line>
+        <line t="X" i="243" b="4" n="2"></line>
+        <line t="X" i="244" b="4" n="1">  end if</line>
+        <line t="X" i="245" b="4" n="1"></line>
+        <line t="ES" i="246" b="4" n="1">end subroutine queue_pop</line>
+        <line t="ES" i="247" b="1" n="1"></line>
+        <line t="ES" i="248" b="1" n="1"></line>
+        <line t="C" i="249" b="1" n="1">! Return the element in the first (next to extract) node in the queue</line>
+        <line k="queue_front" t="F" i="250" b="1" n="1">pure function queue_front( this ) result(res)</line>
+        <line t="F" i="251" b="1" n="1"></line>
+        <line t="C" i="252" b="1" n="1">! The queue</line>
+        <line t="X" i="253" b="1" n="1">  class(xxtypebase___queue_ftl), target, intent(in) :: this</line>
+        <line t="X" i="254" b="1" n="1"></line>
+        <line t="C" i="255" b="1" n="1">! Pointer to the element in the first node in the queue</line>
+        <line t="X" i="256" b="1" n="1">  class(xxtypebase__), allocatable :: res</line>
+        <line t="X" i="257" b="1" n="1"></line>
+        <line t="C" i="258" b="1" n="1">! Assign the return value</line>
+        <line t="X" i="259" b="1" n="1">  call element_assign_allocatable( res, this%first%element )</line>
+        <line t="X" i="260" b="1" n="1"></line>
+        <line t="EF" i="261" b="1" n="1">end function queue_front</line>
+        <line t="EF" i="262" b="1" n="1"></line>
+        <line t="EF" i="263" b="1" n="1"></line>
+        <line t="C" i="264" b="1" n="1">! Returns the element in the last (last to extract) node in the queue</line>
+        <line k="queue_back" t="F" i="265" b="1" n="1">pure function queue_back( this ) result(res)</line>
+        <line t="F" i="266" b="1" n="1"></line>
+        <line t="C" i="267" b="1" n="1">! The queue</line>
+        <line t="X" i="268" b="1" n="1">  class(xxtypebase___queue_ftl), target, intent(in) :: this</line>
+        <line t="X" i="269" b="1" n="1"></line>
+        <line t="C" i="270" b="1" n="1">! Pointer to the element in the first node in the queue</line>
+        <line t="X" i="271" b="1" n="1">  class(xxtypebase__), allocatable :: res</line>
+        <line t="X" i="272" b="1" n="1"></line>
+        <line t="C" i="273" b="1" n="1">! Assign the return value</line>
+        <line t="X" i="274" b="1" n="1">  call element_assign_allocatable( res, this%last%element )</line>
+        <line t="X" i="275" b="1" n="1"></line>
+        <line t="EF" i="276" b="1" n="1">end function queue_back</line>
+        <line t="EF" i="277" b="1" n="1"></line>
+        <line t="EF" i="278" b="1" n="1"></line>
+        <line t="C" i="279" b="1" n="1">! Destroy a queue</line>
+        <line k="queue_clear" t="S" i="280" b="1" n="1">subroutine queue_clear( this )</line>
+        <line t="S" i="281" b="1" n="1"></line>
+        <line t="C" i="282" b="1" n="1">! The queue</line>
+        <line t="X" i="283" b="1" n="1">  class(xxtypebase___queue_ftl), intent(inout) :: this</line>
+        <line t="X" i="284" b="1" n="1"></line>
+        <line t="C" i="285" b="1" n="1">! Local node pointers</line>
+        <line t="X" i="286" b="1" n="1">  type(t_node), pointer :: del, next</line>
+        <line t="X" i="287" b="1" n="1"></line>
+        <line t="C" i="288" b="1" n="1">! Check if empty queue</line>
+        <line t="X" i="289" b="2" n="2">  if( associated( this%last ) ) then</line>
+        <line t="X" i="290" b="2" n="2"></line>
+        <line t="C" i="291" b="2" n="2">!   Initialise queue navigation</line>
+        <line t="X" i="292" b="2" n="2">    del =&gt; this%first</line>
+        <line t="X" i="293" b="2" n="2"></line>
+        <line t="C" i="294" b="2" n="2">!   Navigate the queue</line>
+        <line t="X" i="295" b="3" n="3">    do while( associated(del) )</line>
+        <line t="X" i="296" b="3" n="3"></line>
+        <line t="C" i="297" b="3" n="3">!     Save pointer to next node</line>
+        <line t="X" i="298" b="3" n="3">      next =&gt; del%next</line>
+        <line t="X" i="299" b="3" n="3"></line>
+        <line t="C" i="300" b="3" n="3">!     Destroy data element in the current queue node</line>
+        <line t="X" i="301" b="3" n="3">      deallocate( del%element )</line>
+        <line t="X" i="302" b="3" n="3"></line>
+        <line t="C" i="303" b="3" n="3">!     Deallocate the queue node</line>
+        <line t="X" i="304" b="3" n="3">      deallocate( del )</line>
+        <line t="X" i="305" b="3" n="3"></line>
+        <line t="C" i="306" b="3" n="3">!     Irerate</line>
+        <line t="X" i="307" b="3" n="3">      del =&gt; next</line>
+        <line t="X" i="308" b="3" n="3"></line>
+        <line t="X" i="309" b="3" n="2">    end do</line>
+        <line t="X" i="310" b="3" n="2"></line>
+        <line t="X" i="311" b="3" n="1">  end if</line>
+        <line t="X" i="312" b="3" n="1"></line>
+        <line t="C" i="313" b="3" n="1">! Reinitialise queue pointers</line>
+        <line t="X" i="314" b="3" n="1">  this%first =&gt; null()</line>
+        <line t="X" i="315" b="3" n="1">  this%last =&gt; null()</line>
+        <line t="X" i="316" b="3" n="1"></line>
+        <line t="C" i="317" b="3" n="1">! Reset counter</line>
+        <line t="X" i="318" b="3" n="1">  this%count = 0</line>
+        <line t="X" i="319" b="3" n="1"></line>
+        <line t="ES" i="320" b="3" n="1">end subroutine queue_clear</line>
+        <line t="ES" i="321" b="1" n="1"></line>
+        <line t="ES" i="322" b="1" n="1"></line>
+        <line t="C" i="323" b="1" n="1">! Return total length of queue</line>
+        <line k="queue_size" t="F" i="324" b="1" n="1">pure function queue_size( this ) result(res)</line>
+        <line t="F" i="325" b="1" n="1"></line>
+        <line t="C" i="326" b="1" n="1">! The queue</line>
+        <line t="X" i="327" b="1" n="1">  class(xxtypebase___queue_ftl), intent(in) :: this</line>
+        <line t="X" i="328" b="1" n="1"></line>
+        <line t="C" i="329" b="1" n="1">! The queue size</line>
+        <line t="X" i="330" b="1" n="1">  integer :: res</line>
+        <line t="X" i="331" b="1" n="1"></line>
+        <line t="C" i="332" b="1" n="1">! Assign the return value</line>
+        <line t="X" i="333" b="1" n="1">  res = this%count</line>
+        <line t="X" i="334" b="1" n="1"></line>
+        <line t="EF" i="335" b="1" n="1">end function queue_size</line>
+        <line t="EF" i="336" b="1" n="1"></line>
+        <line t="EF" i="337" b="1" n="1"></line>
+        <line t="C" i="338" b="1" n="1">! Test whether queue is empty</line>
+        <line k="queue_empty" t="F" i="339" b="1" n="1">pure function queue_empty( this ) result(res)</line>
+        <line t="F" i="340" b="1" n="1"></line>
+        <line t="C" i="341" b="1" n="1">! The queue</line>
+        <line t="X" i="342" b="1" n="1">  class(xxtypebase___queue_ftl), intent(in) :: this</line>
+        <line t="X" i="343" b="1" n="1"></line>
+        <line t="C" i="344" b="1" n="1">! The queue empty status</line>
+        <line t="X" i="345" b="1" n="1">  logical :: res</line>
+        <line t="X" i="346" b="1" n="1"></line>
+        <line t="C" i="347" b="1" n="1">! Asign the return value</line>
+        <line t="X" i="348" b="1" n="1">  res = ( this%count == 0 )</line>
+        <line t="X" i="349" b="1" n="1"></line>
+        <line t="EF" i="350" b="1" n="1">end function queue_empty</line>
+        <line t="EF" i="351" b="1" n="1"></line>
+        <line t="EF" i="352" b="1" n="1"></line>
+        <line t="C" i="353" b="1" n="1">! Create a queue from an exisiting queue (assignment operator)</line>
+        <line k="queue_assign_from_queue" t="S" i="354" b="1" n="1">subroutine queue_assign_from_queue( this, other )</line>
+        <line t="S" i="355" b="1" n="1"></line>
+        <line t="C" i="356" b="1" n="1">! The output queue</line>
+        <line t="X" i="357" b="1" n="1">  class(xxtypebase___queue_ftl), intent(out) :: this</line>
+        <line t="X" i="358" b="1" n="1"></line>
+        <line t="C" i="359" b="1" n="1">! The input queue</line>
+        <line t="X" i="360" b="1" n="1">  type(xxtypebase___queue_ftl), intent(in) :: other</line>
+        <line t="X" i="361" b="1" n="1"></line>
+        <line t="C" i="362" b="1" n="1">! Local node pointers</line>
+        <line t="X" i="363" b="1" n="1">  type(t_node), pointer :: lptr</line>
+        <line t="X" i="364" b="1" n="1"></line>
+        <line t="C" i="365" b="1" n="1">! Initialise navigation pointer</line>
+        <line t="X" i="366" b="1" n="1">  lptr =&gt; other%first</line>
+        <line t="X" i="367" b="1" n="1"></line>
+        <line t="C" i="368" b="1" n="1">! Loop on the queue</line>
+        <line t="X" i="369" b="2" n="2">  do while( associated(lptr) )</line>
+        <line t="X" i="370" b="2" n="2"></line>
+        <line t="C" i="371" b="2" n="2">!   Add element to the output queue</line>
+        <line t="X" i="372" b="2" n="2">    call this%push( lptr%element )</line>
+        <line t="X" i="373" b="2" n="2"></line>
+        <line t="C" i="374" b="2" n="2">!   Iterate</line>
+        <line t="X" i="375" b="2" n="2">    lptr =&gt; lptr%next</line>
+        <line t="X" i="376" b="2" n="2"></line>
+        <line t="X" i="377" b="2" n="1">  end do</line>
+        <line t="X" i="378" b="2" n="1"></line>
+        <line t="ES" i="379" b="2" n="1">end subroutine queue_assign_from_queue</line>
+        <line t="ES" i="380" b="1" n="1"></line>
+        <line t="ES" i="381" b="1" n="1"></line>
+        <line t="C" i="382" b="1" n="1">! Create a queue from an array (assignment operator)</line>
+        <line k="queue_assign_from_array" t="S" i="383" b="1" n="1">subroutine queue_assign_from_array( this, array )</line>
+        <line t="S" i="384" b="1" n="1"></line>
+        <line t="C" i="385" b="1" n="1">! The output queue</line>
+        <line t="X" i="386" b="1" n="1">  class(xxtypebase___queue_ftl), intent(out) :: this</line>
+        <line t="X" i="387" b="1" n="1"></line>
+        <line t="C" i="388" b="1" n="1">! The input array</line>
+        <line t="X" i="389" b="1" n="1">  class(xxtypebase__), dimension(:), intent(in) :: array</line>
+        <line t="X" i="390" b="1" n="1"></line>
+        <line t="C" i="391" b="1" n="1">! Local counter</line>
+        <line t="X" i="392" b="1" n="1">  integer :: i</line>
+        <line t="X" i="393" b="1" n="1"></line>
+        <line t="C" i="394" b="1" n="1">! Loop on the input array</line>
+        <line t="X" i="395" b="2" n="2">  do i = 1, size(array)</line>
+        <line t="X" i="396" b="2" n="2"></line>
+        <line t="C" i="397" b="2" n="2">!   Add element to the output queue</line>
+        <line t="X" i="398" b="2" n="2">    call this%push( array(i) )</line>
+        <line t="X" i="399" b="2" n="2"></line>
+        <line t="X" i="400" b="2" n="1">  end do</line>
+        <line t="X" i="401" b="2" n="1"></line>
+        <line t="ES" i="402" b="2" n="1">end subroutine queue_assign_from_array</line>
+        <line t="ES" i="403" b="1" n="1"></line>
+        <line t="ES" i="404" b="1" n="1"></line>
+        <line t="C" i="405" b="1" n="1">! Create an array (allocatabe) of elements from a queue</line>
+        <line k="queue_array" t="F" i="406" b="1" n="1">function queue_array( this ) result(res)</line>
+        <line t="F" i="407" b="1" n="1"></line>
+        <line t="C" i="408" b="1" n="1">! The input queue</line>
+        <line t="X" i="409" b="1" n="1">  class(xxtypebase___queue_ftl), intent(in) :: this</line>
+        <line t="X" i="410" b="1" n="1"></line>
+        <line t="C" i="411" b="1" n="1">! The returned array of elements (unallocated if memory failure)</line>
+        <line t="X" i="412" b="1" n="1">  class(xxtypebase__), allocatable, dimension(:) :: res</line>
+        <line t="X" i="413" b="1" n="1"></line>
+        <line t="C" i="414" b="1" n="1">! Local node pointers</line>
+        <line t="X" i="415" b="1" n="1">  type(t_node), pointer :: lptr</line>
+        <line t="X" i="416" b="1" n="1"></line>
+        <line t="C" i="417" b="1" n="1">! Local counter</line>
+        <line t="X" i="418" b="1" n="1">  integer :: i</line>
+        <line t="X" i="419" b="1" n="1"></line>
+        <line t="C" i="420" b="1" n="1">! Memory allocation status</line>
+        <line t="X" i="421" b="1" n="1">  integer :: status</line>
+        <line t="X" i="422" b="1" n="1"></line>
+        <line t="C" i="423" b="1" n="1">! Allocate memory for returned array</line>
+        <line t="X" i="424" b="1" n="1">  allocate( res( this%size() ), stat=status )</line>
+        <line t="X" i="425" b="2" n="2">  if( status == 0 ) then</line>
+        <line t="X" i="426" b="2" n="2"></line>
+        <line t="C" i="427" b="2" n="2">!   Initialise navigation pointer</line>
+        <line t="X" i="428" b="2" n="2">    lptr =&gt; this%first</line>
+        <line t="X" i="429" b="2" n="2"></line>
+        <line t="C" i="430" b="2" n="2">!   Loop on the elements</line>
+        <line t="X" i="431" b="3" n="3">    do i = 1, this%size()</line>
+        <line t="X" i="432" b="3" n="3">      res(i) = lptr%element</line>
+        <line t="X" i="433" b="3" n="3">      lptr =&gt; lptr%next</line>
+        <line t="X" i="434" b="3" n="2">    end do</line>
+        <line t="X" i="435" b="3" n="2"></line>
+        <line t="X" i="436" b="3" n="1">  end if</line>
+        <line t="X" i="437" b="3" n="1"></line>
+        <line t="EF" i="438" b="3" n="1">end function queue_array</line>
+        <line t="EF" i="439" b="1" n="1"></line>
+        <line t="EF" i="440" b="1" n="1"></line>
+        <line t="C" i="441" b="1" n="1">! Implement the assignment between two elements (contained in the container node)</line>
+        <line t="C" i="442" b="1" n="1">! Centralises the implementation allowing the handling of polymorphism (store parent classes pointing derived clasess)</line>
+        <line t="C" i="443" b="1" n="1">! at the time thta allows the invocation of assignment operators in the cases when the element implements it</line>
+        <line k="element_assign_pointer" t="S" i="444" b="1" n="1">pure subroutine element_assign_pointer( left, right )</line>
+        <line t="S" i="445" b="1" n="1"></line>
+        <line t="C" i="446" b="1" n="1">! Element to be allocated and assigned (pointer interface)</line>
+        <line t="X" i="447" b="1" n="1">  class(xxtypebase__), pointer, intent(inout) :: left</line>
+        <line t="X" i="448" b="1" n="1"></line>
+        <line t="C" i="449" b="1" n="1">! Source element</line>
+        <line t="X" i="450" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="451" b="1" n="1"></line>
+        <line t="C" i="452" b="1" n="1">! Allocate first. Use mold to allow polymorphic object storage through parent class</line>
+        <line t="X" i="453" b="1" n="1">  allocate( left, mold=right )</line>
+        <line t="X" i="454" b="1" n="1"></line>
+        <line t="C" i="455" b="1" n="1">! Assign explicitly to allow invoking the assignment operator if available</line>
+        <line t="X" i="456" b="1" n="1">  left = right</line>
+        <line t="X" i="457" b="1" n="1"></line>
+        <line t="ES" i="458" b="1" n="1">end subroutine element_assign_pointer</line>
+        <line t="ES" i="459" b="1" n="1"></line>
+        <line t="ES" i="460" b="1" n="1"></line>
+        <line t="C" i="461" b="1" n="1">! Implement the assignment between two elements (contained in the container node)</line>
+        <line t="C" i="462" b="1" n="1">! Centralises the implementation allowing the handling of polymorphism (store parent classes pointing derived clasess)</line>
+        <line t="C" i="463" b="1" n="1">! at the time thta allows the invocation of assignment operators in the cases when the element implements it</line>
+        <line k="element_assign_allocatable" t="S" i="464" b="1" n="1">pure subroutine element_assign_allocatable( left, right )</line>
+        <line t="S" i="465" b="1" n="1"></line>
+        <line t="C" i="466" b="1" n="1">! Element to be allocated and assigned (allocatable interface)</line>
+        <line t="X" i="467" b="1" n="1">  class(xxtypebase__), allocatable, intent(inout) :: left</line>
+        <line t="X" i="468" b="1" n="1"></line>
+        <line t="C" i="469" b="1" n="1">! Source element</line>
+        <line t="X" i="470" b="1" n="1">  class(xxtypebase__), intent(in) :: right</line>
+        <line t="X" i="471" b="1" n="1"></line>
+        <line t="C" i="472" b="1" n="1">! Allocate first. Use mold to allow polymorphic object storage through parent class</line>
+        <line t="X" i="473" b="1" n="1">  allocate( left, mold=right )</line>
+        <line t="X" i="474" b="1" n="1"></line>
+        <line t="C" i="475" b="1" n="1">! Assign explicitly to allow invoking the assignment operator if available</line>
+        <line t="X" i="476" b="1" n="1">  left = right</line>
+        <line t="X" i="477" b="1" n="1"></line>
+        <line t="ES" i="478" b="1" n="1">end subroutine element_assign_allocatable</line>
+        <line t="ES" i="479" b="1" n="1"></line>
+        <line t="M" i="480" b="1" n="1">end module xxmodulebase___queue_ftl</line>
+        <line t="M" i="481" b="1" n="1"></line>
+    </code>
+</fmx>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../fmx.xsl"?>
+<fmx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="m_object.f90">
+    <context>
+        <time>2025-03-09T11:42:15</time>
+        <version>1.0.0.1</version>
+        <path>src</path>
+        <path_to_root>../</path_to_root>
+        <project>FTL</project>
+        <name>m_object.f90</name>
+        <copyright>Copyright © 2020, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</copyright>
+    </context>
+    <units>
+        <unit name="m_object" type="module">
+            <main>
+                <lines>
+                    <source percent="22.86">16</source>
+                    <comments percent="54.29">38</comments>
+                    <empty percent="22.86">16</empty>
+                    <total>70</total>
+                </lines>
+                <complexity>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </complexity>
+                <nesting>
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <average>0.00</average>
+                </nesting>
+                <methods>0</methods>
+            </main>
+            <methods>
+                <method name="object_default" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="36.36">4</source>
+                            <comments percent="27.27">3</comments>
+                            <empty percent="36.36">4</empty>
+                            <total>11</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="object_equals" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="33.33">6</source>
+                            <comments percent="27.78">5</comments>
+                            <empty percent="38.89">7</empty>
+                            <total>18</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="object_get_hash_code" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="35.71">10</source>
+                            <comments percent="28.57">8</comments>
+                            <empty percent="35.71">10</empty>
+                            <total>28</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>1</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+                <method name="object_hash_adler32" type="function">
+                    <statistics>
+                        <lines>
+                            <source percent="41.94">13</source>
+                            <comments percent="29.03">9</comments>
+                            <empty percent="29.03">9</empty>
+                            <total>31</total>
+                        </lines>
+                        <complexity>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </complexity>
+                        <nesting>
+                            <minimum>0</minimum>
+                            <maximum>2</maximum>
+                            <average>0.00</average>
+                        </nesting>
+                    </statistics>
+                </method>
+            </methods>
+            <statistics>
+                <lines>
+                    <source percent="31.01">49</source>
+                    <comments percent="39.87">63</comments>
+                    <empty percent="29.11">46</empty>
+                    <total>158</total>
+                </lines>
+                <complexity>
+                    <minimum>1</minimum>
+                    <maximum>2</maximum>
+                    <average>1.25</average>
+                </complexity>
+                <nesting>
+                    <minimum>1</minimum>
+                    <maximum>2</maximum>
+                    <average>1.25</average>
+                </nesting>
+                <methods>4</methods>
+            </statistics>
+        </unit>
+    </units>
+    <statistics>
+        <lines>
+            <source percent="31.01">49</source>
+            <comments percent="39.87">63</comments>
+            <empty percent="29.11">46</empty>
+            <total>158</total>
+        </lines>
+        <complexity>
+            <minimum>1</minimum>
+            <maximum>2</maximum>
+            <average>1.25</average>
+        </complexity>
+        <nesting>
+            <minimum>1</minimum>
+            <maximum>2</maximum>
+            <average>1.25</average>
+        </nesting>
+        <methods>4</methods>
+    </statistics>
+    <code>
+        <line t="M" i="1" b="0" n="0">module m_object</line>
+        <line t="M" i="2" b="0" n="0"></line>
+        <line t="C" i="3" b="0" n="0">! -----------------------------------------------------------------------------</line>
+        <line t="C" i="4" b="0" n="0">! Copyright : 2022, Fran Martinez Fadrique &lt;Fran.Martinez.Fadrique@gmail.com&gt;</line>
+        <line t="C" i="5" b="0" n="0">! Project   : Atlantis</line>
+        <line t="C" i="6" b="0" n="0">! Author    : Fran Martinez Fadrique</line>
+        <line t="C" i="7" b="0" n="0">! Language  : Object Oriented Fortran 2018</line>
+        <line t="C" i="8" b="0" n="0">! Synopsis  : Supports all classes in the framework class hierarchy and provides</line>
+        <line t="C" i="9" b="0" n="0">!             low-level services to derived classes.</line>
+        <line t="C" i="10" b="0" n="0">!             This is the ultimate base class of all classes in the Framework;</line>
+        <line t="C" i="11" b="0" n="0">!             it is the root of the type hierarchy.</line>
+        <line t="C" i="12" b="0" n="0">!</line>
+        <line t="C" i="13" b="0" n="0">! License   : This file is part of the Fortran Template Library (FTL).</line>
+        <line t="C" i="14" b="0" n="0">!</line>
+        <line t="C" i="15" b="0" n="0">!             FTL is free software: you can redistribute it and/or modify</line>
+        <line t="C" i="16" b="0" n="0">!             it under the terms of the GNU Lesser General Public License as</line>
+        <line t="C" i="17" b="0" n="0">!             published by the Free Software Foundation, either version 3 of</line>
+        <line t="C" i="18" b="0" n="0">!             the License, or (at your option) any later version.</line>
+        <line t="C" i="19" b="0" n="0">!</line>
+        <line t="C" i="20" b="0" n="0">!             FTL is distributed in the hope that it will be useful,</line>
+        <line t="C" i="21" b="0" n="0">!             but WITHOUT ANY WARRANTY; without even the implied warranty of</line>
+        <line t="C" i="22" b="0" n="0">!             MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</line>
+        <line t="C" i="23" b="0" n="0">!             See the GNU Lesser General Public License for more details.</line>
+        <line t="C" i="24" b="0" n="0">!</line>
+        <line t="C" i="25" b="0" n="0">!             You should have received a copy of the GNU Lesser General Public</line>
+        <line t="C" i="26" b="0" n="0">!             License along with FTL.  </line>
+        <line t="C" i="27" b="0" n="0">!             If not, see &lt;http://www.gnu.org/licenses/&gt;.</line>
+        <line t="C" i="28" b="0" n="0">! -----------------------------------------------------------------------------</line>
+        <line t="C" i="29" b="0" n="0"></line>
+        <line t="C" i="30" b="0" n="0">! Dependencies ----------------------------------------------------------------</line>
+        <line t="C" i="31" b="0" n="0"></line>
+        <line t="X" i="32" b="0" n="0">  implicit none</line>
+        <line t="X" i="33" b="0" n="0"></line>
+        <line t="C" i="34" b="0" n="0">! Public/Private declarations -------------------------------------------------</line>
+        <line t="C" i="35" b="0" n="0"></line>
+        <line t="X" i="36" b="0" n="0">  private</line>
+        <line t="X" i="37" b="0" n="0">  public t_object, object</line>
+        <line t="X" i="38" b="0" n="0"></line>
+        <line t="C" i="39" b="0" n="0">! Module declarations ---------------------------------------------------------</line>
+        <line t="C" i="40" b="0" n="0"></line>
+        <line t="C" i="41" b="0" n="0">! Supports all classes in the framework class hierarchy and provides</line>
+        <line t="C" i="42" b="0" n="0">! low-level services to derived classes.</line>
+        <line t="C" i="43" b="0" n="0">! This is the ultimate base class of all classes in the Framework;</line>
+        <line t="C" i="44" b="0" n="0">! it is the root of the type hierarchy.</line>
+        <line t="T" i="45" b="0" n="0">  type t_object</line>
+        <line t="X" i="46" b="0" n="0">    private</line>
+        <line t="X" i="47" b="0" n="0"></line>
+        <line t="X" i="48" b="0" n="0">    contains</line>
+        <line t="X" i="49" b="0" n="0"></line>
+        <line t="C" i="50" b="0" n="0">!     Determines whether the specified object is equal to the current object</line>
+        <line t="X" i="51" b="0" n="0">      procedure :: equals =&gt; object_equals</line>
+        <line t="X" i="52" b="0" n="0"></line>
+        <line t="C" i="53" b="0" n="0">!     Default hash function</line>
+        <line t="X" i="54" b="0" n="0">      procedure :: get_hash_code =&gt; object_get_hash_code</line>
+        <line t="X" i="55" b="0" n="0"></line>
+        <line t="C" i="56" b="0" n="0">!     Default has algorithm</line>
+        <line t="X" i="57" b="0" n="0">      procedure, private, nopass :: hash =&gt; object_hash_adler32</line>
+        <line t="X" i="58" b="0" n="0"></line>
+        <line t="T" i="59" b="0" n="0">  end type t_object</line>
+        <line t="T" i="60" b="0" n="0"></line>
+        <line t="C" i="61" b="0" n="0">! Constructor interface</line>
+        <line t="X" i="62" b="0" n="0">  interface object</line>
+        <line t="X" i="63" b="0" n="0">    module procedure object_default</line>
+        <line t="X" i="64" b="0" n="0">  end interface object</line>
+        <line t="X" i="65" b="0" n="0"></line>
+        <line t="C" i="66" b="0" n="0">! Implementation --------------------------------------------------------------</line>
+        <line t="C" i="67" b="0" n="0"></line>
+        <line t="X" i="68" b="0" n="0">contains</line>
+        <line t="X" i="69" b="0" n="0"></line>
+        <line t="C" i="70" b="0" n="0">! Default constructor</line>
+        <line k="object_default" t="F" i="71" b="1" n="1">elemental function object_default() result(res)</line>
+        <line t="F" i="72" b="1" n="1"></line>
+        <line t="C" i="73" b="1" n="1">! Returned object</line>
+        <line t="X" i="74" b="1" n="1">  type(t_object) :: res</line>
+        <line t="X" i="75" b="1" n="1"></line>
+        <line t="C" i="76" b="1" n="1">! Set return object</line>
+        <line t="X" i="77" b="1" n="1">  res = t_object()</line>
+        <line t="X" i="78" b="1" n="1"></line>
+        <line t="EF" i="79" b="1" n="1">end function object_default</line>
+        <line t="EF" i="80" b="1" n="1"></line>
+        <line t="EF" i="81" b="1" n="1"></line>
+        <line t="C" i="82" b="1" n="1">! Determines whether the specified object is equal to the current object</line>
+        <line k="object_equals" t="F" i="83" b="1" n="1">elemental function object_equals( this, other ) result(res)</line>
+        <line t="F" i="84" b="1" n="1"></line>
+        <line t="C" i="85" b="1" n="1">! Calling object</line>
+        <line t="X" i="86" b="1" n="1">  class(t_object), intent(in) :: this</line>
+        <line t="X" i="87" b="1" n="1"></line>
+        <line t="C" i="88" b="1" n="1">! Other object</line>
+        <line t="X" i="89" b="1" n="1">  class(t_object), intent(in) :: other</line>
+        <line t="X" i="90" b="1" n="1"></line>
+        <line t="C" i="91" b="1" n="1">! Comparison result</line>
+        <line t="X" i="92" b="1" n="1">  logical :: res</line>
+        <line t="X" i="93" b="1" n="1"></line>
+        <line t="C" i="94" b="1" n="1">! Compute comparison</line>
+        <line t="X" i="95" b="1" n="1">  res = ( this%get_hash_code() == other%get_hash_code() )</line>
+        <line t="X" i="96" b="1" n="1"></line>
+        <line t="EF" i="97" b="1" n="1">end function object_equals</line>
+        <line t="EF" i="98" b="1" n="1"></line>
+        <line t="EF" i="99" b="1" n="1"></line>
+        <line t="C" i="100" b="1" n="1">! Default hash function</line>
+        <line k="object_get_hash_code" t="F" i="101" b="1" n="1">elemental function object_get_hash_code( this ) result(res)</line>
+        <line t="F" i="102" b="1" n="1"></line>
+        <line t="C" i="103" b="1" n="1">! Calling object</line>
+        <line t="X" i="104" b="1" n="1">  class(t_object), intent(in) :: this</line>
+        <line t="X" i="105" b="1" n="1"></line>
+        <line t="C" i="106" b="1" n="1">! String representation of the object</line>
+        <line t="X" i="107" b="1" n="1">  integer :: res</line>
+        <line t="X" i="108" b="1" n="1"></line>
+        <line t="C" i="109" b="1" n="1">! Local variables</line>
+        <line t="X" i="110" b="1" n="1">  integer :: osize</line>
+        <line t="X" i="111" b="1" n="1">  integer(kind=1), dimension(:), allocatable :: object</line>
+        <line t="X" i="112" b="1" n="1"></line>
+        <line t="C" i="113" b="1" n="1">! Get the size of the input object</line>
+        <line t="X" i="114" b="1" n="1">  osize = 8 * storage_size(this)</line>
+        <line t="X" i="115" b="1" n="1"></line>
+        <line t="C" i="116" b="1" n="1">! Allocate object</line>
+        <line t="X" i="117" b="1" n="1">  allocate( object(osize), source=0_1 )</line>
+        <line t="X" i="118" b="1" n="1"></line>
+        <line t="C" i="119" b="1" n="1">! Get the object data as an array</line>
+        <line t="X" i="120" b="1" n="1">  object = transfer( this, mold=object )</line>
+        <line t="X" i="121" b="1" n="1"></line>
+        <line t="C" i="122" b="1" n="1">! Compute the hash</line>
+        <line t="X" i="123" b="1" n="1">  res = this%hash(object)</line>
+        <line t="X" i="124" b="1" n="1"></line>
+        <line t="EF" i="125" b="1" n="1">end function object_get_hash_code</line>
+        <line t="EF" i="126" b="1" n="1"></line>
+        <line t="EF" i="127" b="1" n="1"></line>
+        <line t="C" i="128" b="1" n="1">! Hash algorithm</line>
+        <line t="C" i="129" b="1" n="1">! Reference: https://stackoverflow.com/questions/14409466/simple-hash-functions</line>
+        <line t="C" i="130" b="1" n="1">!            https://en.wikipedia.org/wiki/Adler-32</line>
+        <line k="object_hash_adler32" t="F" i="131" b="1" n="1">pure function object_hash_adler32( object ) result(res)</line>
+        <line t="F" i="132" b="1" n="1"></line>
+        <line t="C" i="133" b="1" n="1">! Array of bytes representing the object</line>
+        <line t="X" i="134" b="1" n="1">  integer(kind=1), dimension(:), intent(in) :: object</line>
+        <line t="X" i="135" b="1" n="1"></line>
+        <line t="C" i="136" b="1" n="1">! Hash value</line>
+        <line t="X" i="137" b="1" n="1">  integer :: res</line>
+        <line t="X" i="138" b="1" n="1"></line>
+        <line t="C" i="139" b="1" n="1">! Local variables</line>
+        <line t="X" i="140" b="1" n="1">  integer :: i</line>
+        <line t="X" i="141" b="1" n="1">  integer :: s1, s2</line>
+        <line t="X" i="142" b="1" n="1"></line>
+        <line t="C" i="143" b="1" n="1">! Initialise algorithm</line>
+        <line t="X" i="144" b="1" n="1">  s1 = 1</line>
+        <line t="X" i="145" b="1" n="1">  s2 = 0</line>
+        <line t="X" i="146" b="1" n="1"></line>
+        <line t="C" i="147" b="1" n="1">! Loop on the bytes</line>
+        <line t="X" i="148" b="2" n="2">  do i = 1, size(object)</line>
+        <line t="X" i="149" b="2" n="2">    s1 = mod( s1 + object(i), 65521 )</line>
+        <line t="X" i="150" b="2" n="2">    s2 = mod( s2 + s1, 65521 )</line>
+        <line t="X" i="151" b="2" n="1">  end do</line>
+        <line t="X" i="152" b="2" n="1"></line>
+        <line t="C" i="153" b="2" n="1">! Compute the resilt</line>
+        <line t="X" i="154" b="2" n="1">  res = ior( ishft( s2, 16 ), s1 )</line>
+        <line t="X" i="155" b="2" n="1"></line>
+        <line t="EF" i="156" b="2" n="1">end function object_hash_adler32</line>
+        <line t="EF" i="157" b="1" n="1"></line>
+        <line t="M" i="158" b="1" n="1">end module m_object</line>
+        <line t="M" i="159" b="1" n="1"></line>
+    </code>
+</fmx>
