@@ -66,7 +66,7 @@ class Container(object):
             template = template.replace("pure subroutine " + cname + "_iterator_set_element", "subroutine " + cname + "_iterator_set_element")
 
         # Add the time stamp
-        template += '\n! ' + datetime.now().strftime("%Y-%m-%dT%H:%M:%S") + '\n'
+        # template += '\n! ' + datetime.now().strftime("%Y-%m-%dT%H:%M:%S") + '\n'
 
         # Expanded container file name
         container_path = os.path.join(output_directory, self.module + '_' + self.name + '_ftl' + output_file_extension)
