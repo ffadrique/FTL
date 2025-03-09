@@ -1,1 +1,2 @@
 src/metrics/*.html: linguist-documentation
+src/metrics/src/*.html: linguist-documentation
