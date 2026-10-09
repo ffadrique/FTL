@@ -17,7 +17,7 @@ templates_dir = os.path.dirname(reffile)
 # Define the command line options
 parser = argparse.ArgumentParser()
 parser.add_argument('--verbose', required=False, action='store_true', help='Trace detailed information of the process steps')
-parser.add_argument('--templates-dir', required=True, default=tesmplates_dir, help='Location of the container templates (default to path of fxx.py)')
+parser.add_argument('--templates-dir', required=True, default=templates_dir, help='Location of the container templates (default to path of fxx.py)')
 parser.add_argument('--name', required=True, default='list', choices=Container.names, help='Container name (default: list)')
 parser.add_argument('--module', required=True, help='Module name')
 parser.add_argument('--type', required=True, help='Type name')
